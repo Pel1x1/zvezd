@@ -11,7 +11,7 @@ export const Hero = () => {
         {/* Контейнер для рамки и фото */}
         <div className="relative w-[calc(100vw-64px)] h-[calc(100vh-64px)] mx-auto my-auto">
             <Image
-            src="/img/restaurant.png"
+            src="/img/Restaurant.png"
             alt="Hero background"
             fill
             className="object-cover"
