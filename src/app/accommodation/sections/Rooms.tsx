@@ -13,7 +13,7 @@ export const Rooms = () => {
       description:
         "«Черный» Люкс в стиле «лофт» с прекрасным видом на хвойный лес.",
       imageUrl: "/img/BlackLux.jpg",
-      link:"Черный люкс",
+      link:"BlackLux",
       index: 0
     },
     {
@@ -21,19 +21,19 @@ export const Rooms = () => {
       description:
         "Роскошный «Белый» люкс предлагает исключительный комфорт для каждого гостя",
       imageUrl: "/img/WhiteLux.jpg",
-      link:"Белый люкс",
+      link:"WhiteLux",
     },
     {
       title: "Комфорт +",
       description: "Просторный однокомнатный номер",
       imageUrl: "/img/ComfortPlus.jpg",
-      link:"Комфорт +",
+      link:"ComfortPlus",
     },
     {
       title: "Комфорт",
       description: "Комфорт — уютный номер, выполненный в современном стиле.",
       imageUrl: "/img/Comfort.jpg",
-      link:"Комфорт",
+      link:"Comfort",
     },
   ];
 

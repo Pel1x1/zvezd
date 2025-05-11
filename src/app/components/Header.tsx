@@ -49,7 +49,7 @@ export const Header = () => {
               <Link
                 key={label}
                 href={href}
-                className="hover:text-white footer-link transition-colors cursor-pointer font-body text-[7px] md:text-[13px]"
+                className=" footer-link hover:text-white transition-colors cursor-pointer font-body text-[7px] md:text-[13px]"
               >
                 {label}
               </Link>
