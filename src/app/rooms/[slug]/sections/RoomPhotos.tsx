@@ -30,6 +30,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
               onClick={() => openModal(photo)}
             >
               <Image
+                placeholder="blur"
                 src={photo}
                 alt={`${room.name} - фото ${index + 1}`}
                 fill

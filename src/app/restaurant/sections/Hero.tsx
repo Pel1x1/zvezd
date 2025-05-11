@@ -15,6 +15,7 @@ export const Hero = () => {
             alt="Hero background"
             fill
             className="object-cover"
+            placeholder="blur"
             priority
             />
             {/* Центрированный текст поверх фото */}

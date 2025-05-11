@@ -33,7 +33,7 @@ export const AccommodationCard: React.FC<AccommodationCardProps> = ({
 
   return (
     <div className={`w-[45%] relative mb-[50px] max-md:w-full max-sm:w-full ${customClass}`} style={{fontFamily:"RobotoL"}}>
-      <Image src={imageUrl} alt={title} className="w-full h-auto" />
+      <Image src={imageUrl} alt={title} className="w-full h-auto" placeholder="blur" />
       <div className={`absolute text-white  top-5 ${customLeft}`}>
         <h3 className="text-[35px] uppercase" style={{fontFamily:"ZenAntique"}}>{title}</h3>
         <p className="text-base tracking-[2px] mx-0 my-2.5">{description}</p>

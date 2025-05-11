@@ -34,6 +34,7 @@ export const BanquetHallSection = () => {
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0 relative">
           <div className="relative aspect-[0.85] w-full">
             <Image
+              placeholder="blur"
               src="/img/bg2.png"
               alt="Banquet hall"
               fill

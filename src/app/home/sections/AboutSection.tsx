@@ -70,11 +70,12 @@ export const AboutSection = () => {
       <div className="w-[45%] ml-5 max-md:w-full max-md:ml-0">
         <div className="flex flex-col relative min-h-[100%] overflow-hidden max-md:max-w-[50%]">
         <Image
-                  src={rest}
-                  alt="Interior view"
-                  className="absolute h-full w-full object-cover inset-0"
-                  fill
-                />
+        placeholder="blur"
+        src={rest}
+        alt="Interior view"
+        className="absolute h-full w-full object-cover inset-0"
+        fill
+      />
         
         </div>
       </div>
@@ -84,11 +85,12 @@ export const AboutSection = () => {
       <div className="w-[45%] max-md:w-full max-md:ml-0">
         <div className="flex flex-col relative min-h-[100%] overflow-hidden max-md:max-w-[50%] ">
         <Image
-                    src={rainb}
-                    alt="Interior view"
-                    className="absolute h-full w-full object-cover inset-0"
-                    fill
-                  />
+        placeholder="blur"
+        src={rainb}
+        alt="Interior view"
+        className="absolute h-full w-full object-cover inset-0"
+        fill
+      />
 
         </div>
       </div>

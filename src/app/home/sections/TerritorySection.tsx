@@ -13,6 +13,7 @@ export const TerritorySection = () => {
           src="/img/Territory.png"
           alt="Территория комплекса"
           priority
+          loading="lazy"
           width={1280} // Укажи реальные размеры картинки
           height={720}
           style={{

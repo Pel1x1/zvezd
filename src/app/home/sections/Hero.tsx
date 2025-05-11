@@ -11,6 +11,7 @@ export const Hero = () => {
     {/* Контейнер для рамки и фото */}
     <div className="relative w-[calc(100vw-64px)] h-[calc(100vh-64px)] mx-auto my-auto">
       <Image
+        placeholder="blur"
         src="/img/zverd3.png"
         alt="Hero background"
         fill
