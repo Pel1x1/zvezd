@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-
+import  accommodation1 from "@/app/img/accommodation1.jpg";
 export const Hero = () => {
   const isMobile = useIsMobile();
 
@@ -11,7 +11,7 @@ export const Hero = () => {
     {/* Контейнер для рамки и фото */}
     <div className="relative w-[calc(100vw-64px)] h-[calc(100vh-64px)] mx-auto my-auto ">
       <Image
-        src="/img/accommodation1.jpg"
+        src={accommodation1}
         alt="Hero background"
         fill
         className="object-cover "

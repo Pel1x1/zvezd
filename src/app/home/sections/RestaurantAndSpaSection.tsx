@@ -13,7 +13,6 @@ export const RestaurantAndSpaSection = () => {
         <div className="w-6/12 max-md:w-full max-md:ml-0">
           <div className="flex flex-col relative min-h-[586px] text-[rgba(210,182,177,1)] font-light pl-6 pr-12 pt-44 pb-[277px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[100px]">
             <Image
-              placeholder="blur"
               src="https://cdn.builder.io/api/v1/image/assets/e80f950f6d514655b299aa20146ab877/9036c1d4f274b79ae606c61008debe2c01211df6?placeholderIfAbsent=true"
               alt="Restaurant interior"
               className="absolute h-full w-full object-cover inset-0"
@@ -38,7 +37,6 @@ export const RestaurantAndSpaSection = () => {
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
           <div className="flex flex-col relative min-h-[580px] text-[rgba(210,182,177,1)] font-light leading-none mt-[164px] pl-[17px] pr-[52px] pt-[113px] pb-[306px] max-md:max-w-full max-md:mt-10 max-md:pr-5 max-md:py-[100px]">
             <Image
-              placeholder="blur"
               src="https://cdn.builder.io/api/v1/image/assets/e80f950f6d514655b299aa20146ab877/3ee540ed1fd96755dcfb5200fbdfc298dd6674ca?placeholderIfAbsent=true"
               alt="SPA complex"
               className="absolute h-full w-full object-cover inset-0"

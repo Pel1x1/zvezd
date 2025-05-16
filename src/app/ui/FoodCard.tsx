@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
+import type { StaticImageData } from 'next/image';
 
 interface FoodCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   link: string;
   index?: number;
 

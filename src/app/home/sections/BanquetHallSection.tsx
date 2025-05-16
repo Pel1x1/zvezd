@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/app/ui/Button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
+import bg2 from "@/app/img/bg2.png"
 
 export const BanquetHallSection = () => {
   const isMobile = useIsMobile();
@@ -35,7 +36,7 @@ export const BanquetHallSection = () => {
           <div className="relative aspect-[0.85] w-full">
             <Image
               placeholder="blur"
-              src="/img/bg2.png"
+              src={bg2}
               alt="Banquet hall"
               fill
               className="object-cover"

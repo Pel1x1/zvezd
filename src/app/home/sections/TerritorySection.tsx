@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
+import territory from "@/app/img/Territory.png";
 
 export const TerritorySection = () => {
   const isMobile = useIsMobile();
@@ -10,10 +11,9 @@ export const TerritorySection = () => {
     <section className="self-center w-full max-w-full mt-[100px] mb-[25px] max-md:mt-[100px]">
       <div className="relative inline-block w-full">
         <Image
-          src="/img/Territory.png"
+          src={territory}
           alt="Территория комплекса"
           priority
-          loading="lazy"
           width={1280} // Укажи реальные размеры картинки
           height={720}
           style={{

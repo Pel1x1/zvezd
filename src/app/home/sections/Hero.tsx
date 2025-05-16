@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-
+import zvezd3 from "@/app/img/zverd3.png";
 export const Hero = () => {
   const isMobile = useIsMobile();
 
@@ -12,7 +12,7 @@ export const Hero = () => {
     <div className="relative w-[calc(100vw-64px)] h-[calc(100vh-64px)] mx-auto my-auto">
       <Image
         placeholder="blur"
-        src="/img/zverd3.png"
+        src={zvezd3}
         alt="Hero background"
         fill
         className="object-cover"
