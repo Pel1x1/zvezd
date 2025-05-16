@@ -8,8 +8,7 @@ import { RoomSection } from "./sections/RoomSection";
 import { BanquetHallSection } from "./sections/BanquetHallSection";
 import { PromoSection } from "@/app/components/PromoSection";
 import { TerritorySection } from "./sections/TerritorySection";
-import {Header} from "../components/Header";
-import {Footer} from "../components/Footer";
+import  InteractiveMap  from "./sections/InteractiveMap";
 
 export default function HomePage() {
   return (
@@ -19,6 +18,7 @@ export default function HomePage() {
         <main>
           <Hero />
           <AboutSection />
+          <InteractiveMap/>
           <TerritorySection/>
           <RestaurantAndSpaSection />
           <RoomSection />

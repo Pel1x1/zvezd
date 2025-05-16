@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import Link from "next/link";
+import type { StaticImageData } from 'next/image';
 
 interface AccommodationCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   link: string;
   index?: number;
 

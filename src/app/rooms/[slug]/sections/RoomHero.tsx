@@ -16,7 +16,6 @@ return (
             fill
             className="object-cover "
             priority
-            placeholder="blur"
         />
         </div>
         {/* Центрированный текст поверх фото */}

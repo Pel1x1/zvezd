@@ -3,6 +3,10 @@
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { AccommodationCard } from "@/app/ui/AccommodationCard";
+import blacklux from "@/app/img/BlackLux.jpg";
+import whitelux from "@/app/img/WhiteLux.jpg";
+import comfortplus from "@/app/img/ComfortPlus.jpg";
+import comfort from "@/app/img/Comfort.jpg";
 
 export const Rooms = () => {
   const isMobile = useIsMobile();
@@ -12,7 +16,7 @@ export const Rooms = () => {
       title: "Черный люкс",
       description:
         "«Черный» Люкс в стиле «лофт» с прекрасным видом на хвойный лес.",
-      imageUrl: "/img/BlackLux.jpg",
+      imageUrl: blacklux,
       link:"BlackLux",
       index: 0
     },
@@ -20,19 +24,19 @@ export const Rooms = () => {
       title: "Белый люкс",
       description:
         "Роскошный «Белый» люкс предлагает исключительный комфорт для каждого гостя",
-      imageUrl: "/img/WhiteLux.jpg",
+      imageUrl: whitelux,
       link:"WhiteLux",
     },
     {
       title: "Комфорт +",
       description: "Просторный однокомнатный номер",
-      imageUrl: "/img/ComfortPlus.jpg",
+      imageUrl: comfortplus,
       link:"ComfortPlus",
     },
     {
       title: "Комфорт",
       description: "Комфорт — уютный номер, выполненный в современном стиле.",
-      imageUrl: "/img/Comfort.jpg",
+      imageUrl: comfort,
       link:"Comfort",
     },
   ];
@@ -41,7 +45,14 @@ export const Rooms = () => {
     <section className=" bg-[#D2B6B1] px-0 py-[50px] max-sm:px-0 max-sm:py-[30px]">
         <div className="flex flex-wrap justify-around mt-[100px]">
         {accommodations.map((accommodation, index) => (
-            <AccommodationCard key={index} {...accommodation} index={index} />
+            <AccommodationCard
+              key={index}
+              index={index}
+              title={accommodation.title}
+              description={accommodation.description}
+              imageUrl={accommodation.imageUrl}
+              link={accommodation.link}
+            />
         ))}
         </div>
     </section>
