@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { HotelPOI } from '@/components/ui/HotelPOI';
+import { HotelPOI } from '@/lib/HotelPOI';
 import { 
   BedDouble, 
   Utensils, 
@@ -15,6 +14,8 @@ import {
 interface MarkerProps {
   poi: HotelPOI;
   onClick: (poi: HotelPOI) => void;
+  onMouseEnter: (poi: HotelPOI) => void;
+  onMouseLeave: () => void;
 }
 
 const iconColors = {
@@ -28,7 +29,7 @@ const iconColors = {
   sport: '#27ae60'
 };
 
-const Marker: React.FC<MarkerProps> = ({ poi, onClick }) => {
+const Marker: React.FC<MarkerProps> = ({ poi, onClick, onMouseEnter, onMouseLeave }) => {
   const getIcon = () => {
     switch (poi.type) {
       case 'room':
@@ -36,7 +37,7 @@ const Marker: React.FC<MarkerProps> = ({ poi, onClick }) => {
       case 'restaurant':
         return <Utensils size={24} className="text-white" />;
       case 'pool':
-        return <Waves size={24} className="text-white " />;
+        return <Waves size={24} className="text-white" />;
       case 'spa':
         return <Heart size={24} className="text-white" />;
       case 'parking':
@@ -56,11 +57,13 @@ const Marker: React.FC<MarkerProps> = ({ poi, onClick }) => {
 
   return (
     <g 
-      className="placemark animate-pulse duration-1500" 
+      className="placemark" 
       id={`marker-${poi.id}`} 
       data-item={poi.type} 
       data-placemark={poi.id} 
       onClick={() => onClick(poi)}
+      onMouseEnter={() => onMouseEnter(poi)}
+      onMouseLeave={onMouseLeave}
       style={{ cursor: 'pointer' }}
     >
       <circle 

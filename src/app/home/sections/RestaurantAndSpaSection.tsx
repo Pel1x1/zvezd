@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/lib/Button";
 
 export const RestaurantAndSpaSection = () => {
   const isMobile = useIsMobile();

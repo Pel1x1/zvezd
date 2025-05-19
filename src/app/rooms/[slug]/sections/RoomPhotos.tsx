@@ -31,7 +31,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
             >
               <Image
                 src={photo}
-                alt={`${room.name} - фото ${index + 1}`}
+                alt={`${room.name} - фото ${index}`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

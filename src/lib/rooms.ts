@@ -101,7 +101,7 @@ export const rooms: Room[] = [
       'Ванная комната'
     ],
     photos: [
-      '/img/Comfort.jpg',
+      '/img/Comfort.png',
       '/rooms/standard-2.jpg',
       '/rooms/standard-3.jpg',
     ],

@@ -6,7 +6,7 @@ import { AccommodationCard } from "@/app/ui/AccommodationCard";
 import blacklux from "@/app/img/BlackLux.jpg";
 import whitelux from "@/app/img/WhiteLux.jpg";
 import comfortplus from "@/app/img/ComfortPlus.jpg";
-import comfort from "@/app/img/Comfort.jpg";
+import comfort from "@/app/img/Comfort.png";
 
 export const Rooms = () => {
   const isMobile = useIsMobile();

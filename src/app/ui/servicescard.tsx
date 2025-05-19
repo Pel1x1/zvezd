@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/lib/Button";
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 

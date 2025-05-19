@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Marker from '@/app/ui/Marker';
 import Popup from '@/app/ui/Popup';
-import { HotelPOI, hotelPoints } from '@/components/ui/HotelPOI';
+import { HotelPOI, hotelPoints } from '@/lib/HotelPOI';
 import { cn } from '@/lib/utils';
 import { ZoomIn, ZoomOut, RefreshCw } from 'lucide-react';
 import { MapButton } from '@/app/ui/MapButton';
@@ -13,14 +13,16 @@ interface InteractiveMapProps {
 
 const InteractiveMap: React.FC<InteractiveMapProps> = ({ className }) => {
   const [selectedPOI, setSelectedPOI] = useState<HotelPOI | null>(null);
+  const [hoverPOI, setHoverPOI] = useState<HotelPOI | null>(null);
   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+  const [hoverPopupPosition, setHoverPopupPosition] = useState({ x: 0, y: 0 });
   const [scale, setScale] = useState(1);
   const svgRef = useRef<SVGSVGElement>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
   const handleMarkerClick = (poi: HotelPOI) => {
     setSelectedPOI(poi);
-    
+    setHoverPOI(null);
     // Calculate position for popup
     if (svgRef.current) {
       const svgRect = svgRef.current.getBoundingClientRect();
@@ -33,18 +35,26 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({ className }) => {
       });
     }
   };
+  const handleMarkerHover = (poi: HotelPOI) => {
+    if (selectedPOI) return; // Не показываем hover если открыт popup по клику
 
-  const handleZoomIn = () => {
-    setScale(prev => Math.min(prev + 0.2, 3));
+    setHoverPOI(poi);
+    
+    // Calculate position for hover popup
+    if (svgRef.current) {
+      const svgRect = svgRef.current.getBoundingClientRect();
+      const x = (poi.x / 1920) * svgRect.width;
+      const y = (poi.y / 900) * svgRect.height;
+      
+      setHoverPopupPosition({ 
+        x: x > svgRect.width / 2 ? x - 240 : x + 20, 
+        y: y > svgRect.height / 2 ? y - 90 : y 
+      });
+    }
   };
 
-  const handleZoomOut = () => {
-    setScale(prev => Math.max(prev - 0.2, 0.5));
-  };
-
-  const handleReset = () => {
-    setScale(1);
-    setSelectedPOI(null);
+  const handleMarkerLeave = () => {
+    setHoverPOI(null);
   };
 
   useEffect(() => {
@@ -83,8 +93,13 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({ className }) => {
           />
 
           {hotelPoints.map(poi => (
-            <g transform={`translate(${poi.x}, ${poi.y})`} key={poi.id}>
-              <Marker poi={poi} onClick={handleMarkerClick} />
+            <g transform={`translate(${poi.x}, ${poi.y})`} key={poi.id} >
+              <Marker 
+                poi={poi} 
+                onClick={handleMarkerClick} 
+                onMouseEnter={handleMarkerHover}
+                onMouseLeave={handleMarkerLeave}
+              />
             </g>
           ))}
         </svg>
@@ -100,6 +115,20 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({ className }) => {
             }}
           >
             <Popup poi={selectedPOI} onClose={() => setSelectedPOI(null)} />
+          </div>
+        )}
+
+        {hoverPOI && !selectedPOI && (
+          <div 
+            style={{ 
+              position: 'absolute', 
+              left: `${hoverPopupPosition.x}px`, 
+              top: `${hoverPopupPosition.y}px`,
+              transform: `scale(${1/scale})`,
+              transformOrigin: 'top left'
+            }}
+          >
+            <Popup poi={hoverPOI} onClose={() => setHoverPOI(null)} isHoverPopup={true} />
           </div>
         )}
       </div>
