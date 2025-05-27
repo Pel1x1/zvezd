@@ -61,7 +61,7 @@ const EventsSection = () => {
     <section className="py-20 px-4 bg-white/5">
       <div className="max-w-7xl mx-auto">
 
-        <div className="space-y-12">
+        <div className="space-y-[25px]">
           {events.map((event) => (
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -72,7 +72,7 @@ const EventsSection = () => {
                       <img
                         src={image}
                         alt={`${event.title} фото ${index + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-auto h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
                     </div>
