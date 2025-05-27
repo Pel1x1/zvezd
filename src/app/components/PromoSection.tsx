@@ -14,9 +14,9 @@ type CardData = {
 };
 
 const cards: CardData[] = [
-  { title: "кафе 3 котёнка", image: "/img/bg1.png", description: "", link: "" },
-  { title: "кафе 4 котёнка", image: "/img/bg2.png", description: "", link: "" },
-  { title: "кафе 5 котёнка", image: "/img/bg3.png", description: "", link: "" },
+  { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на бронирование номеров молодоженам и на годовщину свадьбы.", link: "" },
+  { title: "Скидки для именинников", image: "../img/events.jpg", description: "Скидка 10% на проживание на весь заезд.", link: "" },
+  { title: "За поводом", image: "/img/zapovod.jpg", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "" },
 ];
 
 export const PromoSection = () => {
@@ -33,25 +33,16 @@ export const PromoSection = () => {
             <div
               className={`carousel-item${idx === 0 ? " active" : ""}`}
               key={card.title}
-              style={{fontFamily: "TrajanPro3"}}
+              style={{fontFamily: "TrajanPro3", height: isMobile?"":"60vh"}}
               
             >
               <img src={card.image} className="d-block w-100" style={{height: isMobile?"23vh":""}} alt={card.title} />
               <div className="carousel-caption d-md-block top-0 mt-[5%] ">
-                <p style={{fontSize: isMobile ? "20px" : "45px"}}>{card.title}</p>
+                <p style={{fontSize: isMobile ? "15px" : "45px"}}>{card.title}</p>
                 
-                {card.description && <p>{card.description}</p>}
+                {card.description && <p style={{fontSize: isMobile ? "10px" : "25px"}}>{card.description}</p>}
 
-                <Button
-                  variant="outline"
-                  className="self-center mt-[30px] transform  text-white hover:border-white hover:cursor-pointer transition-colors duration-300"
-                  style={{borderWidth: isMobile?"2px":"4px" ,fontSize: isMobile? "10px":"20px",paddingLeft: isMobile?"10px":"60px", paddingRight: isMobile?"10px":"60px", paddingTop: isMobile?"10px":"30px", paddingBottom: isMobile?"10px":"30px"}}
-                  onClick={() => {
-                    if (card.link) window.location.href = card.link;
-                  }}
-                >
-                  Подробнее
-                </Button> 
+                
 
               </div>
             </div>
@@ -79,4 +70,14 @@ export const PromoSection = () => {
     </section>
   );
 };
+/*<Button
+                  variant="outline"
+                  className="self-center mt-[30px] transform  text-white hover:border-white hover:cursor-pointer transition-colors duration-300"
+                  style={{borderWidth: isMobile?"2px":"4px" ,fontSize: isMobile? "10px":"20px",paddingLeft: isMobile?"10px":"60px", paddingRight: isMobile?"10px":"60px", paddingTop: isMobile?"10px":"30px", paddingBottom: isMobile?"10px":"30px"}}
+                  onClick={() => {
+                    if (card.link) window.location.href = card.link;
+                  }}
+                >
+                  Подробнее
+                </Button> */
 

@@ -86,7 +86,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({ className }) => {
           ref={svgRef}
         >
           <image 
-            href="../../img/map-summer.webp" 
+            href="/img/map-summer.webp" 
             width="1920" 
             height="900" 
             preserveAspectRatio="xMidYMid meet"

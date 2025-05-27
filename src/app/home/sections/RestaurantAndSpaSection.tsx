@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { Button } from "@/lib/Button";
-
+import { useRouter } from 'next/navigation';
 export const RestaurantAndSpaSection = () => {
   const isMobile = useIsMobile();
-
+  const router = useRouter();
   return (
     <section className="bg-[rgba(210,182,177,1)] w-full px-[70px] py-[71px] max-md:max-w-full max-md:px-5 mt-[50px]">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
@@ -29,6 +29,7 @@ export const RestaurantAndSpaSection = () => {
               variant="outline"
               className="relative text-lg leading-none tracking-[2px] underline mt-4 w-fit
                         hover:text-white hover:border-white hover:underline hover:cursor-pointer transition-colors duration-300"
+                        onClick={() => router.push('/restaurant')}
             >
               Подробнее
             </Button>
@@ -53,6 +54,7 @@ export const RestaurantAndSpaSection = () => {
               variant="outline"
               className="relative text-lg leading-none tracking-[2px] underline mt-4 w-fit
                         hover:text-white hover:border-white hover:underline hover:cursor-pointer transition-colors duration-300"
+                         onClick={() => router.push('/spa')}
             >
               Подробнее
             </Button>

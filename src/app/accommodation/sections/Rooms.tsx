@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { AccommodationCard } from "@/app/ui/AccommodationCard";
-import blacklux from "@/app/img/BlackLux.jpg";
-import whitelux from "@/app/img/WhiteLux.jpg";
-import comfortplus from "@/app/img/ComfortPlus.jpg";
-import comfort from "@/app/img/Comfort.png";
+import blacklux from "@/app/img/rooms/BlackLux.webp";
+import whitelux from "@/app/img/rooms/WhiteLux.webp";
+import comfortplus from "@/app/img/rooms/ComfortPlus.webp";
+import comfort from "@/app/img/rooms/Comfort.webp";
 
 export const Rooms = () => {
   const isMobile = useIsMobile();

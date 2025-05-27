@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/app/ui/Button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import bg2 from "@/app/img/bg2.png"
+import bg2 from "@/app/img/main/bg2.webp"
 
 export const BanquetHallSection = () => {
   const isMobile = useIsMobile();

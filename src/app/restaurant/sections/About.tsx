@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-
+import Image from "next/image";
+import abresimage from "@/app/img/rest/RestPhoto.webp"
 export const About = () =>{
 
     return(
@@ -26,8 +27,8 @@ export const About = () =>{
                 </div>
             </div>
             <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
-                <img
-                src="/img/RestPhoto.png"
+                <Image
+                src={abresimage}
                 alt="Restaurant interior"
                 className="aspect-[0.9] object-contain w-full grow max-md:max-w-full max-md:mt-10 h-full"
                 style={{transform: "scale(0.9)"}}

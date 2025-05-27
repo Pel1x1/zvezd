@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import restaurant1 from "@/app/img/Restaurant.png";
+import restaurant1 from "@/app/img/rest/Restaurant.webp";
 export const Hero = () => {
   const isMobile = useIsMobile();
 

@@ -116,5 +116,35 @@ export const rooms: Room[] = [
       bedType: 'Queen Size',
       view: 'Внутренний двор'
     }
-  }
+  },
+  {
+    id: '5',
+    slug: 'shalle',
+    name: 'Апартаменты',
+    description: 'Апартаменты Берёзки',
+    price: 15000,
+    features: [
+      'Панорамные окна',
+      'Отдельная гостиная',
+      'Джакузи',
+      'Мини-кухня'
+    ],
+    photos: [
+      '/img/BlackLux.jpg',
+      '/rooms/deluxe-suite-2.jpg',
+      '/rooms/deluxe-suite-3.jpg'
+    ],
+    amenities: [
+      { name: 'Wi-Fi', icon: 'wifi' },
+      { name: 'Кондиционер', icon: 'ac' },
+      { name: 'Мини-бар', icon: 'minibar' },
+      { name: 'Сейф', icon: 'safe' }
+    ],
+    details: {
+      size: '45 м²',
+      capacity: 2,
+      bedType: 'King Size',
+      view: 'Хвойный лес'
+    }
+  },
 ]; 

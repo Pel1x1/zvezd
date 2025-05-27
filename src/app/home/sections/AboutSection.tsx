@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import rest from "@/app/img/Container (1).png"
-import rainb from "@/app/img/Frame 56 1.png"
+import rest from "@/app/img/main/Container (1).webp"
+import rainb from "@/app/img/main/Frame 56 1.webp"
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import React, { useRef, useEffect, useState } from "react";
 

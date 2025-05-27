@@ -20,7 +20,8 @@ export const Header = () => {
     { label: "ПРОЖИВАНИЕ", href: "/accommodation" },
     { label: "БРОНИРОВАНИЕ", href: "/booking" },
     { label: "SPA-КОМПЛЕКС", href: "/spa" },
-    { label: "УСЛУГИ", href: "/services" },
+    { label: "МЕРОПРИЯТИЯ", href: "/events" },
+    { label: "СВАДЬБЫ", href: "/weddings" },
     { label: "РЕСТОРАН", href: "/restaurant" },
   ];
   

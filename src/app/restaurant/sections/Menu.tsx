@@ -3,10 +3,10 @@
 import React from 'react';
 import { FoodCard } from '@/app/ui/FoodCard';
 
-import RestMenu from "@/app/img/RestMenu.png";
-import RestBreakfast from "@/app/img/RestBreakfast.png";
-import RestBanket from "@/app/img/RestBanket.png";
-import RestKids from "@/app/img/RestKids.png";
+import RestMenu from "@/app/img/rest/RestMenu.webp";
+import RestBreakfast from "@/app/img/rest/RestBreakfast.webp";
+import RestBanket from "@/app/img/rest/RestBanket.webp";
+import RestKids from "@/app/img/rest/RestKids.webp";
 
 export const Menu = () =>{
 
