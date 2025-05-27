@@ -64,7 +64,7 @@ const EventsSection = () => {
         <div className="space-y-[25px]">
           {events.map((event) => (
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              <div className="grid grid-cols-2 lg:grid-cols-2 gap-0">
                 {/* Image Gallery */}
                 <div className="grid grid-cols-2 gap-2 p-4">
                   {event.images.map((image, index) => (
