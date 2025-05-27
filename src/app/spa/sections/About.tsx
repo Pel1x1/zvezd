@@ -99,13 +99,13 @@ const Hero = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
             {services.map((service, Index) => (
-              <ServiceCard key={service.id} service={service} index={Index} />
+              <ServiceCard key={service.id} service={service} index={Index}/>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PDF Download Section */}
+      {/* PDF Download Section 
       <section className="py-16 px-4 bg-black/20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-8">Полный каталог услуг</h2>
@@ -121,20 +121,9 @@ const Hero = () => {
             Скачать каталог (PDF)
           </Button>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Contact Section */}
-      <section className="py-16 px-4 bg-black/10">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Запишитесь на процедуру</h2>
-          <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-            Наши специалисты помогут вам выбрать идеальную процедуру для достижения желаемого результата
-          </p>
-          <Button size="lg" className="text-lg px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
-            Связаться с нами
-          </Button>
-        </div>
-      </section>
+      
     </div>
   );
 };

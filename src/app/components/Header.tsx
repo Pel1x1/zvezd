@@ -16,9 +16,8 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "О НАС", href: "/about" },
     { label: "ПРОЖИВАНИЕ", href: "/accommodation" },
-    { label: "БРОНИРОВАНИЕ", href: "/booking" },
+    { label: "БАНКЕТНЫЕ ЗАЛЫ", href: "/banquethall" },
     { label: "SPA-КОМПЛЕКС", href: "/spa" },
     { label: "МЕРОПРИЯТИЯ", href: "/events" },
     { label: "СВАДЬБЫ", href: "/weddings" },

@@ -21,7 +21,7 @@ interface ServiceProps {
 const ServiceCard = ({ service, index }: ServiceProps) => {
   return (
     <Card 
-      className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300 hover-scale animate-fade-in"
+      className="bg-black/5 backdrop-blur-md border-black/10 border-[1px] hover:bg-white/5 transition-all duration-300 hover-scale animate-fade-in"
       style={{ animationDelay: `${index * 0.1}s`, fontFamily: "RobotoL" }}
     >
       <CardHeader>
@@ -34,7 +34,7 @@ const ServiceCard = ({ service, index }: ServiceProps) => {
           {service.description}
         </p>
         
-        <Separator className="bg-white/20" />
+        <Separator className="bg-black/10" />
         
         <div>
           <h4 className="text-white font-semibold mb-3">Включает в себя:</h4>
@@ -51,7 +51,7 @@ const ServiceCard = ({ service, index }: ServiceProps) => {
           </div>
         </div>
         
-        <Separator className="bg-white/20" />
+        <Separator className="bg-black/10" />
         
         <div>
           <h4 className="text-white font-semibold mb-3">Время и стоимость:</h4>
