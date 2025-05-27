@@ -11,7 +11,6 @@ export const rooms: Room[] = [
       'Панорамные окна',
       'Отдельная гостиная',
       'Джакузи',
-      'Мини-кухня'
     ],
     photos: [
       '/img/BlackLux.jpg',
