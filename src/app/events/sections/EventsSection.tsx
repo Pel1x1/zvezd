@@ -68,7 +68,7 @@ const EventsSection = () => {
                 {/* Image Gallery */}
                 <div className="grid grid-cols-2 gap-2 p-4">
                   {event.images.map((image, index) => (
-                    <div key={index} className="aspect-square relative overflow-hidden rounded-lg group">
+                    <div key={index} className="aspect-square relative overflow-hidden rounded-lg group w-full h-full">
                       <img
                         src={image}
                         alt={`${event.title} фото ${index + 1}`}
