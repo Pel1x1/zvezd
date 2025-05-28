@@ -66,10 +66,10 @@ const EventsSection = () => {
     <section className="py-20 px-4 bg-white/5">
       <div className="max-w-7xl mx-auto">
 
-        <div className="py-[25px] px-[25px]">
+        <div className="py-[25px]">
           {events.map((event) => (
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
-              <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
+              <div className="grid" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
                 <div className="grid grid-cols-2 gap-2 p-4 items-center">
                   {event.images.map((image, index) => (
