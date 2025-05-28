@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/app/ui/card";
 import { Badge } from "@/app/ui/badge";
-import { Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, Grid, MapPin, Users } from "lucide-react";
+import { useIsMobile } from "@/app/hooks/use-mobile";
+import { HoverCard } from "radix-ui";
+import { useState } from 'react';
 
 const events = [
   {
@@ -14,10 +17,10 @@ const events = [
     price: "от 4500₽ за персону",
     status: "Осталось мест: 15",
     images: [
-      "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     ]
   },
   {
@@ -48,25 +51,27 @@ const events = [
     price: "от 2500₽ за персону",
     status: "Еженедельно",
     images: [
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
     ]
   }
 ];
 
 const EventsSection = () => {
+  const isMobile = useIsMobile();
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <section className="py-20 px-4 bg-white/5">
       <div className="max-w-7xl mx-auto">
 
-        <div className="space-y-[25px]">
+        <div className="py-[25px] px-[25px]">
           {events.map((event) => (
-            <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden">
-              <div className="grid grid-cols-2 lg:grid-cols-2 gap-0">
+            <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
+              <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
-                <div className="grid grid-cols-2 gap-2 p-4">
+                <div className="grid grid-cols-2 gap-2 p-4 items-center">
                   {event.images.map((image, index) => (
                     <div key={index} className="aspect-square relative overflow-hidden rounded-lg group w-full h-full">
                       <img
@@ -82,7 +87,7 @@ const EventsSection = () => {
                 {/* Event Info */}
                 <CardContent className="p-8 flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex items-center gap-3 mb-4">
                       <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                         {event.status}
                       </Badge>
@@ -112,9 +117,15 @@ const EventsSection = () => {
                   
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-2xl font-bold">{event.price}</p>
+                      <p className="text-xl font-bold">{event.price}</p>
                     </div>
-                    <button className="bg-white text-gray-800 hover:bg-transparent transition-colors px-5 py-3 font-semibold" style={{borderRadius:"10px"}}>
+                    <button 
+                    className="transition-colors hover:bg-white/40  px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
+                    style={{
+                      borderRadius:"10px",
+                    }} 
+                    >
+                      
                       Забронировать
                     </button>
                   </div>
