@@ -26,12 +26,17 @@ const weddingServices = [
 ];
 
 const weddingGallery = [
-  "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+  "/img/weddings/weddings-1.jpg",
+  "/img/weddings/weddings-2.jpg",
+  "/img/weddings/weddings-3.jpg",
+
+  "/img/weddings/weddings-4.jpg",
+  "/img/weddings/weddings-5.jpg",
+  "/img/weddings/weddings-6.jpg",
+  
+  "/img/weddings/weddings-7.jpg",
+  "/img/weddings/weddings-8.jpg",
+  "/img/weddings/weddings-9.jpg",
 ];
 
 const WeddingsSection = () => {

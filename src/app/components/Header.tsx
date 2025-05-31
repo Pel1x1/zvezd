@@ -21,6 +21,7 @@ export const Header = () => {
     { label: "SPA-КОМПЛЕКС", href: "/spa" },
     { label: "МЕРОПРИЯТИЯ", href: "/events" },
     { label: "СВАДЬБЫ", href: "/weddings" },
+    { label: "УСЛУГИ", href: "/services" },
     { label: "РЕСТОРАН", href: "/restaurant" },
   ];
   

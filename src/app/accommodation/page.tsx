@@ -12,7 +12,6 @@ export default function AboutPage() {
       <Hero/>
       <Rooms/>
       <Shalle/>
-      <PromoSection/>
     </main>
   );
 }

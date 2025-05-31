@@ -13,7 +13,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "50%",
     icon: Percent,
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/img/rooms/BlackLux/BlackLux-2.jpg",
     badge: "Популярное",
     conditions: ["Заказ меню на сумму от 250.000", "Любое количество гостей"]
   },
@@ -24,7 +24,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "Подарки",
     icon: Gift,
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/img/rooms/WhiteLux/WhiteLux.webp",
     badge: "Свадьбам",
     conditions: ["Заказ меню на сумму от 350.000", "Любое количество гостей"]
   },
@@ -35,7 +35,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "Подарки",
     icon: Gift,
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/img/spa.webp",
     badge: "Выгодно",
     conditions: ["Заказ свадьбы", "Любое количество гостей"]
   },
@@ -46,7 +46,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "от 10%",
     icon: Percent,
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: "/img/rooms/ComfortPlus/ComfortPlus-3.jpg",
     badge: "Удобно",
     conditions: ["Посещение любого банкета в качестве гостя"]
   }
@@ -123,10 +123,10 @@ const SpecialOffers = () => {
 
         <div className="text-center mt-12">
           <p className="text-3xl opacity-90 mb-4" style={{fontFamily: "ZenAntoquie"}}>
-            Связь с банкетным менеджером
+            Связь со свадебным менеджером
           </p>
           <p className="text-2xl font-semibold">
-            <a href="tel:+79999999999" className="text-white hover:text-gray transition-colors cursor-pointer">+7 (999) 999-99-99</a>
+            <a href="tel:+79850168008" className="text-white hover:text-gray transition-colors cursor-pointer">+7 (985) 016-80-08</a>
           </p>
         </div>
       </div>

@@ -10,7 +10,6 @@ export default function RestaurantPage() {
       <Hero/>
       <About/>
       <Menu/>
-      <PromoSection/>
     </main>
   );
 }

@@ -22,12 +22,12 @@ const cards: CardData[] = [
 export const PromoSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section>
+    <section className="bg-[rgba(210,182,177,1)]">
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         strategy="afterInteractive"
       />
-      <div id="carouselExample" className="carousel slide mt-[100px]" data-bs-ride="carousel">
+      <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           {cards.map((card, idx) => (
             <div

@@ -57,7 +57,7 @@ const Marker: React.FC<MarkerProps> = ({ poi, onClick, onMouseEnter, onMouseLeav
 
   return (
     <g 
-      className="placemark" 
+      className="placemark animate-pulse" 
       id={`marker-${poi.id}`} 
       data-item={poi.type} 
       data-placemark={poi.id} 
@@ -71,7 +71,7 @@ const Marker: React.FC<MarkerProps> = ({ poi, onClick, onMouseEnter, onMouseLeav
         cy="0" 
         r="24" 
         fill="white" 
-        className="marker-pulse" 
+        className="" 
       />
       <circle 
         cx="0" 

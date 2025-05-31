@@ -8,6 +8,10 @@ import { FileText } from "lucide-react";
 import ServiceCard from "@/app/spa/sections/ServiceCard";
 import { bodyServices, faceServices, hammamServices } from "@/app/spa/sections/services";
 
+import {Card as CardSupport} from "@/app/ui/card";
+import {CardContent as  CardContentSupport} from "@/app/ui/card";
+import {Button as  ButtonSupport} from "@/lib/Button";
+
 const Hero = () => {
   const [activeCategory, setActiveCategory] = useState("body");
   const [services, setServices] = useState(bodyServices);
@@ -105,8 +109,29 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* PDF Download Section 
-      <section className="py-16 px-4 bg-black/20">
+      <section className="py-20 px-4">
+      <div className="text-center">
+          <CardSupport className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+            <CardContentSupport className="p-8">
+              <h3 className="text-3xl font-bold mt-[10px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
+              <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
+              Наш менеджер всегда готов помочь вам подобрать идеальную спа-программу, которая подарит максимум удовольствия и расслабления. Просто свяжитесь с нами — и мы сделаем всё, чтобы ваш отдых был незабываемым!
+              </p>
+              <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
+              <ButtonSupport 
+                className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
+                style={{ borderRadius:"10px" }}
+              >
+                Связаться с менеджером
+              </ButtonSupport>
+            </a>
+            </CardContentSupport>
+          </CardSupport>
+        </div>
+        </section>
+
+      {/* PDF Download Section */}
+      <section className="py-20 px-4 bg-black/10">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-8">Полный каталог услуг</h2>
           <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
@@ -121,7 +146,7 @@ const Hero = () => {
             Скачать каталог (PDF)
           </Button>
         </div>
-      </section>*/}
+      </section>
 
       
     </div>

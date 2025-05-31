@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Card, CardContent } from "@/app/ui/card";
@@ -7,64 +6,84 @@ import { Calendar, Grid, MapPin, Users } from "lucide-react";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { HoverCard } from "radix-ui";
 import { useState } from 'react';
+import { Button } from "@/lib/Button";
 
 const events = [
   {
     id: 1,
-    title: "Новогодний банкет 2024",
-    date: "31 декабря 2023",
-    time: "20:00",
-    location: "Большой зал",
+    title: "Корпортаивные мероприятия",
+    date: "Всегда",
+    time: "Всегда",
+    location: "«Звездный»",
     capacity: "до 200 гостей",
-    description: "Встретьте Новый год в роскошной атмосфере нашего банкетного комплекса. Праздничное меню от шеф-повара, живая музыка и незабываемая атмосфера.",
-    price: "от 4500₽ за персону",
-    status: "Осталось мест: 15",
+    description: "В загородном комплексе «Звездный» вы найдете все необходимое для организации незабываемого корпоративного праздника, который оставит яркие впечатления у ваших сотрудников и партнеров.",
+    price: "",
+    status: "",
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      "/img/events/event-1.webp",
+      
     ]
   },
   {
     id: 2,
-    title: "День святого Валентина",
-    date: "14 февраля 2024",
-    time: "19:00",
-    location: "Романтический зал",
-    capacity: "до 50 пар",
-    description: "Романтический ужин для влюбленных. Изысканное меню, живая музыка, декор в красно-белых тонах и особая атмосфера любви.",
-    price: "от 3500₽ за пару",
-    status: "Раннее бронирование",
+    title: "Свадьбы",
+    date: "Всегда",
+    time: "",
+    location: "«Звездный»",
+    capacity: "до 200 гостей",
+    description: "На территории загородного комплекса «Звёздный» у вас есть возможность провести свадьбу мечты. Уникальная природная атмосфера, уютные номера, живописные места для церемонии и три зала на выбор для торжественного банкета – все для вашего незабываемого события.",
+    price: "",
+    status: "Всегда",
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      "/img/weddings/weddings-2.jpg",
     ]
   },
   {
     id: 3,
-    title: "Винная дегустация",
-    date: "каждая пятница",
-    time: "18:00",
-    location: "Винный погреб",
-    capacity: "до 30 гостей",
-    description: "Познакомьтесь с лучшими винами из нашей коллекции в сопровождении сомелье. Закуски от шеф-повара и атмосфера французского винного погреба.",
-    price: "от 2500₽ за персону",
-    status: "Еженедельно",
+    title: "Банкеты",
+    date: "Всегда",
+    time: "",
+    location: "«Звездный»",
+    capacity: "до 200 гостей",
+    description: "Мы можем провести мероприятие любого формата, с любым количеством гостей и выбором блюд, и при этом гарантируем высокое качество кухни, сервиса и обслуживания. Поверьте нам заботу о вашем важном дне, и мы превратим его в незабываемый опыт.",
+    price: "",
+    status: "Всегда",
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ]
+  },
+  {
+    id: 4,
+    title: "Личное торжество",
+    date: "Всегда",
+    time: "",
+    location: "«Звездный»",
+    capacity: "до 200 гостей",
+    description: "Создайте свои незабываемые воспоминания, соберите всех близких и дорогих людей и отправьтесь провести время на природе. Мы гарантируем, что ваш отдых будет комфортным и наполненным радостными моментами.",
+    price: "",
+    status: "Всегда",
+    images: [
+      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    ]
+  },
+  {
+    id: 5,
+    title: "Детские праздники",
+    date: "Всегда",
+    time: "",
+    location: "«Звездный»",
+    capacity: "до 200 гостей",
+    description: "Лучший выбор для проведения детского праздника: выбор банкетных залов, специальное меню для взрослых и маленьких гостей, программа анимации.",
+    price: "",
+    status: "Всегда",
+    images: [
+      "/img/events/events-4.webp",
     ]
   }
 ];
 
 const EventsSection = () => {
   const isMobile = useIsMobile();
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <section className="py-20 px-4 ">
       <div className="max-w-7xl mx-auto">
@@ -74,7 +93,7 @@ const EventsSection = () => {
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
               <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
-                <div className="grid grid-cols-2 gap-2 p-4">
+                <div className={`grid gap-2 p-4 ${event.images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
                   {event.images.map((image, index) => (
                     <div key={index} className="aspect-square relative overflow-hidden rounded-lg group">
                       <img
@@ -86,6 +105,7 @@ const EventsSection = () => {
                     </div>
                   ))}
                 </div>
+
 
                 {/* Event Info */}
                 <CardContent className="px-[40px] py-[50px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
@@ -101,7 +121,7 @@ const EventsSection = () => {
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center gap-3 mt-2 mb-2">
                         <Calendar className="w-5 h-5" />
-                        <span>{event.date} в {event.time}</span>
+                        <span>{event.date}</span>
                       </div>
                       <div className="flex items-center gap-3 mt-2 mb-2">
                         <MapPin className="w-5 h-5" />
@@ -120,16 +140,22 @@ const EventsSection = () => {
                   
                   <div className="flex items-center justify-between" >
                     <div>
-                      <p className="text-xl font-bold">{event.price}</p>
+                      <p className="text-xl font-bold" style={{fontSize: isMobile? "18px" : "24px"}}>{event.price}</p>
                     </div>
-                    <button 
-                    className="transition-colors hover:bg-white/40 px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
+                    <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
+                    <Button 
+                    className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
                     style={{
                       borderRadius:"10px",
+                      fontFamily:"RobotoL",
+                      fontSize: isMobile? "12px" : "18px",
                     }} 
+                    
+
                     >
                       Забронировать
-                    </button>
+                    </Button>
+                    </a>
                   </div>
                 </CardContent>
               </div>
@@ -138,17 +164,22 @@ const EventsSection = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
             <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mb-6 mt-6"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
-              <p className="text-lg opacity-90 mb-6 mt-6"  style={{fontFamily: "RobotoL"}}>
+              <h3 className="text-3xl font-bold mt-[10px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
+              <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
                 Хотите организовать собственное мероприятие?<br/> Мы поможем воплотить любую идею в жизнь. 
                 Корпоративы, дни рождения, юбилеи - каждое событие станет особенным.
               </p>
-              <button className="bg-white mt-6 mb-6 text-gray-800 hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold" style={{borderRadius:"10px"}}> 
+              <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
+              <Button 
+                className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
+                style={{ borderRadius:"10px" }}
+              >
                 Обсудить мероприятие
-              </button>
+              </Button>
+            </a>
             </CardContent>
           </Card>
         </div>

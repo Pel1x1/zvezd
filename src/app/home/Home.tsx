@@ -23,7 +23,6 @@ export default function HomePage() {
           <RestaurantAndSpaSection />
           <RoomSection />
           <BanquetHallSection />
-          <PromoSection />
         </main>
       </div>
     </div>

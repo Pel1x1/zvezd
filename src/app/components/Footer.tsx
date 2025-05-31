@@ -23,9 +23,11 @@ export const Footer = () => {
       <div className="text-[rgba(242,215,210,1)] leading-[21px] mt-[18px]">
         141143, Московская область, г. Щёлково,д. Шевёлкино, 1
       </div>
-      <div className="text-[rgba(210,182,177,1)] leading-none mt-[21px]">
-        © 2025. ЗАГОРОДНЫЙ КОМПЛЕКС «ЗВЁЗДНЫЙ»
+      <div className="text-[rgba(210,182,177,1)] leading-none mt-[21px] flex justify-between">
+        <p>© 2025. ЗАГОРОДНЫЙ КОМПЛЕКС «ЗВЁЗДНЫЙ»</p>
+        <p className="text-[14px]">Made by "K<span className="text-[10px]">&</span>K"</p>
       </div>
+      
     </footer>
 
   );
