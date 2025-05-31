@@ -88,7 +88,7 @@ const EventsSection = () => {
                 <CardContent className="p-8 flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
                     <div className="flex items-center gap-3 mb-4">
-                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
                         {event.status}
                       </Badge>
                     </div>
@@ -96,15 +96,15 @@ const EventsSection = () => {
                     <h3 className="text-4xl font-bold mb-4" style={{fontFamily: "ZenAntoquie"}}>{event.title}</h3>
                     
                     <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 mt-2 mb-2">
                         <Calendar className="w-5 h-5" />
                         <span>{event.date} в {event.time}</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 mt-2 mb-2">
                         <MapPin className="w-5 h-5" />
                         <span>{event.location}</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 mt-2 mb-2">
                         <Users className="w-5 h-5" />
                         <span>{event.capacity}</span>
                       </div>
@@ -115,7 +115,7 @@ const EventsSection = () => {
                     </p>
                   </div>
                   
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mb-6" >
                     <div>
                       <p className="text-xl font-bold">{event.price}</p>
                     </div>
