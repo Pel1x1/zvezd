@@ -66,7 +66,7 @@ const EventsSection = () => {
     <section className="py-20 px-4 bg-white/5">
       <div className="max-w-7xl mx-auto">
 
-        <div className="py-[25px]">
+        <div className="space-y-16">
           {events.map((event) => (
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
               <div className="grid" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
@@ -156,3 +156,4 @@ const EventsSection = () => {
 };
 
 export default EventsSection;
+
