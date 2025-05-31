@@ -120,7 +120,7 @@ const EventsSection = () => {
                       <p className="text-xl font-bold">{event.price}</p>
                     </div>
                     <button 
-                    className="transition-colors hover:bg-white/40  px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
+                    className="transition-colors hover:bg-white/40 mr-6 px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
                     style={{
                       borderRadius:"10px",
                     }} 
