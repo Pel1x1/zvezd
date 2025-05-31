@@ -115,12 +115,12 @@ const EventsSection = () => {
                     </p>
                   </div>
                   
-                  <div className="flex items-center justify-between mb-6" >
+                  <div className="flex items-center justify-between mb-6 mr-6 " >
                     <div>
                       <p className="text-xl font-bold">{event.price}</p>
                     </div>
                     <button 
-                    className="transition-colors hover:bg-white/40 mr-6 px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
+                    className="transition-colors hover:bg-white/40 px-5 py-3 font-semibold text-gray-800 border-[2px] border-white" 
                     style={{
                       borderRadius:"10px",
                     }} 
@@ -139,12 +139,12 @@ const EventsSection = () => {
         <div className="mt-16 text-center">
           <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
             <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mb-4"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
-              <p className="text-lg opacity-90 mb-6"  style={{fontFamily: "RobotoL"}}>
-                Хотите организовать собственное мероприятие? Мы поможем воплотить любую идею в жизнь. 
+              <h3 className="text-3xl font-bold mb-6 mt-6"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
+              <p className="text-lg opacity-90 mb-6 mt-6"  style={{fontFamily: "RobotoL"}}>
+                Хотите организовать собственное мероприятие?<br/> Мы поможем воплотить любую идею в жизнь. 
                 Корпоративы, дни рождения, юбилеи - каждое событие станет особенным.
               </p>
-              <button className="bg-white text-gray-800 hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold" style={{borderRadius:"10px"}}> 
+              <button className="bg-white mt-6 mb-6 text-gray-800 hover:bg-gray-100 transition-colors px-8 py-3 rounded-lg font-semibold" style={{borderRadius:"10px"}}> 
                 Обсудить мероприятие
               </button>
             </CardContent>
