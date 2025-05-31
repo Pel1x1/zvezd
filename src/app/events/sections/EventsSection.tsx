@@ -88,7 +88,7 @@ const EventsSection = () => {
                 </div>
 
                 {/* Event Info */}
-                <CardContent className="p-8 flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
+                <CardContent className="px-[30px] py-[40px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
