@@ -1,3 +1,6 @@
+
+"use client";
+
 import { Card, CardContent } from "@/app/ui/card";
 import { Badge } from "@/app/ui/badge";
 import { Calendar, Grid, MapPin, Users } from "lucide-react";
@@ -63,17 +66,17 @@ const EventsSection = () => {
   const isMobile = useIsMobile();
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <section className="py-20 px-4 bg-white/5">
+    <section className="py-20 px-4 ">
       <div className="max-w-7xl mx-auto">
 
-        <div className="space-y-16">
+        <div className="space-y-12">
           {events.map((event) => (
             <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
-              <div className="grid" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
+              <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
-                <div className="grid grid-cols-2 gap-2 p-4 items-center">
+                <div className="grid grid-cols-2 gap-2 p-4">
                   {event.images.map((image, index) => (
-                    <div key={index} className="aspect-square relative overflow-hidden rounded-lg group w-full h-full">
+                    <div key={index} className="aspect-square relative overflow-hidden rounded-lg group">
                       <img
                         src={image}
                         alt={`${event.title} фото ${index + 1}`}
@@ -87,7 +90,7 @@ const EventsSection = () => {
                 {/* Event Info */}
                 <CardContent className="p-8 flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center gap-2 mb-4">
                       <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
                         {event.status}
                       </Badge>
@@ -115,7 +118,7 @@ const EventsSection = () => {
                     </p>
                   </div>
                   
-                  <div className="flex items-center justify-between mb-6 mr-6 " >
+                  <div className="flex items-center justify-between" >
                     <div>
                       <p className="text-xl font-bold">{event.price}</p>
                     </div>
@@ -125,7 +128,6 @@ const EventsSection = () => {
                       borderRadius:"10px",
                     }} 
                     >
-                      
                       Забронировать
                     </button>
                   </div>
