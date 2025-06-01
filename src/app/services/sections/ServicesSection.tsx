@@ -99,17 +99,9 @@ const ServicesSection = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Услуги</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Дополните ваше мероприятие нашими эксклюзивными услугами. 
-            От активного отдыха до деловых встреч - мы предоставляем всё необходимое для комфортного времяпрепровождения.
-          </p>
-        </div>
-
         <div className="space-y-12">
           {services.map((service) => (
-            <Card key={service.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden" style={{fontFamily: "RobotoL"}}>
+            <Card key={service.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]" style={{fontFamily: "RobotoL"}}>
               <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
                 <div className={`grid gap-2 p-4 ${service.images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>

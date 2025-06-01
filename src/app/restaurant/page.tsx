@@ -6,7 +6,7 @@ import {Menu} from "./sections/Menu"
 import { PromoSection } from "@/app/components/PromoSection";
 export default function RestaurantPage() {
   return (
-    <main>
+    <main className="bg-[rgba(210,182,177,1)]">
       <Hero/>
       <About/>
       <Menu/>

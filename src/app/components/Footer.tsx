@@ -1,10 +1,13 @@
 "use client";
 
 import "../components/styles.css";
+import { useIsMobile } from "@/app/hooks/use-mobile";
 
 export const Footer = () => {
+    const isMobile = useIsMobile();
+  
   return (
-    <footer className="bg-black flex w-full flex-col text-sm font-light tracking-[2px] px-[51px] py-[77px] max-md:max-w-full max-md:px-5">
+    <footer className="bg-black flex w-full flex-col text-sm font-light tracking-[2px] px-[51px] pt-[77px] pb-3 max-md:max-w-full max-md:px-5">
       <div className="text-[rgba(210,182,177,1)]">
       <a href="https://t.me" className="footer-link">TELEGRAM</a> | 
         <a href="https://vk.ru" className="footer-link hover:text-white ml-[5px]">VK</a>
@@ -24,10 +27,13 @@ export const Footer = () => {
         141143, Московская область, г. Щёлково,д. Шевёлкино, 1
       </div>
       <div className="text-[rgba(210,182,177,1)] leading-none mt-[21px] flex justify-between">
-        <p>© 2025. ЗАГОРОДНЫЙ КОМПЛЕКС «ЗВЁЗДНЫЙ»</p>
-        <p className="text-[14px]">Made by "K<span className="text-[10px]">&</span>K"</p>
+        <p className="" style={{fontSize: isMobile?"10px":"15px"}}>© 2025. ЗАГОРОДНЫЙ КОМПЛЕКС «ЗВЁЗДНЫЙ»</p>
+        <a href="https://pel1x1.ru" className="footer-link">
+          <p className="text-right whitespace-nowrap flex-shrink-0" style={{fontSize: isMobile?"10px":"15px"}}>
+            Made by "K<span className="text-[10px]">&</span>K"</p>
+        </a>
       </div>
-      
+
     </footer>
 
   );

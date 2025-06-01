@@ -14,22 +14,20 @@ export const rooms: Room[] = [
     ],
     photos: [
       '/img/rooms/BlackLux/BlackLux.webp',
-      '/img/rooms/BlackLux/BlackLux-11.jpg',
-      '/img/rooms/BlackLux/BlackLux-2.jpg',
+      '/img/rooms/BlackLux/BlackLux-11.webp',
+      '/img/rooms/BlackLux/BlackLux-2.webp',
 
-      '/img/rooms/BlackLux/BlackLux-3.jpg',
-      '/img/rooms/BlackLux/BlackLux-4.jpg',
-      '/img/rooms/BlackLux/BlackLux-5.jpg',
+      '/img/rooms/BlackLux/BlackLux-3.webp',
+      '/img/rooms/BlackLux/BlackLux-4.webp',
+      '/img/rooms/BlackLux/BlackLux-5.webp',
 
-      '/img/rooms/BlackLux/BlackLux-6.jpg',
-      '/img/rooms/BlackLux/BlackLux-12.jpg',
-      '/img/rooms/BlackLux/BlackLux-7.jpg',
+      '/img/rooms/BlackLux/BlackLux-6.webp',
+      '/img/rooms/BlackLux/BlackLux-12.webp',
+      '/img/rooms/BlackLux/BlackLux-7.webp',
 
-      '/img/rooms/BlackLux/BlackLux-8.jpg',
-      '/img/rooms/BlackLux/BlackLux-9.jpg',
-      '/img/rooms/BlackLux/BlackLux-10.jpg',
-
-      '/img/rooms/BlackLux/BlackLux-13.jpg',
+      '/img/rooms/BlackLux/BlackLux-8.webp',
+      '/img/rooms/BlackLux/BlackLux-13.webp',
+      '/img/rooms/BlackLux/BlackLux-10.webp',
 
     ],
     amenities: [
@@ -98,24 +96,24 @@ export const rooms: Room[] = [
     ],
     photos: [
       '/img/rooms/ComfortPlus/ComfortPlus.webp',
-      '/img/rooms/ComfortPlus/ComfortPlus-3.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-4.jpg',
+      '/img/rooms/ComfortPlus/ComfortPlus-3.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-4.webp',
 
-      '/img/rooms/ComfortPlus/ComfortPlus-5.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-6.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-7.jpg',
+      '/img/rooms/ComfortPlus/ComfortPlus-5.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-6.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-7.webp',
 
-      '/img/rooms/ComfortPlus/ComfortPlus-8.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-9.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-10.jpg',
+      '/img/rooms/ComfortPlus/ComfortPlus-8.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-9.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-10.webp',
 
-      '/img/rooms/ComfortPlus/ComfortPlus-14.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-15.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-16.jpg',
+      '/img/rooms/ComfortPlus/ComfortPlus-14.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-15.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-16.webp',
 
-      '/img/rooms/ComfortPlus/ComfortPlus-11.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-12.jpg',
-      '/img/rooms/ComfortPlus/ComfortPlus-13.jpg',
+      '/img/rooms/ComfortPlus/ComfortPlus-11.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-12.webp',
+      '/img/rooms/ComfortPlus/ComfortPlus-13.webp',
     ],
     amenities: [
       { name: 'Wi-Fi', icon: 'wifi' },
@@ -142,17 +140,17 @@ export const rooms: Room[] = [
     ],
     photos: [
       '/img/rooms/Comfort/Comfort.webp',
-      '/img/rooms/Comfort/Comfort-2.jpg',
-      '/img/rooms/Comfort/Comfort-3.jpg',
+      '/img/rooms/Comfort/Comfort-2.webp',
+      '/img/rooms/Comfort/Comfort-3.webp',
 
-      '/img/rooms/Comfort/Comfort-4.jpg',
-      '/img/rooms/Comfort/Comfort-6.jpg',
-      '/img/rooms/Comfort/Comfort-5.jpg',
+      '/img/rooms/Comfort/Comfort-4.webp',
+      '/img/rooms/Comfort/Comfort-6.webp',
+      '/img/rooms/Comfort/Comfort-5.webp',
 
 
-      '/img/rooms/Comfort/Comfort-7.jpg',
-      '/img/rooms/Comfort/Comfort-8.jpg',
-      '/img/rooms/Comfort/Comfort-9.jpg',
+      '/img/rooms/Comfort/Comfort-7.webp',
+      '/img/rooms/Comfort/Comfort-8.webp',
+      '/img/rooms/Comfort/Comfort-9.webp',
     ],
     amenities: [
       { name: 'Wi-Fi', icon: 'wifi' },
@@ -178,29 +176,29 @@ export const rooms: Room[] = [
       'Мини-кухня'
     ],
     photos: [
-      '/img/rooms/Shalle/shalle.jpg',
-      '/img/rooms/Shalle/shalle-2.jpg',
-      '/img/rooms/Shalle/shalle-3.jpg',
+      '/img/rooms/Shalle/shalle.webp',
+      '/img/rooms/Shalle/shalle-2.webp',
+      '/img/rooms/Shalle/shalle-3.webp',
 
-      '/img/rooms/Shalle/shalle-3.jpg',
-      '/img/rooms/Shalle/shalle-4.jpg',
-      '/img/rooms/Shalle/shalle-5.jpg',
+      '/img/rooms/Shalle/shalle-3.webp',
+      '/img/rooms/Shalle/shalle-4.webp',
+      '/img/rooms/Shalle/shalle-5.webp',
 
-      '/img/rooms/Shalle/shalle-11.jpg',
-      '/img/rooms/Shalle/shalle-12.jpg',
-      '/img/rooms/Shalle/shalle-13.jpg',
+      '/img/rooms/Shalle/shalle-11.webp',
+      '/img/rooms/Shalle/shalle-12.webp',
+      '/img/rooms/Shalle/shalle-13.webp',
 
-      '/img/rooms/Shalle/shalle-14.jpg',
-      '/img/rooms/Shalle/shalle-15.jpg',
-      '/img/rooms/Shalle/shalle-16.jpg',
+      '/img/rooms/Shalle/shalle-14.webp',
+      '/img/rooms/Shalle/shalle-15.webp',
+      '/img/rooms/Shalle/shalle-16.webp',
       
-      '/img/rooms/Shalle/shalle-6.jpg',
-      '/img/rooms/Shalle/shalle-10.jpg',
-      '/img/rooms/Shalle/shalle-9.jpg',
+      '/img/rooms/Shalle/shalle-6.webp',
+      '/img/rooms/Shalle/shalle-10.webp',
+      '/img/rooms/Shalle/shalle-9.webp',
 
-      '/img/rooms/Shalle/shalle-17.jpg',
-      '/img/rooms/Shalle/shalle-18.jpg',
-      '/img/rooms/Shalle/shalle-19.jpg',
+      '/img/rooms/Shalle/shalle-17.webp',
+      '/img/rooms/Shalle/shalle-18.webp',
+      '/img/rooms/Shalle/shalle-19.webp',
 
 
     ],
