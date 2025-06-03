@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/app/ui/card";
 import { Badge } from "@/app/ui/badge";
 import { Clock, MapPin, DollarSign } from "lucide-react";
-import { Button } from "@/lib/Button";
+import { Button } from "@/app/spa/sections/button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { useState } from 'react';
 const services = [
@@ -118,10 +118,10 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Service Info */}
-                <CardContent className="p-8 flex flex-col justify-between">
+                <CardContent className="px-[40px] py-[50px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
                     <div className="flex items-center gap-2 mb-4">
-                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
+                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
                         {service.status}
                       </Badge>
                     </div>
@@ -163,17 +163,20 @@ const ServicesSection = () => {
                   
                   <div className="flex items-center justify-between">
                     <div>
-                      {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (<p className="text-sm opacity-75">от {service.pricing.weekdays}</p>) : (<span>Договорная</span>)}
+                      {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (<p className="text-xl font-bold" style={{fontSize: isMobile? "18px" : "24px"}}>от {service.pricing.weekdays}</p>) : (<span>Договорная</span>)}
                     </div>
-                    <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
-                    <Button className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
-                    style={{
-                      borderRadius:"10px",
-                      fontFamily:"RobotoL",
-                      fontSize: isMobile? "12px" : "18px",
-                    }} >
+                    <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block' }}>
+                    <Button
+                      size="lg"
+                      className="text-lg px-12 py-4 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
+                      style={{
+                        borderRadius:"10px",
+                        fontFamily:"RobotoL",
+                        fontSize: isMobile? "22px" : "20px",
+                      }}>
                       Забронировать
-                    </Button></a>
+                    </Button>
+                    </a>
                   </div>
                 </CardContent>
               </div>
@@ -183,18 +186,21 @@ const ServicesSection = () => {
 
         {/* Additional Info */}
         <div className="text-center mt-[50px]">
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mt-[10px]">Индивидуальные услуги</h3>
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
+            <CardContent className="p-8 container mx-auto text-center">
+              <h3 className="text-4xl font-bold mt-[20px]">Индивидуальные услуги</h3>
               <p className="text-lg opacity-90 mt-[10px]">
                 Нужна особенная услуга? Мы готовы обсудить индивидуальные предложения 
                 и создать идеальные условия для вашего мероприятия.
               </p>
-              <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
-              <Button 
-                    className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
-                style={{borderRadius:"10px",}}>                Обсудить услуги
-              </Button></a>
+              <a href="tel:+79850168008" className="footer-link " style={{ display: 'inline-block', borderRadius: "15px" }}>
+                <Button
+                  style={{borderRadius: "15px"}}
+                  size="lg"
+                  className="text-lg px-12 py-4 bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex gap-3 mx-auto mb-[20px] ml-[0px]">
+                  Обсудить услуги
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </div>
