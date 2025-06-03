@@ -47,10 +47,9 @@ const Hero = () => {
   };
 
   const handleDownloadPDF = () => {
-    // Создаем временную ссылку для скачивания PDF
     const link = document.createElement('a');
-    link.href = './Прайс Звездный 26.02.25.pdf'; // Путь к PDF файлу
-    link.download = './Прайс Звездный 26.02.25.pdf';
+    link.href = './SpaPrices.pdf';
+    link.setAttribute('download', 'SpaPricesZvezd.pdf');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -110,20 +109,21 @@ const Hero = () => {
       </section>
 
       <section className="py-20 px-4">
-      <div className="text-center">
-          <CardSupport className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+      <div className="text-center space-y-12">
+          <CardSupport className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
             <CardContentSupport className="p-8">
-              <h3 className="text-3xl font-bold mt-[10px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
+              <h3 className="text-3xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
               Наш менеджер всегда готов помочь вам подобрать идеальную спа-программу, которая подарит максимум удовольствия и расслабления. Просто свяжитесь с нами — и мы сделаем всё, чтобы ваш отдых был незабываемым!
               </p>
-              <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
-              <ButtonSupport 
-                className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
-                style={{ borderRadius:"10px" }}
+              <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block', borderRadius: "15px" }}>
+              <Button 
+                size="lg" 
+                style={{borderRadius: "15px"}}
+                className="text-lg px-12 py-4 bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
               >
-                Связаться с менеджером
-              </ButtonSupport>
+                Cвязаться с менеджером
+              </Button>
             </a>
             </CardContentSupport>
           </CardSupport>
@@ -139,6 +139,8 @@ const Hero = () => {
           </p>
           <Button 
             onClick={handleDownloadPDF}
+            style={{borderRadius: "15px"}}
+
             size="lg" 
             className="text-lg px-12 py-4 bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto"
           >
