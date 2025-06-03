@@ -21,7 +21,7 @@ export default async function RoomPage({ params }: PageProps) {
   }
 
   return (
-    <main>
+    <main className='bg-[#D2B6B1]'>
       <RoomHero room={room}/>
       <RoomDetails room={room} />
       <RoomFeature room={room} />

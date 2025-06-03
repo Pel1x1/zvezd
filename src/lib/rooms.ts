@@ -166,32 +166,16 @@ export const rooms: Room[] = [
   },
   {
     id: '5',
-    slug: 'shalle',
+    slug: 'shalle1',
     name: 'Апартаменты',
-    description: 'Апартаменты Берёзки',
+    description: 'Апартаменты Берёзки однокомнатные',
     price: 15000,
     features: [
       'Панорамные окна',
-      'Отдельная гостиная',
-      'Мини-кухня'
+      'Мини-кухня',
+      'Веранда'
     ],
     photos: [
-      '/img/rooms/Shalle/shalle.webp',
-      '/img/rooms/Shalle/shalle-2.webp',
-      '/img/rooms/Shalle/shalle-3.webp',
-
-      '/img/rooms/Shalle/shalle-3.webp',
-      '/img/rooms/Shalle/shalle-4.webp',
-      '/img/rooms/Shalle/shalle-5.webp',
-
-      '/img/rooms/Shalle/shalle-11.webp',
-      '/img/rooms/Shalle/shalle-12.webp',
-      '/img/rooms/Shalle/shalle-13.webp',
-
-      '/img/rooms/Shalle/shalle-14.webp',
-      '/img/rooms/Shalle/shalle-15.webp',
-      '/img/rooms/Shalle/shalle-16.webp',
-      
       '/img/rooms/Shalle/shalle-6.webp',
       '/img/rooms/Shalle/shalle-10.webp',
       '/img/rooms/Shalle/shalle-9.webp',
@@ -200,19 +184,74 @@ export const rooms: Room[] = [
       '/img/rooms/Shalle/shalle-18.webp',
       '/img/rooms/Shalle/shalle-19.webp',
 
-
+      '/img/rooms/Shalle/shalle-20.webp',
+      '/img/rooms/Shalle/shalle-21.webp',
     ],
     amenities: [
       { name: 'Wi-Fi', icon: 'wifi' },
       { name: 'Кондиционер', icon: 'ac' },
       { name: 'Мини-бар', icon: 'minibar' },
-      { name: 'Сейф', icon: 'safe' }
+      { name: 'Сейф', icon: 'safe' },
+      { name: 'Холодильник', icon: 'safe' },
+      { name: 'Кухня', icon: 'safe' },
+      { name: 'Ортопедический матрас', icon: 'safe' },
+      { name: 'Теплый пол', icon: 'safe' },
     ],
     details: {
-      size: '45 м²',
+      size: '35 м²',
+      capacity: 2,
+      bedType: 'Queen Size',
+      view: 'Хвойный лес или парк',
+    }
+  },
+  {
+    id: '6',
+    slug: 'shalle2',
+    name: 'Апартаменты 2',
+    description: 'Апартаменты Берёзки двухкомнатные',
+    price: 15000,
+    features: [
+      'Панорамные окна',
+      'Отдельная гостиная',
+      'Мини-кухня',
+      'Терраса'
+    ],
+    photos: [
+      '/img/rooms/Shalle/shalle.webp',
+      '/img/rooms/Shalle/shalle-2.webp',
+      '/img/rooms/Shalle/shalle-3.webp',
+
+      '/img/rooms/Shalle/shalle-4.webp',
+      '/img/rooms/Shalle/shalle-5.webp',
+      '/img/rooms/Shalle/shalle-11.webp',
+
+      '/img/rooms/Shalle/shalle-12.webp',
+      '/img/rooms/Shalle/shalle-13.webp',
+      '/img/rooms/Shalle/shalle-14.webp',
+
+      '/img/rooms/Shalle/shalle-15.webp',
+      '/img/rooms/Shalle/shalle-16.webp',
+      '/img/rooms/Shalle/shalle-20.webp',
+
+      '/img/rooms/Shalle/shalle-21.webp',
+      '/img/rooms/Shalle/shalle-22.webp',
+      '/img/rooms/Shalle/shalle-23.webp',
+    ],
+    amenities: [
+      { name: 'Wi-Fi', icon: 'wifi' },
+      { name: 'Кондиционер', icon: 'ac' },
+      { name: 'Мини-бар', icon: 'minibar' },
+      { name: 'Сейф', icon: 'safe' },
+      { name: 'Холодильник', icon: 'safe' },
+      { name: 'Кухня', icon: 'safe' },
+      { name: 'Ортопедический матрас', icon: 'safe' },
+      { name: 'Теплый пол', icon: 'safe' },
+    ],
+    details: {
+      size: '70 м²',
       capacity: 2,
       bedType: 'King Size',
-      view: 'Хвойный лес'
+      view: 'Хвойный лес или парк'
     }
   },
 ]; 

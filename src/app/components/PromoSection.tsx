@@ -33,17 +33,24 @@ export const PromoSection = () => {
             <div
               className={`carousel-item${idx === 0 ? " active" : ""}`}
               key={card.title}
-              style={{fontFamily: "TrajanPro3", height: isMobile?"":"60vh"}}
-              
+              style={{fontFamily: "TrajanPro3", height: isMobile?"":"45vh"}}
             >
               <img src={card.image} className="d-block w-100" style={{height: isMobile?"23vh":""}} alt={card.title} />
-              <div className="carousel-caption d-md-block top-0 mt-[5%] ">
-                <p style={{fontSize: isMobile ? "15px" : "45px"}}>{card.title}</p>
-                
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: isMobile ? "23vh" : "45vh", // совпадает с высотой img или контейнера
+                  backgroundColor: "rgba(0, 0, 0, 0.4)", // чёрный с прозрачностью 40%
+                  pointerEvents: "none", // чтобы оверлей не мешал кликам
+                  zIndex: 1,
+                }}
+              />
+              <div className="carousel-caption d-md-block top-0 mt-[5%] " style={{zIndex: 2}}>
+                <p style={{fontSize: isMobile ? "15px" : "45px"}}>{card.title}</p>   
                 {card.description && <p style={{fontSize: isMobile ? "10px" : "25px"}}>{card.description}</p>}
-
-                
-
               </div>
             </div>
           ))}

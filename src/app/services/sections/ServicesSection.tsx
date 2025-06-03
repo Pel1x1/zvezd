@@ -163,7 +163,7 @@ const ServicesSection = () => {
                   
                   <div className="flex items-center justify-between">
                     <div>
-                      {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (<p className="text-xl font-bold" style={{fontSize: isMobile? "18px" : "24px"}}>от {service.pricing.weekdays}</p>) : (<span>Договорная</span>)}
+                      {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (<p className="text-xl font-bold" style={{fontSize: isMobile? "15px" : "24px"}}>от {service.pricing.weekdays}</p>) : (<span className="text-sm"></span>)}
                     </div>
                     <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block' }}>
                     <Button
