@@ -162,8 +162,8 @@ const EventsSection = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="text-center">
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+        <div className="text-center space-y-12">
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
             <CardContent className="p-8">
               <h3 className="text-3xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
