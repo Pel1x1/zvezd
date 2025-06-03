@@ -111,8 +111,8 @@ const Hero = () => {
       <section className="py-20 px-4">
       <div className="text-center space-y-12 ">
           <CardSupport className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4 max-w-7xl mx-auto">
-            <CardContentSupport className="p-8">
-              <h3 className="text-3xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
+            <CardContentSupport className="p-8 container mx-auto text-center">
+              <h3 className="text-4xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
               Наш менеджер всегда готов помочь вам подобрать идеальную спа-программу, которая подарит максимум удовольствия и расслабления. Просто свяжитесь с нами — и мы сделаем всё, чтобы ваш отдых был незабываемым!
               </p>

@@ -6,7 +6,7 @@ import { Calendar, Grid, MapPin, Users } from "lucide-react";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { HoverCard } from "radix-ui";
 import { useState } from 'react';
-import { Button } from "@/lib/Button";
+import { Button } from "@/app/spa/sections/button";
 
 const events = [
   {
@@ -105,8 +105,6 @@ const EventsSection = () => {
                     </div>
                   ))}
                 </div>
-
-
                 {/* Event Info */}
                 <CardContent className="px-[40px] py-[50px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
@@ -144,11 +142,12 @@ const EventsSection = () => {
                     </div>
                     <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block' }}>
                     <Button 
-                    className="text-lg px-11 py-2.5 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
+                     size="lg" 
+                     className="text-lg px-12 py-4 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
                     style={{
                       borderRadius:"10px",
                       fontFamily:"RobotoL",
-                      fontSize: isMobile? "12px" : "20px",
+                      fontSize: isMobile? "22px" : "20px",
                     }} 
                     >
                       Забронировать
@@ -164,16 +163,17 @@ const EventsSection = () => {
         {/* Additional Info */}
         <div className="text-center space-y-12">
           <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
-            <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
+            <CardContent className="p-8 container mx-auto text-center">
+              <h3 className="text-4xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
                 Хотите организовать собственное мероприятие?<br/> Мы поможем воплотить любую идею в жизнь. 
                 Корпоративы, дни рождения, юбилеи - каждое событие станет особенным.
               </p>
-              <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block', borderRadius: "15px" }}>
+              <a href="tel:+79850168008" className="footer-link " style={{ display: 'inline-block', borderRadius: "15px" }}>
               <Button 
                   style={{borderRadius: "15px"}}
-                  className="text-lg px-11 py-2.5 bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
+                   size="lg" 
+                    className="text-lg px-12 py-4   bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex gap-3 mx-auto mb-[20px] ml-[0px]"
                 >
                   Cвязаться с менеджером
                 </Button>
