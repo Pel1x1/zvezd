@@ -18,7 +18,7 @@ export default function HomePage() {
         <main>
           <Hero />
           <AboutSection />
-          <InteractiveMap/>
+          {/*<InteractiveMap/>*/}
           <TerritorySection/>
           <RestaurantAndSpaSection />
           <RoomSection />

@@ -18,7 +18,7 @@ const events = [
     capacity: "до 200 гостей",
     description: "В загородном комплексе «Звездный» вы найдете все необходимое для организации незабываемого корпоративного праздника, который оставит яркие впечатления у ваших сотрудников и партнеров.",
     price: "",
-    status: "",
+    status: "Всегда",
     images: [
       "/img/events/event-1.webp",
       
@@ -35,7 +35,7 @@ const events = [
     price: "",
     status: "Всегда",
     images: [
-      "/img/weddings/weddings-2.jpg",
+      "/img/weddings/weddings-2.webp",
     ]
   },
   {
@@ -49,7 +49,7 @@ const events = [
     price: "",
     status: "Всегда",
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "/img/bankets/banketWhite-1.jpg",
     ]
   },
   {
@@ -63,7 +63,7 @@ const events = [
     price: "",
     status: "Всегда",
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "/img/bankets/banketEmerald-2.jpg",
     ]
   },
   {
@@ -167,18 +167,18 @@ const EventsSection = () => {
         <div className="text-center">
           <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
             <CardContent className="p-8">
-              <h3 className="text-3xl font-bold mt-[10px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
+              <h3 className="text-3xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>
                 Хотите организовать собственное мероприятие?<br/> Мы поможем воплотить любую идею в жизнь. 
                 Корпоративы, дни рождения, юбилеи - каждое событие станет особенным.
               </p>
-              <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
+              <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block', borderRadius: "15px" }}>
               <Button 
-                className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
-                style={{ borderRadius:"10px" }}
-              >
-                Обсудить мероприятие
-              </Button>
+                  style={{borderRadius: "15px"}}
+                  className="text-lg px-11 py-2.5 bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
+                >
+                  Cвязаться с менеджером
+                </Button>
             </a>
             </CardContent>
           </Card>
