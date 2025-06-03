@@ -142,16 +142,14 @@ const EventsSection = () => {
                     <div>
                       <p className="text-xl font-bold" style={{fontSize: isMobile? "18px" : "24px"}}>{event.price}</p>
                     </div>
-                    <a href="tel:+79850168008" style={{ display: 'inline-block' }}>
+                    <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block' }}>
                     <Button 
-                    className="transition-colors hover:bg-white/40 px-3 py-2.5 md:px-4 md:py-3 font-semibold text-4xl text-gray-800 border-[1.5px] border-white" 
+                    className="text-lg px-11 py-2.5 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
                     style={{
                       borderRadius:"10px",
                       fontFamily:"RobotoL",
-                      fontSize: isMobile? "12px" : "18px",
+                      fontSize: isMobile? "12px" : "20px",
                     }} 
-                    
-
                     >
                       Забронировать
                     </Button>
