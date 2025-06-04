@@ -9,10 +9,10 @@ export const BanquetHallSection = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mb-[100px]  mt-[100px] max-md:max-w-full max-md:mt-10">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mt-[100px] max-md:max-w-full max-md:mt-10">
+      <div className="gap-5 flex max-md:flex-col max-md:items-stretch mb-[100px]">
         {/* Текст слева - показываем только на десктопе */}
-        <div className="w-6/12 max-md:hidden">
+        <div className="w-6/12 max-md:hidden ">
           <div className="flex flex-col self-stretch text-black leading-none my-auto">
             <h2 className="font-medium uppercase" style={{ fontSize: isMobile ? "20px" : "35px" }}>
               Банкетные залы
