@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import rest from "@/app/img/main/Container (1).webp"
-import rainb from "@/app/img/main/Frame 56 1.webp"
+import rest from "@/app/img/main/rest.webp"
+import rainb from "@/app/img/rooms/shalle.jpg"
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import React, { useRef, useEffect, useState } from "react";
 import { Card, CardContent } from "@/app/ui/card";
 
 export const AboutSection = () => {
   const isMobile = useIsMobile();
-  const textRef = useRef<HTMLDivElement>(null); // Явная типизация
+  const textRef = useRef<HTMLDivElement>(null);
   const [imageHeight, setImageHeight] = useState(400);
 
   useEffect(() => {
@@ -30,33 +30,27 @@ export const AboutSection = () => {
     <div className="bg-transparent text-black overflow-hidden " style={{ fontFamily: "RobotoL" }}>
       <div className="grid gap-0" style={{ display: "grid", gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
         {/* Левая часть - текст */}
-        <CardContent className="p-8 flex flex-col justify-between">
+        <CardContent className="p-8 flex flex-col justify-between tracking-[2px]">
           <div>
             <p className="text-5xl mb-6 uppercase text-center" style={{ fontFamily: "Gothamlight" }}>
               Звёздный
             </p>
 
-            <div className="space-y-4 text-[20px] font-light leading-6 tracking-normal text-black/80">
-              <p className="font-medium text-center">
-                Добро пожаловать в <span className="font-medium">Загородный комплекс «Звёздный»!</span>
+            <div className="space-y-4 text-[20px] font-light leading-8 text-black/80">
+              <p className="font-medium mt-8">
+                Добро пожаловать в <span style={{ fontFamily: "Roboto" }}>Загородный комплекс «Звёздный»!</span>
               </p>
               <p>
-                Здесь вы найдете всё для идеального отдыха и проведения мероприятий.
-              </p>
-              <p>
-                Отель с уютными номерами для комфортного проживания. Ресторан с европейской кухней и банкетные залы для проведения праздников и мероприятий любого формата.
-              </p>
-              <p>
-                Бильярд и караоке для веселого времяпровождения. Баня/хаммам для полного расслабления и отдыха. Аренда беседок, костровая зона и детская площадка для активного отдыха на свежем воздухе.
-              </p>
-              <p>
-                Платная рыбалка для любителей увлекательных прогулок на природе. Возможность организовать конные прогулки и уникальные фотосессии с лошадьми.
+                Здесь вы найдете всё для идеального отдыха и проведения мероприятий.<br/>
+                <span style={{ fontFamily: "Roboto" }}>Отель с уютными номерами для комфортного проживания.</span> Ресторан с европейской кухней и банкетные залы для проведения праздников и мероприятий любого формата.
+                <span style={{ fontFamily: "Roboto" }}> Бильярд и караоке</span> для веселого времяпровождения. Баня/хаммам для полного расслабления и отдыха. Аренда беседок, костровая зона и детская площадка для активного отдыха на свежем воздухе.
+                Платная рыбалка для любителей увлекательных прогулок на природе. Возможность организовать <span style={{ fontFamily: "Roboto" }}>конные прогулки и уникальные фотосессии с лошадьми.</span>
               </p>
               <p>
                 Мы также предлагаем специальные предложения для наших гостей!
               </p>
-              <p className="font-medium text-center">
-                Выберите комплекс «Звёздный» для незабываемого отдыха и организации вашего мероприятия!
+              <p >
+                Выберите комплекс <span style={{ fontFamily: "Roboto" }}>«Звёздный»</span> для незабываемого отдыха и организации вашего мероприятия!
               </p>
             </div>
           </div>
@@ -79,7 +73,7 @@ export const AboutSection = () => {
 
 
 
-    <div className="bg-transparent overflow-hidden  mt-[50px]" style={{ fontFamily: "RobotoL" }}>
+    <div className="bg-transparent overflow-hidden mt-[50px]" style={{ fontFamily: "RobotoL" }}>
       <div className="grid gap-0" style={{ display: "grid", gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
         {/* Левая часть - изображение */}
         <div className="grid gap-2 p-4 grid-cols-1">
@@ -95,15 +89,15 @@ export const AboutSection = () => {
         </div>
 
         {/* Правая часть - текст */}
-        <CardContent className="p-8 flex flex-col justify-between" style={{marginTop: isMobile? "-10%" : ""}}>
-          <div className="flex flex-col  justify-center text-black max-md:mt-10 max-md:max-w-full">
+        <CardContent className="p-8 flex flex-col justify-between mt-[20%]" style={{marginTop: isMobile? "-10%" : ""}}>
+          <div className="flex flex-col justify-center text-black max-md:mt-10 max-md:max-w-full">
             <p className="text-5xl uppercase mb-8 text-center" style={{ fontFamily: "Gothamlight" }}>
               Звёздный
             </p>
-            <div className="text-[20px] font-light leading-6 tracking-normal text-black/80">
-              <p  >Расслабьтесь и насладитесь комфортом в уютных номерах нашего отеля.</p>
-              <p>Побалуйте себя изысканной европейской кухней в нашем ресторане. </p>
-              <p>Проведите незабываемый праздник в одном из наших элегантных банкетных залов, идеально подходящих для мероприятий любого масштаба.</p>
+            <div className="text-[20px] mt-8 font-light leading-8 tracking-[2px] text-black/80">
+              <p  >Расслабьтесь и насладитесь комфортом в <span style={{ fontFamily: "Roboto" }}>уютных номерах нашего отеля. </span>
+               Побалуйте себя <span style={{ fontFamily: "Roboto" }}>изысканной европейской кухней</span> в нашем ресторане.
+              <span style={{ fontFamily: "Roboto" }}> Проведите незабываемый праздник</span> в одном из наших элегантных банкетных залов, идеально подходящих <span style={{ fontFamily: "Roboto" }}>для мероприятий любого масштаба.</span></p>
             </div>
           </div>
           </CardContent>

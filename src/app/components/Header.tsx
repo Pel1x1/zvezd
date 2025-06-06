@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import { Menu, X } from "lucide-react";
+import { Icon, Menu, X } from "lucide-react";
 import { FiMenu } from "react-icons/fi";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-
+import Image from "next/image";
 
 
 export const Header = () => {
@@ -30,12 +30,12 @@ export const Header = () => {
     <header
       className="fixed top-0 z-10 w-full bg-[rgba(145,3,1,1)] backdrop-blur-sm py-3 px-4 sm:py-6 sm:px-8 shadow-md"
     >
-      <div className="max-w-[100%] mx-auto flex items-center justify-between text-[#D2B6B1]">
-        {/* Логотип */}
+      <div className="max-w-[100%] mx-auto flex items-center text-center justify-between text-[#D2B6B1] ">
+        {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}
         <span
           onClick={() => router.push('/')}
-          className="text-[15px] md:text-[18px] shrink-0 cursor-pointer text-white hover:text-[#D2B6B1]  transition-colors l-0"
-          style={{ fontFamily: "TDMars", marginLeft: isMobile ? "3%":"10%" }}
+          className="text-[15px] md:text-[20px] shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0"
+          style={{ fontFamily: "MontserratR"}}
         >
           ЗВЁЗДНЫЙ
         </span>
