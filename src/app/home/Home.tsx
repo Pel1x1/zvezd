@@ -12,10 +12,10 @@ import  InteractiveMap  from "./sections/InteractiveMap";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className='bg-[rgba(210,182,177,1)]'>
       <div className="bg-[rgba(68,68,68,1)] overflow-hidden rounded-sm border-[rgba(255,255,255,0.1)] border-solid ">
       <div className="bg-[rgba(210,182,177,1)] flex w-full flex-col items-stretch max-md:max-w-full ">
-        <main>
+        <main className=''>
           <Hero />
           <AboutSection />
           {/*<InteractiveMap/>*/}
@@ -23,7 +23,7 @@ export default function HomePage() {
           <RestaurantAndSpaSection />
           <RoomSection />
           <BanquetHallSection />
-          <div className='mb-[100px] text-transparent'></div>
+          <div className='mb-[100px] mt-[100px] text-transparent' style={{height:"100px"}}></div>
         </main>
       </div>
     </div>
