@@ -41,13 +41,26 @@ export const BanquetHallSection = () => {
               placeholder="blur"
               src={bg2}
               alt="Banquet hall"
-              fill
               className="object-cover"
+              fill
             />
+            {isMobile ? (
+        <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          height: "100%",
+          width: "100%", // совпадает с высотой img или контейнера
+          backgroundColor: "rgba(0, 0, 0, 0.4)", // чёрный с прозрачностью 40%
+          pointerEvents: "none", // чтобы оверлей не мешал кликам
+          zIndex: 1,
+        }}
+      />) : (<div></div>)}
           </div>
 
           {/* Текст поверх фото - показываем только на мобиле */}
-          <div className="absolute top-[25%] left-0 w-full px-4 max-md:block hidden text-white text-center">
+          <div className="absolute top-[25%] left-0 w-full px-4 max-md:block hidden text-white text-center" style={{zIndex:2}}>
             <h2 className="font-medium uppercase" style={{ fontSize: "20px" }}>
               Банкетные залы
             </h2>

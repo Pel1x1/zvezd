@@ -15,7 +15,20 @@ export const RoomSection = () => {
       className="absolute h-full w-full object-cover inset-0"
       fill
     />
-      <div className="relative flex mb-[-27px] w-[591px] max-w-full flex-col items-center max-md:mb-2.5">
+    {isMobile ? (
+        <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          height: "100%",
+          width: "100%", // совпадает с высотой img или контейнера
+          backgroundColor: "rgba(0, 0, 0, 0.4)", // чёрный с прозрачностью 40%
+          pointerEvents: "none", // чтобы оверлей не мешал кликам
+          zIndex: 1,
+        }}
+      />) : (<div></div>)}
+      <div className="relative flex mb-[-27px] w-[591px] max-w-full flex-col items-center max-md:mb-2.5" style={{zIndex:2}}>
         <h2 className="text-[38px] font-medium uppercase">номерной фонд</h2>
         <p className="text-lg font-light tracking-[2px] self-stretch mt-[15px] max-md:max-w-full">
           Отель с уютными номерами для комфортного проживания
