@@ -22,7 +22,7 @@ const cards: CardData[] = [
 export const PromoSection = () => {
   const isMobile = useIsMobile();
   return (
-    <section className="bg-[rgba(210,182,177,1)] mt-[50px]">
+    <section className="bg-[rgba(210,182,177,1)]">
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         strategy="afterInteractive"
