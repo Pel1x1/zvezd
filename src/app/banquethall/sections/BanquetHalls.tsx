@@ -11,10 +11,9 @@ const halls = [
     description: "Большой просторный зал ресторана-отеля «За поводом» Идеально подходит для торжественных мероприятий и свадеб. Удобное зонирование с тремя вип - зонами.",
     features: ["Дизайнерский интерьер", "Панорамные окна", "Камин", "Профессиональное освещение"],
     images: [
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/img/bankets/banketClassic-1.webp",
+      "/img/bankets/banketClassic-2.webp",
+      "/img/bankets/banketClassic-3.webp",
     ]
   },
   {

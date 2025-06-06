@@ -32,13 +32,13 @@ export const Header = () => {
     >
       <div className="max-w-[100%] mx-auto flex items-center text-center justify-between text-[#D2B6B1] ">
         {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}
-        <span
+        <p
           onClick={() => router.push('/')}
-          className="text-[15px] md:text-[20px] shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0"
-          style={{ fontFamily: "MontserratR"}}
+          className="text-[15px] md:text-[20px] shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0"
+          style={{ fontFamily: "MontserratR", marginLeft: isMobile? "3%":"10%"}}
         >
           ЗВЁЗДНЫЙ
-        </span>
+        </p>
 
         {/* Десктопная навигация */}
         {!isMobile && (
