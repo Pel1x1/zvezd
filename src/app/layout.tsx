@@ -12,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
-      <body className={inter.className}>
+    <html lang="ru" className="bg-black">
+      <body className={inter.className} style={{background: "black"}} >
         <Header/>
         {children}
         <PromoSection/>
