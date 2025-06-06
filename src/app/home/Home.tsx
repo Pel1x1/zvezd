@@ -23,6 +23,7 @@ export default function HomePage() {
           <RestaurantAndSpaSection />
           <RoomSection />
           <BanquetHallSection />
+          <div className='h-[100px] text-transparent'></div>
         </main>
       </div>
     </div>

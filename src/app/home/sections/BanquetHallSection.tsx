@@ -10,7 +10,7 @@ export const BanquetHallSection = () => {
   const isMobile = useIsMobile();
   const router = useRouter();
   return (
-    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mt-[100px] mb-[100px] max-md:max-w-full max-md:mt-10">
+    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mt-[100px] max-md:max-w-full max-md:mt-10">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         {/* Текст слева - показываем только на десктопе */}
         <div className="w-6/12 max-md:hidden ">
