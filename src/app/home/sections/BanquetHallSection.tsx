@@ -4,12 +4,13 @@ import Image from "next/image";
 import { Button } from "@/app/ui/Button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import bg2 from "@/app/img/main/bg2.webp"
+import { useRouter } from 'next/navigation';
 
 export const BanquetHallSection = () => {
   const isMobile = useIsMobile();
-
+  const router = useRouter();
   return (
-    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mt-[100px]  max-md:max-w-full max-md:mt-10">
+    <section style={{marginLeft: isMobile?"":"11%"}} className="w-full max-w-[1249px] mt-[100px] mb-[100px] max-md:max-w-full max-md:mt-10">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         {/* Текст слева - показываем только на десктопе */}
         <div className="w-6/12 max-md:hidden ">
@@ -25,7 +26,9 @@ export const BanquetHallSection = () => {
               гостей и выбором блюд, и при этом гарантируем высокое качество
               кухни, сервиса и обслуживания.
             </p>
-            <Button variant="primary" className="mt-[46px] border-black border-[1px] hover:underline">
+            <Button variant="primary" className="mt-[46px] border-black border-[1px] hover:underline"
+             onClick={() => router.push("/banquethall")}
+            >
               Подробнее
             </Button>
           </div>
@@ -33,7 +36,7 @@ export const BanquetHallSection = () => {
 
         {/* Фото с текстом поверх на мобиле */}
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0 relative">
-          <div className="relative aspect-[0.85] w-full">
+          <div className="relative aspect-[0.95] w-full">
             <Image
               placeholder="blur"
               src={bg2}

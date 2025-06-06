@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { Button } from "@/lib/Button";
-
+import { useRouter } from 'next/navigation';
 export const RoomSection = () => {
   const isMobile = useIsMobile();
-
+  const router = useRouter();
   return (
       <section className="flex flex-col relative min-h-[540px] w-full items-center text-[rgba(210,182,177,1)] text-center leading-none justify-center mt-[15px] px-20 py-[151px] max-md:max-w-full max-md:px-5 max-md:py-[100px]">
       <Image
@@ -22,6 +22,7 @@ export const RoomSection = () => {
         </p>
         <Button
           variant="outline"
+          onClick={() => router.push("/accommodation")}
           className="relative text-lg leading-none tracking-[2px] mt-4 w-fit
                     hover:text-white hover:border-white hover:cursor-pointer transition-colors duration-300"
         >

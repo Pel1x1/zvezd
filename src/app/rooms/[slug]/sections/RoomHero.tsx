@@ -28,9 +28,9 @@ return (
         </div>
         </div>
         {/* Текст в левом нижнем углу рамки */}
-        <div className="ml-[25px] mt-[10px] bottom-8 z-1 text-[rgba(210,182,177,1)] text-sm font-light tracking-[2px] leading-none">
-        Московская область, г. Щёлково, д. Шевёлкино, 1
-        </div>
+        <div className="w-[calc(100vw-64px)] mx-auto mt-[10px] left-8 bottom-8 z-10 text-[rgba(210,182,177,1)] text-sm font-light tracking-[2px] leading-none">
+      Московская область, г. Щёлково, д. Шевёлкино, 1
+    </div>
     </section>
     );
 } 

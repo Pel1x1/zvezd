@@ -16,14 +16,17 @@ export const TerritorySection = () => {
           priority
           style={{
             display: "block",
+            width: isMobile? "92%":"90%",
+            marginLeft: isMobile? "4%":"5%",
+            marginRight: isMobile? "4%":"5%",
           }}
-          className="w-[80%] ml-[10%] mr-[10%]"
+        
         />
         <p
-          className="absolute left-1/2 top-[25%] -translate-x-1/2 text-white text-center w-full px-4"
+          className="absolute left-1/2 top-[25%] -translate-x-1/2 text-white text-center w-full px-4 tracking-[2px]"
           style={{
             fontFamily: "Roboto",
-            fontSize: isMobile ? "11px" : "25px",
+            fontSize: isMobile ? "9px" : "25px",
           }}
         >
           Территория комплекса находится в экологически чистом районе

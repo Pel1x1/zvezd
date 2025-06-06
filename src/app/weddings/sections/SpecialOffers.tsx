@@ -13,7 +13,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "50%",
     icon: Percent,
-    image: "/img/rooms/BlackLux/BlackLux-2.jpg",
+    image: "/img/rooms/BlackLux/BlackLux-2.webp",
     badge: "Популярное",
     conditions: ["Заказ меню на сумму от 250.000", "Любое количество гостей"]
   },
@@ -46,7 +46,7 @@ const specialOffers = [
     validUntil: "постоянно",
     discount: "от 10%",
     icon: Percent,
-    image: "/img/rooms/ComfortPlus/ComfortPlus-3.jpg",
+    image: "/img/rooms/ComfortPlus/ComfortPlus-3.webp",
     badge: "Удобно",
     conditions: ["Посещение любого банкета в качестве гостя"]
   }

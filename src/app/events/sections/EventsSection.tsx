@@ -49,7 +49,7 @@ const events = [
     price: "",
     status: "Всегда",
     images: [
-      "/img/bankets/banketWhite-1.jpg",
+      "/img/bankets/banketWhite-1.webp",
     ]
   },
   {
@@ -63,7 +63,7 @@ const events = [
     price: "",
     status: "Всегда",
     images: [
-      "/img/bankets/banketEmerald-2.jpg",
+      "/img/bankets/banketEmerald-2.webp",
     ]
   },
   {

@@ -26,17 +26,17 @@ const weddingServices = [
 ];
 
 const weddingGallery = [
-  "/img/weddings/weddings-1.jpg",
-  "/img/weddings/weddings-2.jpg",
-  "/img/weddings/weddings-3.jpg",
+  "/img/weddings/weddings-1.webp",
+  "/img/weddings/weddings-2.webp",
+  "/img/weddings/weddings-3.webp",
 
-  "/img/weddings/weddings-4.jpg",
-  "/img/weddings/weddings-5.jpg",
-  "/img/weddings/weddings-6.jpg",
+  "/img/weddings/weddings-4.webp",
+  "/img/weddings/weddings-5.webp",
+  "/img/weddings/weddings-6.webp",
   
-  "/img/weddings/weddings-7.jpg",
-  "/img/weddings/weddings-8.jpg",
-  "/img/weddings/weddings-9.jpg",
+  "/img/weddings/weddings-7.webp",
+  "/img/weddings/weddings-8.webp",
+  "/img/weddings/weddings-9.webp",
 ];
 
 const WeddingsSection = () => {
@@ -58,7 +58,7 @@ const WeddingsSection = () => {
 
         {/* Photo Gallery */}
         <div className="mb-12">
-          <h3 className="text-4xl font-bold text-center mb-8" style={{fontFamily: "ZenAntoquie"}}>Галерея наших свадеб</h3>
+          <h3 className="text-5xl font-bold text-center mb-8" style={{fontFamily: "ZenAntoquie"}}>Галерея наших свадеб</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {weddingGallery.map((image, index) => (
               <div key={index} className="aspect-square relative overflow-hidden rounded-lg group">

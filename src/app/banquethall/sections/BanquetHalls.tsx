@@ -25,11 +25,10 @@ const halls = [
     description: "Стильный светлый зал в окружении березовой рощи, панорамные окна и минимализм в интерьере.",
     features: ["Выездная регистрация", "Панорамные окна", "Романтическое освещение", "Уютная атмосфера"],
     images: [
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    ]
+      "/img/bankets/banketWhite-1.webp",
+      "/img/bankets/banketWhite-2.webp",
+      "/img/bankets/banketWhite-3.webp",
+    ] 
   },
   {
     id: 3,
@@ -39,10 +38,9 @@ const halls = [
     description: "Уютный изолированный зал на третьем этаже бутик-отеля «За поводом» для камерных мероприятий.",
     features: ["Бар", "LED-освещение", "Мультимедийное оборудование", "Зонирование"],
     images: [
-      "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/img/bankets/banketEmerald-1.webp",
+      "/img/bankets/banketEmerald-2.webp",
+      "/img/bankets/banketEmerald-3.webp",
     ]
   }
 ];
