@@ -179,14 +179,14 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
             style={{zIndex: 99}}
             onClick={closeModal}
           >
-            <div className="relative w-[90%] h-[90%]" onClick={(e) => e.stopPropagation()} style={{zIndex: 999}}>
+            <div className="relative w-[90%] h-[90%]" style={{zIndex: 999}}>
               <Image
                 src={currentPhoto}
                 alt="Фото в полном размере"
                 fill
                 className="object-contain rounded transition-transform duration-500 ease-in-out"
                 priority
-                
+                onClick={(e) => e.stopPropagation()}
               />
               <button
                 onClick={closeModal}
