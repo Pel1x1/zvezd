@@ -40,7 +40,7 @@ body {
 }
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
