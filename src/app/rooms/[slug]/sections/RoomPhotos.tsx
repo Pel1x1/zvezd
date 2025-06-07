@@ -46,7 +46,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
   return (
     <section className="py-12 bg-[#D2B6B1]">
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-5xl font-bold mb-8 text-white" style={{ fontFamily: "ZenAntique" }}>
+        <h2 className="text-5xl font-bold mb-8 text-white " style={{ fontFamily: "ZenAntique" }}>
           Фотографии номера
         </h2>
 
@@ -110,7 +110,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
           </div>
         ) : (
           <div
-            className="grid grid-cols-[auto_1fr_1fr_1fr_auto] items-center"
+            className="grid grid-cols-[1fr_1fr_1fr_1fr_1fr] items-center"
             style={{
               gap: "1rem",
               marginTop: "1rem", // mt-4
