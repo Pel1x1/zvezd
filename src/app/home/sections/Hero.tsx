@@ -30,9 +30,6 @@ export const Hero = () => {
           </p>
         </div>
       </div>
-
-
-
     ):(
       <div 
       style={{width:"97%"}}
