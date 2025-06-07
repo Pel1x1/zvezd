@@ -110,10 +110,11 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
           </div>
         ) : (
           <div
-            className="grid grid-cols-[1fr_1fr_1fr_1fr_1fr] items-center"
+            className="grid items-center"
             style={{
               gap: "1rem",
-              marginTop: "1rem", // mt-4
+              gridTemplateColumns: "auto 1fr 1fr 1fr auto",
+              marginTop: "1.5rem", // mt-4
               width: "100%",
               margin: "0 auto",
               transform: "scale(1.05)"
