@@ -23,13 +23,15 @@ export const Hero = () => {
     {/* Текст в левом нижнем углу рамки */}
     
     {isMobile?(
-      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8" style={{zIndex:3}}>
-        <div className="bg-black/40 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3 border border-white/10">
-          <p className="text-white/80 text-xs sm:text-sm font-light tracking-wider leading-tight mb-0">
+      <div style={{position: 'absolute', bottom: '1rem', left: '1rem', zIndex: 3}}>
+        <div style={{backgroundColor: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)', borderRadius: '0.5rem', padding: '0.5rem 1rem', border: '1px solid rgba(255,255,255,0.1)'}}>
+          <p style={{color: 'rgba(255,255,255,0.8)', fontSize: '12px', fontWeight: 300, letterSpacing: '0.05em', lineHeight: '1.25rem', marginBottom: 0}}>
             Московская область, г. Щёлково, д. Шевёлкино, 1
           </p>
         </div>
       </div>
+
+
 
     ):(
       <div 
