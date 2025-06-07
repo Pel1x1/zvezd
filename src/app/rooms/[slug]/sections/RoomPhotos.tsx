@@ -52,20 +52,37 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
 
         {isMobile ? (
           <div
-            className="grid grid-cols-[auto_1fr_auto] gap-4 items-center mt-3"
-            style={{ width: "100%", margin: "0 auto" }}
+            className="grid grid-cols-[auto_1fr_auto] items-center"
+            style={{
+              gap: "1rem", // gap-4
+              marginTop: "0.75rem", // mt-3
+              width: "100%",
+              margin: "0 auto"
+            }}
           >
             <button
               onClick={goPrev}
               aria-label="Предыдущие фото"
-              className="text-white text-5xl font-bold disabled:opacity-40 select-none"
+              style={{
+                color: "white", // text-white
+                fontSize: "3rem", // text-5xl
+                fontWeight: "bold", // font-bold
+                opacity: 1, // disabled:opacity-40 handled by React disabled prop
+                userSelect: "none" // select-none
+              }}
             >
               &lt;
             </button>
 
             <div
-              className="relative w-full rounded-lg overflow-hidden cursor-pointer transform transition-all duration-500 ease-in-out"
-              style={{ aspectRatio: "4 / 3"}}
+              className="relative w-full"
+              style={{
+                borderRadius: "0.5rem", // rounded-lg
+                overflow: "hidden", // overflow-hidden
+                cursor: "pointer", // cursor-pointer
+                transition: "transform 0.5s ease-in-out", // transition-all duration-500 ease-in-out
+                aspectRatio: "4 / 3"
+              }}
               onClick={() => openModal(visiblePhotos[0])}
             >
               <Image
@@ -80,28 +97,51 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
             <button
               onClick={goNext}
               aria-label="Следующие фото"
-              className="text-white text-5xl font-bold disabled:opacity-40 select-none"
+              style={{
+                color: "white",
+                fontSize: "3rem",
+                fontWeight: "bold",
+                opacity: 1,
+                userSelect: "none"
+              }}
             >
               &gt;
             </button>
           </div>
         ) : (
           <div
-            className="grid grid-cols-[auto_1fr_1fr_1fr_auto] gap-4 items-center mt-4 "
-            style={{ width: "100%", margin: "0 auto", transform:"Scale(1.05)" }}
+            className="grid grid-cols-[auto_1fr_1fr_1fr_auto] items-center"
+            style={{
+              gap: "1rem",
+              marginTop: "1rem", // mt-4
+              width: "100%",
+              margin: "0 auto",
+              transform: "scale(1.05)"
+            }}
           >
             <button
               onClick={goPrev}
               aria-label="Предыдущие фото"
-              className="text-white text-5xl font-bold disabled:opacity-40 select-none"
+              style={{
+                color: "white",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                opacity: 1,
+                userSelect: "none"
+              }}
             >
               &lt;
             </button>
             {visiblePhotos.map((photo, idx) => (
               <div
                 key={startIndex + idx}
-                className="relative w-full rounded-lg overflow-hidden cursor-pointer "
-                style={{ aspectRatio: "4 / 3" }}
+                className="relative w-full"
+                style={{
+                  borderRadius: "0.5rem",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  aspectRatio: "4 / 3"
+                }}
                 onClick={() => openModal(photo)}
               >
                 <Image
@@ -116,12 +156,19 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
             <button
               onClick={goNext}
               aria-label="Следующие фото"
-              className="text-white text-5xl font-bold disabled:opacity-40 select-none"
+              style={{
+                color: "white",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                opacity: 1,
+                userSelect: "none"
+              }}
             >
               &gt;
             </button>
           </div>
         )}
+
 
         {/* Модальное окно */}
         {isOpen && currentPhoto && (
