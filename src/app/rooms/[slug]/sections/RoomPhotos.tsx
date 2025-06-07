@@ -66,7 +66,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
               aria-label="Предыдущие фото"
               style={{
                 color: "white", // text-white
-                fontSize: "3rem", // text-5xl
+                fontSize: "1.5rem", // text-5xl
                 fontWeight: "bold", // font-bold
                 opacity: 1, // disabled:opacity-40 handled by React disabled prop
                 userSelect: "none" // select-none
@@ -100,7 +100,7 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
               aria-label="Следующие фото"
               style={{
                 color: "white",
-                fontSize: "3rem",
+                fontSize: "1.5rem",
                 fontWeight: "bold",
                 opacity: 1,
                 userSelect: "none"
@@ -176,17 +176,17 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
         {isOpen && currentPhoto && (
           <div
             className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center"
+            style={{zIndex: 99}}
             onClick={closeModal}
-            style={{zIndex: 1}}
           >
-            <div className="relative w-[90%] h-[90%]" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-[90%] h-[90%]" onClick={(e) => e.stopPropagation()} style={{zIndex: 999}}>
               <Image
                 src={currentPhoto}
                 alt="Фото в полном размере"
                 fill
                 className="object-contain rounded transition-transform duration-500 ease-in-out"
                 priority
-                style={{zIndex: 2}}
+                
               />
               <button
                 onClick={closeModal}
