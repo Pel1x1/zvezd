@@ -1,3 +1,4 @@
+```Room page
 "use client";
 
 import { useState, useEffect } from "react";
@@ -200,3 +201,141 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
     </section>
   );
 }
+
+"use client";
+
+import Image from "next/image";
+import { useIsMobile } from "@/app/hooks/use-mobile";
+import { RoomHeroProps } from '@/lib/types';
+
+export default function RoomHero({ room }: RoomHeroProps) {
+    const isMobile = useIsMobile();
+return (
+    <section className="relative min-h-screen w-full bg-black overflow-hidden">
+        {/* Контейнер для рамки и фото */}
+        <div className="relative w-[calc(100vw-64px)] h-[calc(100vh-64px)] mx-auto my-auto ">
+        <Image
+            src={room.photos[0]}
+            alt="Hero background"
+            fill
+            className="object-cover "
+            priority
+        />
+        </div>
+        {/* Центрированный текст поверх фото */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-1 ">
+        <div className="items-center flex flex-col justify-center">
+        <p className="text-white text-[30px] md:text-[70px] mb-4 drop-shadow-lg" style={{fontFamily: "ZenAntoquie"}}>{room.name}</p>
+        <p className="text-white text-[15px] md:text-[30px] font-light max-w-2xl text-center drop-shadow-md"  style={{fontFamily: "RobotoL"}}>
+        {room.description}
+        </p>
+        </div>
+        </div>
+        {/* Текст в левом нижнем углу рамки */}
+        <div className="w-[calc(100vw-64px)] mx-auto mt-[10px] left-8 bottom-8 z-10 text-[rgba(210,182,177,1)] text-sm font-light tracking-[2px] leading-none">
+      Московская область, г. Щёлково, д. Шевёлкино, 1
+    </div>
+    </section>
+    );
+} 
+
+"use client";
+
+
+import { RoomFeatureProps } from '@/lib/types';
+
+export default function RoomFeature({ room }: RoomFeatureProps) {
+  return (
+    <section className="py-12 bg-[#D2B6B1]">
+      <div className="container mx-auto px-4 ">
+        <h2 className="text-5xl font-bold mb-8 text-white" style={{fontFamily:"ZenAntique"}}>Особенности номера</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[15px]">
+          {room.features.map((feature, index) => (
+            <div key={index} className=" border-[2px] p-4 rounded-lg shadow-sm items-center flex flex-col justify-center bg-white/10">
+                <p className="text-xl text-white mb-0 mt-0 font-semibold " style={{fontFamily:"RobotoL"}}>{feature}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+} 
+
+"use client";
+
+import { RoomDetailsProps } from '@/lib/types';
+import { useIsMobile } from "@/app/hooks/use-mobile";
+import { Route } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Button } from "@/app/spa/sections/button";
+
+export default function RoomDetails({ room }: RoomDetailsProps) {
+      const isMobile = useIsMobile();
+        const router = useRouter();
+  return (
+    <section className="py-12 bg-[#D2B6B1]">
+      <div className="container mx-auto px-4">
+        {(room.id === '5' || room.id === '6') && (
+        <div className="mb-8 flex gap-4 justify-center">
+          <Button
+            onClick={() => router.push("/rooms/shalle1")}
+            disabled = {room.id === '5'}
+            size="lg"
+            variant={room.id === "5" ? "default" : "transparent"}
+            className="px-10 py-3 text-white border-white bg-white/20 transition-all "
+            style={{ fontFamily: "Roboto", borderRadius: "12px", }}
+          >
+            1 комнатные
+          </Button>
+          <Button
+            onClick={() => router.push("/rooms/shalle2")}
+            disabled = {room.id === '6'}
+            size="lg"
+            variant={room.id === "6" ? "default" : "transparent"}
+            className="px-10 py-3 text-white border-white bg-white/20 transition-all "
+            style={{ fontFamily: "Roboto", borderRadius: "12px", }}
+          >
+            2 комнатные
+          </Button>
+        </div>
+        )}
+        <h2 className=" text-white font-bold mb-8" style={{fontFamily:"ZenAntique", fontSize: isMobile? "40px" : "40px"}}>{room.name}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <p className="text-white mb-[15px]" style={{fontFamily:"RobotoL", fontSize: isMobile? "20px" : "25px"}}>{room.description}</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="border-[2px] p-[15px] rounded-lg bg-white/10">
+                <p className="text-xl text-white" style={{fontFamily:"ZenAntique"}}>Размер</p>
+                <p className="font-semibold text-white text-2xl" style={{fontFamily:"RobotoL"}}>{room.details.size}</p>
+              </div>
+              <div className="bg-white/10 border-[2px] p-[15px] rounded-lg">
+                <p className="text-xl text-white" style={{fontFamily:"ZenAntique"}}>Вместимость</p>
+                <p className="font-semibold text-white text-2xl" style={{fontFamily:"RobotoL"}}>{room.details.capacity} чел.</p>
+              </div>
+              <div className="bg-white/10 border-[2px] p-[15px] rounded-lg">
+                <p className="text-xl text-white" style={{fontFamily:"ZenAntique"}}>Тип кровати</p>
+                <p className="font-semibold text-white text-2xl" style={{fontFamily:"RobotoL"}}>{room.details.bedType}</p>
+              </div>
+              <div className="bg-white/10 border-[2px] p-[15px] rounded-lg">
+                <p className="text-xl text-white" style={{fontFamily:"ZenAntique"}}>Вид</p>
+                <p className="font-semibold text-white text-2xl" style={{fontFamily:"RobotoL"}}>{room.details.view}</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white/10 border-[2px] rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-4 text-white" style={{fontFamily:"ZenAntique"}}>Удобства</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {room.amenities.map((amenity, index) => (
+                <div key={index} className="flex items-center text-white" style={{fontFamily:"RobotoL"}}>
+                  <span className="mr-2">•</span>
+                  <span className='text-xl font-semibold'>{amenity.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 
+```
