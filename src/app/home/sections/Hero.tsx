@@ -9,6 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full bg-black overflow-hidden" style={{height:isMobile?"":"100vh"}}>
     {/* Контейнер для рамки и фото */}
+    <div>
     <div className="relative mx-auto my-auto" style={{width:isMobile?"100%":"97%", height:isMobile?"50vh":"95vh"}}>
       <Image
         placeholder="blur"
@@ -31,13 +32,13 @@ export const Hero = () => {
       </div>
 
     ):(
-        <div 
+      <div 
       style={{width:"97%"}}
       className="mx-auto mt-[10px] left-8 bottom-8 z-10 text-[rgba(210,182,177,1)] text-sm font-light tracking-[2px] leading-none">
         Московская область, г. Щёлково, д. Шевёлкино, 1
       </div>
     )}
-
+    </div>
   </section>
 
 
