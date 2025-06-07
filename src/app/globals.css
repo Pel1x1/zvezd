@@ -38,7 +38,12 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: 'TDMars';
   src: url('/fonts/TDMars.otf') format('truetype');
@@ -75,12 +80,6 @@ body {
 @font-face {
   font-family: 'RobotoL';
   src: url('/fonts/Roboto-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MontserratR';
-  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
