@@ -7,8 +7,10 @@ import RestMenu from "@/app/img/rest/RestMenu.webp";
 import RestBreakfast from "@/app/img/rest/RestBreakfast.webp";
 import RestBanket from "@/app/img/rest/RestBanket.webp";
 import RestKids from "@/app/img/rest/RestKids.webp";
+import { useIsMobile } from "@/app/hooks/use-mobile";
 
 export const Menu = () =>{
+  const isMobile = useIsMobile();
 
     
     const Foods = [
@@ -41,7 +43,7 @@ export const Menu = () =>{
     ];
     
     return (
-    <section className=" bg-[#D2B6B1] px-0 py-[50px] max-sm:px-0 max-sm:py-[30px]">
+    <section className=" bg-[#D2B6B1] px-0 py-[50px] max-sm:px-0 max-sm:py-[30px]" style={{marginTop:isMobile?"-50px":"50px"}}>
         <div className="flex flex-wrap justify-around mt-[100px]">
         {Foods.map((food, index) => (
             <FoodCard key={index}

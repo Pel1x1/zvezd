@@ -121,7 +121,7 @@ const ServicesSection = () => {
                 <CardContent className="px-[40px] py-[50px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
                     <div className="flex items-center gap-2 mb-4">
-                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
+                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30 " style={{marginTop:"-30px"}}>
                         {service.status}
                       </Badge>
                     </div>

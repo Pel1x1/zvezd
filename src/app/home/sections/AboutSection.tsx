@@ -36,7 +36,7 @@ export const AboutSection = () => {
               Звёздный
             </p>
 
-            <div className="space-y-4 text-[15px] md:text-[20px] font-light leading-8 text-black/80">
+            <div className="space-y-4 text-[15px] md:text-[23px] font-light leading-8 text-black/80">
               <p className="font-medium mt-8">
                 Добро пожаловать в <span style={{ fontFamily: "Roboto" }}>Загородный комплекс «Звёздный»!</span>
               </p>
@@ -94,7 +94,7 @@ export const AboutSection = () => {
             <p className="text-5xl uppercase mb-8 text-center" style={{ fontFamily: "Gothamlight" }}>
               Звёздный
             </p>
-            <div className="text-[15px] md:text-[20px] mt-8 font-light leading-8 tracking-[2px] text-black/80">
+            <div className="text-[15px] md:text-[23px] mt-8 font-light leading-8 tracking-[2px] text-black/80">
               <p  >Расслабьтесь и насладитесь комфортом в <span style={{ fontFamily: "Roboto" }}>уютных номерах нашего отеля. </span>
                Побалуйте себя <span style={{ fontFamily: "Roboto" }}>изысканной европейской кухней</span> в нашем ресторане.
               <span style={{ fontFamily: "Roboto" }}> Проведите незабываемый праздник</span> в одном из наших элегантных банкетных залов, идеально подходящих <span style={{ fontFamily: "Roboto" }}>для мероприятий любого масштаба.</span></p>

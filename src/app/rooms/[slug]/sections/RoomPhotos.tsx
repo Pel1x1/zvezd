@@ -175,16 +175,18 @@ export default function RoomPhotos({ room }: RoomPhotosProps) {
         {/* Модальное окно */}
         {isOpen && currentPhoto && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 "
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center"
             onClick={closeModal}
+            style={{zIndex: 1}}
           >
-            <div className="relative w-[95%] h-[95%]" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-[90%] h-[90%]" onClick={(e) => e.stopPropagation()}>
               <Image
                 src={currentPhoto}
                 alt="Фото в полном размере"
                 fill
                 className="object-contain rounded transition-transform duration-500 ease-in-out"
                 priority
+                style={{zIndex: 2}}
               />
               <button
                 onClick={closeModal}
