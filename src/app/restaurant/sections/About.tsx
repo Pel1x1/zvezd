@@ -10,11 +10,11 @@ export const About = () =>{
     <div className="mb-[-75px] max-md:max-w-full max-md:mb-2.5">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
             <div className="w-6/12 max-md:w-full max-md:ml-0">
-                <div className="flex flex-col items-stretch text-white font-normal max-md:max-w-full max-md:mt-10">
+                <div className="flex flex-col items-stretch text-black font-normal max-md:max-w-full max-md:mt-10">
                     <p className="text-[64px] leading-none max-md:max-w-full max-md:text-[40px]">
                         <span className='text-center' style={{ fontFamily: "ZenAntique" }}>Ресторан за поводом</span>
                     </p>
-                    <p className="text-xl leading-[40px] tracking-[2px] mt-[200px] max-md:max-w-full max-md:mt-[200px]"
+                    <p className="tracking-[2px] mt-[200px] max-md:max-w-full max-md:mt-[200px] text-[15px] md:text-[20px]"
                     style={{fontFamily:"RobotoL"}}>
                         Наше меню разработано с учетом самых разнообразных гастрономических предпочтений.<br/>
 

@@ -23,8 +23,8 @@ export const Hero = () => {
     <div className="absolute inset-0 flex flex-col items-center justify-center z-1 ">
       <div className="items-center flex flex-col justify-center">
       <p className="text-white text-[30px] md:text-[70px] mb-4 drop-shadow-lg" style={{fontFamily: "ZenAntoquie"}}>Мероприятия</p>
-      <p className="text-white text-[15px] md:text-[30px] font-light max-w-2xl text-center drop-shadow-md"  style={{fontFamily: "RobotoL"}}>
-      Присоединяйтесь к нашим эксклюзивным мероприятиям. Каждое событие - это уникальная возможность насладиться особенной атмосферой и создать незабываемые воспоминания.
+      <p className="text-white text-[15px] md:text-[30px] font-light max-w-4xl text-center drop-shadow-md"  style={{fontFamily: "RobotoL"}}>
+      Присоединяйтесь к нашим эксклюзивным мероприятиям.<br/> Каждое событие - это уникальная возможность насладиться особенной атмосферой и создать незабываемые воспоминания.
       </p>
       </div>
     </div>

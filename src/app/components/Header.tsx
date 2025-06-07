@@ -35,7 +35,7 @@ export const Header = () => {
         <p
           onClick={() => router.push('/')}
           className="text-[15px] md:text-[20px] shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0"
-          style={{ fontFamily: "MontserratR", marginLeft: isMobile? "3%":"10%"}}
+          style={{ fontFamily: "TDMars", marginLeft: isMobile? "3%":"10%"}}
         >
           ЗВЁЗДНЫЙ
         </p>

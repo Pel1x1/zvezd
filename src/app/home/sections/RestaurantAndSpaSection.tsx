@@ -21,7 +21,7 @@ export const RestaurantAndSpaSection = () => {
             <h2 className="relative text-[37px] font-medium leading-none uppercase">
               Ресторан
             </h2>
-            <p className="relative text-[20px] leading-5 tracking-[2px] self-stretch mt-[31px] max-md:max-w-full">
+            <p className="relative text-[20px] leading-5 tracking-[2px] self-stretch mt-5 max-md:max-w-full">
               Европейские блюда от наших талантливых поваров - все это сделает
               ваш визит поистине особенным.
             </p>
@@ -46,7 +46,7 @@ export const RestaurantAndSpaSection = () => {
             <h2 className="relative text-[38px] font-medium uppercase">СПА</h2>
             <p className="relative text-[20px] leading-5 tracking-[2px] self-stretch mt-5 max-md:max-w-full">
               Для расслабляющего отдыха и оздоровления мы предлагаем финскую
-              сауну, турецкий хаммам. Также в загородном комплексе ``Звездный``
+              сауну, турецкий хаммам. Также в загородном комплексе «Звёздный»
               доступны услуги профессионального массажа!
               <br />
             </p>
