@@ -23,7 +23,7 @@ export const Hero = () => {
     {/* Текст в левом нижнем углу рамки */}
     
     {isMobile?(
-      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8" style={{zIndex:3}}>
         <div className="bg-black/40 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3 border border-white/10">
           <p className="text-white/80 text-xs sm:text-sm font-light tracking-wider leading-tight mb-0">
             Московская область, г. Щёлково, д. Шевёлкино, 1
