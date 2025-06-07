@@ -30,13 +30,13 @@ export const AboutSection = () => {
     <div className="bg-transparent text-black overflow-hidden " style={{ fontFamily: "RobotoL" }}>
       <div className="grid gap-0" style={{ display: "grid", gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
         {/* Левая часть - текст */}
-        <CardContent className="p-8 flex flex-col justify-center tracking-[2px]">
+        <CardContent className="p-7 flex flex-col justify-center tracking-[2px]">
           <div>
             <p className="text-5xl mb-6 uppercase text-center" style={{ fontFamily: "Gothamlight" }}>
               Звёздный
             </p>
 
-            <div className="space-y-4 text-[15px] md:text-[23px] font-light leading-8 text-black/80">
+            <div className="space-y-2 text-[15px] md:text-[23px] font-light leading-8 text-black/80">
               <p className="font-medium mt-8">
                 Добро пожаловать в <span style={{ fontFamily: "Roboto" }}>Загородный комплекс «Звёздный»!</span>
               </p>
@@ -89,7 +89,7 @@ export const AboutSection = () => {
         </div>
 
         {/* Правая часть - текст */}
-        <CardContent className="p-8 flex flex-col justify-center" style={{marginTop: isMobile? "-10%" : ""}}>
+        <CardContent className="p-7 flex flex-col justify-center" style={{marginTop: isMobile? "-10%" : ""}}>
           <div className="flex flex-col justify-center text-black max-md:mt-10 max-md:max-w-full">
             <p className="text-5xl uppercase mb-8 text-center" style={{ fontFamily: "Gothamlight" }}>
               Звёздный
