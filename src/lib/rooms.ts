@@ -122,7 +122,7 @@ export const rooms: Room[] = [
     ],
     details: {
       size: '25 м²',
-      capacity: 1,
+      capacity: 2,
       bedType: 'Queen Size',
       view: 'Внутренний двор'
     }
@@ -159,7 +159,7 @@ export const rooms: Room[] = [
     ],
     details: {
       size: '25 м²',
-      capacity: 1,
+      capacity: 2,
       bedType: 'Queen Size',
       view: 'Внутренний двор'
     }

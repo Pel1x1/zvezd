@@ -15,7 +15,7 @@ export const About = () =>{
             <div className="w-6/12 max-md:w-full max-md:ml-0">
                 <div className="flex flex-col items-stretch text-black font-normal max-md:max-w-full max-md:mt-10" style={{marginTop:isMobile?"-50px":"20%"}}>
                     <p className="text-[64px] leading-none max-md:max-w-full max-md:text-[40px]">
-                        <span className='text-center' style={{ fontFamily: "ZenAntique" }}>Ресторан за поводом</span>
+                        <span className='text-center' style={{ fontFamily: "ZenAntique" }}>Ресторан за Поводом</span>
                     </p>
                     <p className="tracking-[2px] mt-[200px] max-md:max-w-full max-md:mt-[200px] text-[15px] md:text-[20px]"
                     style={{fontFamily:"RobotoL"}}>
