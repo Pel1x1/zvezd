@@ -36,7 +36,7 @@ export const AboutSection = () => {
               Звёздный
             </p>
 
-            <div className="space-y-2 text-[15px] md:text-[23px] font-light leading-8 text-black/80">
+            <div className="space-y-2 text-[15px] md:text-[20px] font-light leading-8 text-black/80">
               <p className="font-medium mt-8">
                 Добро пожаловать в <span style={{ fontFamily: "Roboto" }}>Загородный комплекс «Звёздный»!</span>
               </p>

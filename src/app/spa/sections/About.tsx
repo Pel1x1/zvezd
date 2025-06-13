@@ -6,7 +6,7 @@ import { Badge } from "@/app/spa/sections/badge";
 import { Separator } from "@/app/spa/sections/separator";
 import { FileText } from "lucide-react";
 import ServiceCard from "@/app/spa/sections/ServiceCard";
-import { bodyServices, faceServices, hammamServices } from "@/app/spa/sections/services";
+import { bodyServices, faceServices, hammamServices, saunaServices } from "@/app/spa/sections/services";
 
 import {Card as CardSupport} from "@/app/ui/card";
 import {CardContent as  CardContentSupport} from "@/app/ui/card";
@@ -25,6 +25,8 @@ const Hero = () => {
           return faceServices;
         case "hammam":
           return hammamServices;
+        case "sauna":
+          return saunaServices;
         default:
           return bodyServices;
       }
@@ -90,6 +92,15 @@ const Hero = () => {
             >
               Хаммам
             </Button>
+            <Button 
+              onClick={() => setActiveCategory("sauna")}
+              variant={activeCategory === "sauna" ? "default" : "transparent"}
+              size="lg"
+              style={{borderRadius: "12px", fontFamily: "Roboto"}}
+              className="px-10 py-3 bg-white/20 text-white border-white  transition-all"
+            >
+              Сауна
+            </Button>
           </div>
         </div>
       </section>
@@ -110,7 +121,7 @@ const Hero = () => {
 
       <section className="py-20 px-4">
       <div className="text-center space-y-12 ">
-          <CardSupport className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4 max-w-7xl mx-auto">
+          <CardSupport className="bg-black/5 backdrop-blur-sm border-white/20 text-white pb-4 pt-4 max-w-7xl mx-auto">
             <CardContentSupport className="p-8 container mx-auto text-center">
               <h3 className="text-4xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Нужна помощь с выбором?</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>

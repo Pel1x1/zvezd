@@ -101,7 +101,7 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="space-y-12">
           {services.map((service) => (
-            <Card key={service.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]" style={{fontFamily: "RobotoL"}}>
+            <Card key={service.id} className="bg-black/5 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]" style={{fontFamily: "RobotoL"}}>
               <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
                 <div className={`grid gap-2 p-4 ${service.images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
@@ -186,7 +186,7 @@ const ServicesSection = () => {
 
         {/* Additional Info */}
         <div className="text-center mt-[50px]">
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
+          <Card className="bg-black/5 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
             <CardContent className="p-8 container mx-auto text-center">
               <h3 className="text-4xl font-bold mt-[20px]">Индивидуальные услуги</h3>
               <p className="text-lg opacity-90 mt-[10px]">

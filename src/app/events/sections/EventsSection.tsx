@@ -90,7 +90,7 @@ const EventsSection = () => {
 
         <div className="space-y-12">
           {events.map((event) => (
-            <Card key={event.id} className="bg-white/10 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
+            <Card key={event.id} className="bg-black/5 backdrop-blur-sm border-white/20 text-white overflow-hidden mb-[50px]">
               <div className="grid gap-0" style={{display: 'grid' ,gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
                 {/* Image Gallery */}
                 <div className={`grid gap-2 p-4 ${event.images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
@@ -109,7 +109,7 @@ const EventsSection = () => {
                 <CardContent className="px-[40px] py-[50px] flex flex-col justify-between" style={{fontFamily: "RobotoL"}}>
                   <div>
                     <div className="flex items-center gap-2 mb-4">
-                      <Badge variant="secondary" className="bg-white/20 text-white border-white/30 mt-4">
+                      <Badge variant="secondary" className="bg-white/10 text-white border-white/30 mt-4">
                         {event.status}
                       </Badge>
                     </div>
@@ -162,7 +162,7 @@ const EventsSection = () => {
 
         {/* Additional Info */}
         <div className="text-center space-y-12">
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
+          <Card className="bg-black/5 backdrop-blur-sm border-white/20 text-white pb-4 pt-4">
             <CardContent className="p-8 container mx-auto text-center">
               <h3 className="text-4xl font-bold mt-[20px]"  style={{fontFamily: "ZenAntoquie"}}>Индивидуальные мероприятия</h3>
               <p className="text-lg opacity-90 mt-[10px]"  style={{fontFamily: "RobotoL"}}>

@@ -155,13 +155,15 @@ export const hammamServices = [
       { duration: "60 мин", price: "8500 ₽" }
     ]
   },
+];
+export const saunaServices = [
   {
-    id: "finskay",
+    id: "sauna-1",
     name: "Финская сауна",
     description: "",
     includes: [],
     pricing: [
       { duration: "60 мин", price: "5000 ₽" }
     ]
-  }
+  },
 ];

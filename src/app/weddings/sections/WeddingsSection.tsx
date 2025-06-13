@@ -46,7 +46,7 @@ const WeddingsSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {weddingServices.map((service, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+            <Card key={index} className="bg-black/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <service.icon className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2" style={{fontFamily:"ZenAntique"}}>{service.title}</h3>
