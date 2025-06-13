@@ -13,39 +13,27 @@ import {CardContent as  CardContentSupport} from "@/app/ui/card";
 import {Button as  ButtonSupport} from "@/lib/Button";
 
 const Hero = () => {
-  const [activeCategory, setActiveCategory] = useState("body");
+  const [mainCategory, setMainCategory] = useState("spa"); // spa, hammam, sauna
+  const [spaSubCategory, setSpaSubCategory] = useState("body"); // body или face
   const [services, setServices] = useState(bodyServices);
 
   useEffect(() => {
-    const getCurrentServices = () => {
-      switch (activeCategory) {
-        case "body":
-          return bodyServices;
-        case "face":
-          return faceServices;
-        case "hammam":
-          return hammamServices;
-        case "sauna":
-          return saunaServices;
-        default:
-          return bodyServices;
-      }
-    };
-    
-    setServices(getCurrentServices());
-  }, [activeCategory]);
+    if (mainCategory === "spa") {
+      setServices(spaSubCategory === "body" ? bodyServices : faceServices);
+    } else if (mainCategory === "hammam") {
+      setServices(hammamServices);
+    } else if (mainCategory === "sauna") {
+      setServices(saunaServices);
+    }
+  }, [mainCategory, spaSubCategory]);
 
   const getCategoryTitle = () => {
-    switch (activeCategory) {
-      case "body":
-        return "Услуги для тела";
-      case "face":
-        return "Услуги для лица";
-      case "hammam":
-        return "Хаммам";
-      default:
-        return "Услуги для тела";
+    if (mainCategory === "spa") {
+      return spaSubCategory === "body" ? "Услуги для тела" : "Услуги для лица";
     }
+    if (mainCategory === "hammam") return "Хаммам";
+    if (mainCategory === "sauna") return "Сауна";
+    return "";
   };
 
   const handleDownloadPDF = () => {
@@ -59,61 +47,74 @@ const Hero = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#D2B6B1' }}>
-      
-      {/* Hero Section */}
+      {/* Основные кнопки */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-3xl">
-            <Button 
-              onClick={() => setActiveCategory("body")}
-              variant={activeCategory === "body" ? "default" : "transparent"}
+          <div className="flex justify-center gap-4 text-3xl">
+            <Button
+              onClick={() => setMainCategory("spa")}
+              variant={mainCategory === "spa" ? "default" : "transparent"}
               size="lg"
-              style={{borderRadius: "12px", fontFamily: "Roboto"}}
-              className="px-10 py-3 text-white border-white bg-white/20 transition-all "
+              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
             >
-              Тело
+              СПА услуги
             </Button>
-            <Button 
-              onClick={() => setActiveCategory("face")}
-              variant={activeCategory === "face" ? "default" : "transparent"}
+            <Button
+              onClick={() => setMainCategory("hammam")}
+              variant={mainCategory === "hammam" ? "default" : "transparent"}
               size="lg"
-              style={{borderRadius: "12px", fontFamily: "Roboto"}}
-              className="px-10 py-3 text-white border-white  bg-white/20 transition-all "
-            >
-              Лицо
-            </Button>
-            <Button 
-              onClick={() => setActiveCategory("hammam")}
-              variant={activeCategory === "hammam" ? "default" : "transparent"}
-              size="lg"
-              style={{borderRadius: "12px", fontFamily: "Roboto"}}
-              className="px-10 py-3 bg-white/20 text-white border-white  transition-all"
+              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
             >
               Хаммам
             </Button>
-            <Button 
-              onClick={() => setActiveCategory("sauna")}
-              variant={activeCategory === "sauna" ? "default" : "transparent"}
+            <Button
+              onClick={() => setMainCategory("sauna")}
+              variant={mainCategory === "sauna" ? "default" : "transparent"}
               size="lg"
-              style={{borderRadius: "12px", fontFamily: "Roboto"}}
-              className="px-10 py-3 bg-white/20 text-white border-white  transition-all"
+              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
             >
               Сауна
             </Button>
           </div>
+
+          {/* Под-кнопки для СПА услуг */}
+          {mainCategory === "spa" && (
+            <div className="flex justify-center gap-4 mt-6 text-xl">
+              <Button
+                onClick={() => setSpaSubCategory("body")}
+                variant={spaSubCategory === "body" ? "default" : "transparent"}
+                size="lg"
+                style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+                className="px-8 py-2 text-white border-white bg-white/20 transition-all"
+              >
+                Тело
+              </Button>
+              <Button
+                onClick={() => setSpaSubCategory("face")}
+                variant={spaSubCategory === "face" ? "default" : "transparent"}
+                size="lg"
+                style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+                className="px-8 py-2 text-white border-white bg-white/20 transition-all"
+              >
+                Лицо
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-5xl font-bold text-white text-center" style={{fontFamily: "ZenAntique"}}>
+          <h2 className="text-5xl font-bold text-white text-center" style={{ fontFamily: "ZenAntique" }}>
             {getCategoryTitle()}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
-            {services.map((service, Index) => (
-              <ServiceCard key={service.id} service={service} index={Index}/>
+            {services.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
             ))}
           </div>
         </div>

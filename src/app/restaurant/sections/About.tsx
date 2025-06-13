@@ -17,8 +17,8 @@ export const About = () =>{
                     <p className="text-[60px] leading-none max-md:max-w-full max-md:text-[30px]">
                         <span className='text-center' style={{ fontFamily: "ZenAntique" }}>Ресторан «За Поводом»</span>
                     </p>
-                    <p className="tracking-[2px] mt-[200px] max-md:max-w-full max-md:mt-[200px] text-[15px] md:text-[29px]"
-                    style={{fontFamily:"RobotoL"}}>
+                    <p className="tracking-[2px] mt-[200px] max-md:max-w-full max-md:mt-[200px]"
+                    style={{fontFamily:"RobotoL", fontSize: isMobile? "15px":"30px"}}>
                         Наше меню разработано с учетом самых разнообразных гастрономических предпочтений.<br/>
 
                         Будь то корпоративное торжество, свадебное мероприятие, встреча с друзьями или романтический 
