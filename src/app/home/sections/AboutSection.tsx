@@ -27,16 +27,16 @@ export const AboutSection = () => {
   return (
   <section className="self-center w-[90%] ml-[5%] mr-[5%] max-w-full mt-11 max-md:max-w-[full] max-md:mt-10 ">
 
-    <div className="bg-transparent text-black overflow-hidden " style={{ fontFamily: "RobotoL" }}>
+    <div className="bg-transparent text-black overflow-hidden ">
       <div className="grid gap-0" style={{ display: "grid", gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
         {/* Левая часть - текст */}
         <CardContent className="p-7 flex flex-col justify-center tracking-[2px]">
           <div>
-            <p className="text-5xl mb-6 uppercase text-center" style={{ fontFamily: "Gothamlight" }}>
+            <p className="text-5xl mb-6 uppercase text-center">
               Звёздный
             </p>
 
-            <div className="space-y-2 text-[15px] md:text-[20px] font-light leading-8 text-black/80">
+            <div className="space-y-2 text-[15px] md:text-[20px] font-light leading-8 text-black/80"  style={{ fontFamily: "RobotoL" }}>
               <p className="font-medium mt-8">
                 Добро пожаловать в <span style={{ fontFamily: "Roboto" }}>Загородный комплекс «Звёздный»!</span>
               </p>
@@ -66,7 +66,7 @@ export const AboutSection = () => {
 
 
 
-    <div className="bg-transparent overflow-hidden mt-[50px]" style={{ fontFamily: "RobotoL" }}>
+    <div className="bg-transparent overflow-hidden mt-[50px]" >
       <div className="grid gap-0" style={{ display: "grid", gridTemplateColumns: isMobile? '1fr' : '1fr 1fr'}}>
         {/* Левая часть - изображение */}
         <div className="grid gap-2 p-4 grid-cols-1">
@@ -84,10 +84,10 @@ export const AboutSection = () => {
         {/* Правая часть - текст */}
         <CardContent className="p-7 flex flex-col justify-center" style={{marginTop: isMobile? "-10%" : ""}}>
           <div className="flex flex-col justify-center text-black max-md:mt-10 max-md:max-w-full">
-            <p className="text-5xl uppercase mb-8 text-center" style={{ fontFamily: "Gothamlight" }}>
+            <p className="text-5xl uppercase mb-8 text-center">
               Звёздный
             </p>
-            <div className="text-[15px] md:text-[23px] mt-8 font-light leading-8 tracking-[2px] text-black/80">
+            <div className="text-[15px] md:text-[23px] mt-8 font-light leading-8 tracking-[2px] text-black/80" style={{ fontFamily: "RobotoL" }}>
               <p  >
 <span style={{ fontFamily: "Roboto" }}>Для мероприятий</span> – просторные банкетные залы, оборудованные для свадеб, корпоративов и торжеств. 
 После праздника можно продолжить вечер за бильярдом или караоке, а для полного релакса – баня и хаммам. На свежем воздухе вас ждут уютные беседки, костровая зона и детская площадка. Любители активного отдыха оценят рыбалку и конные прогулки с возможностью фотосессий на фоне живописной природы.  

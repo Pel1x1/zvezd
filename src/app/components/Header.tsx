@@ -34,8 +34,7 @@ export const Header = () => {
         {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}
         <p
           onClick={() => router.push('/')}
-          className="text-[15px] md:text-[20px] text-bold shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0"
-          style={{ fontFamily: "Gothamlight", marginLeft: isMobile? "3%":"10%"}}
+          className="text-[15px] md:text-[25px] text-bold shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0" style={{ marginLeft: isMobile? "3%":"10%"}}
         >
           ЗВЁЗДНЫЙ
         </p>
