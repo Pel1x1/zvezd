@@ -16,7 +16,7 @@ type CardData = {
 const cards: CardData[] = [
   { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на бронирование номеров молодоженам и на годовщину свадьбы.", link: "" },
   { title: "Скидки для именинников", image: "../img/events.webp", description: "Скидка 10% на проживание на весь заезд.", link: "" },
-  { title: "За поводом", image: "/img/zapovod.webp", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "" },
+  { title: "За Поводом", image: "/img/zapovod.webp", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "" },
 ];
 
 export const PromoSection = () => {
