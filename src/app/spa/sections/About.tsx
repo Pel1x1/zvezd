@@ -7,6 +7,7 @@ import { Separator } from "@/app/spa/sections/separator";
 import { FileText } from "lucide-react";
 import ServiceCard from "@/app/spa/sections/ServiceCard";
 import { bodyServices, faceServices, hammamServices, saunaServices } from "@/app/spa/sections/services";
+import { useIsMobile } from "@/app/hooks/use-mobile";
 
 import {Card as CardSupport} from "@/app/ui/card";
 import {CardContent as  CardContentSupport} from "@/app/ui/card";
@@ -16,6 +17,7 @@ const Hero = () => {
   const [mainCategory, setMainCategory] = useState("spa"); // spa, hammam, sauna
   const [spaSubCategory, setSpaSubCategory] = useState("body"); // body или face
   const [services, setServices] = useState(bodyServices);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (mainCategory === "spa") {
@@ -55,8 +57,8 @@ const Hero = () => {
               onClick={() => setMainCategory("spa")}
               variant={mainCategory === "spa" ? "default" : "transparent"}
               size="lg"
-              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
-              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
+              style={{ borderRadius: "12px", fontFamily: "Roboto", fontSize: isMobile? "17px":"30px", paddingLeft: isMobile? "15px":"30px", paddingRight: isMobile? "15px":"30px", }}
+              className="py-4 text-white border-white bg-white/20 transition-all"
             >
               СПА услуги
             </Button>
@@ -64,8 +66,8 @@ const Hero = () => {
               onClick={() => setMainCategory("hammam")}
               variant={mainCategory === "hammam" ? "default" : "transparent"}
               size="lg"
-              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
-              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
+              style={{ borderRadius: "12px", fontFamily: "Roboto", fontSize: isMobile? "17px":"30px", paddingLeft: isMobile? "15px":"30px", paddingRight: isMobile? "15px":"30px", }}
+              className="py-4 text-white border-white bg-white/20 transition-all"
             >
               Хаммам
             </Button>
@@ -73,8 +75,8 @@ const Hero = () => {
               onClick={() => setMainCategory("sauna")}
               variant={mainCategory === "sauna" ? "default" : "transparent"}
               size="lg"
-              style={{ borderRadius: "12px", fontFamily: "Roboto" }}
-              className="px-10 py-3 text-white border-white bg-white/20 transition-all"
+              style={{ borderRadius: "12px", fontFamily: "Roboto", fontSize: isMobile? "17px":"30px", paddingLeft: isMobile? "15px":"30px", paddingRight: isMobile? "15px":"30px", }}
+              className="py-4 text-white border-white bg-white/20 transition-all"
             >
               Сауна
             </Button>
@@ -87,7 +89,7 @@ const Hero = () => {
                 onClick={() => setSpaSubCategory("body")}
                 variant={spaSubCategory === "body" ? "default" : "transparent"}
                 size="lg"
-                style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+                style={{ borderRadius: "12px", fontFamily: "Roboto", fontSize: isMobile? "15px":"25px" }}
                 className="px-8 py-2 text-white border-white bg-white/20 transition-all"
               >
                 Тело
@@ -96,7 +98,7 @@ const Hero = () => {
                 onClick={() => setSpaSubCategory("face")}
                 variant={spaSubCategory === "face" ? "default" : "transparent"}
                 size="lg"
-                style={{ borderRadius: "12px", fontFamily: "Roboto" }}
+                style={{ borderRadius: "12px", fontFamily: "Roboto", fontSize: isMobile? "15px":"25px" }}
                 className="px-8 py-2 text-white border-white bg-white/20 transition-all"
               >
                 Лицо
@@ -107,7 +109,7 @@ const Hero = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4">
+      <section className="px-4">
         <div className="container mx-auto">
           <h2 className="text-5xl font-bold text-white text-center" style={{ fontFamily: "ZenAntique" }}>
             {getCategoryTitle()}
