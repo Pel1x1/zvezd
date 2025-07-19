@@ -14,12 +14,12 @@ export const Header = () => {
 
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = useState(false);
-
   const navLinks = [
     { label: "ПРОЖИВАНИЕ", href: "/accommodation" },
     { label: "БАНКЕТНЫЕ ЗАЛЫ", href: "/banquethall" },
     { label: "SPA-КОМПЛЕКС", href: "/spa" },
     { label: "МЕРОПРИЯТИЯ", href: "/events" },
+    { label: "КЛУБНЫЙ ПОСЁЛОК", href: "/clubvillage" },
     { label: "СВАДЬБЫ", href: "/weddings" },
     { label: "УСЛУГИ", href: "/services" },
     { label: "РЕСТОРАН", href: "/restaurant" },
@@ -34,7 +34,7 @@ export const Header = () => {
         {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}
         <p
           onClick={() => router.push('/')}
-          className="text-[15px] md:text-[25px] text-bold shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0" 
+          className="text-[15px] md:text-[20px] text-bold shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0" 
           style={{ marginLeft: isMobile? "3%":"10%"}}
         >
           ЗВЁЗДНЫЙ
@@ -50,7 +50,7 @@ export const Header = () => {
               <Link
                 key={label}
                 href={href}
-                className=" footer-link hover:text-white transition-colors cursor-pointer font-body text-[14px]"
+                className=" footer-link hover:text-white transition-colors cursor-pointer font-body font-bold text-[12px]"
               >
                 {label}
               </Link>

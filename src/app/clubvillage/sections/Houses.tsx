@@ -13,10 +13,10 @@ const houses = [
     features: ["2 спальни, 2 санузла", "Кабинет (или сауна)", "Терраса", "Котельная-постирочная", "Опция: навес на 2 машины"],
     images: [
       "/img/clubvil/120/dom_120_bej_ver.jpg",
-      "/img/clubvil/120/dom_120_bej_ver_1.jpg",
-      "/img/clubvil/120/dom_120_red_ter-1.jpg",
       "/img/clubvil/120/dom_120_red_ter.jpg",
       "/img/clubvil/120/dom_120_white.jpg",
+      "/img/clubvil/120/dom_120_bej_ver_1.jpg",
+      "/img/clubvil/120/dom_120_red_ter-1.jpg",
       "/img/clubvil/120/dom_120_white_ver_1.jpg",
       "/img/clubvil/120/dom_120_1.png",
       "/img/clubvil/120/dom_120_2.png",
@@ -26,16 +26,21 @@ const houses = [
     id: 2,
     name: "ПРОСТОРНЫЙ ДОМ ДЛЯ СЕМЬИ С ДЕТЬМИ",
     area: "141 кв.м",
-    features: ["3 спальни, 3 санузла", "Котельная постирочная",
-      "Гардеробная при входе","Кладовка при кухне","Терраса (или застекленная веранда)",
-      "Мастер-спальня с санузлом и гардеробной","Кабинет (или сауна)","Опция: навес на 2 машины",],
+    features: ["3 спальни, 3 санузла",
+       "Котельная постирочная",
+      "Гардеробная при входе",
+      "Кладовка при кухне",
+      "Терраса (или застекленная веранда)",
+      "Мастер-спальня с санузлом и гардеробной",
+      "Кабинет (или сауна)",
+      "Опция: навес на 2 машины",],
     images: [
       "/img/clubvil/140/dom_140_bej_ter.jpg",
-      "/img/clubvil/140/dom_140_bej_ver_n.jpg",
-      "/img/clubvil/140/dom_140_white_ver.jpg",
-      "/img/clubvil/140/dom_140_white_ver_1.jpg",
       "/img/clubvil/140/dom_140_red_ter.jpg",
+      "/img/clubvil/140/dom_140_white_ver.jpg",
+      "/img/clubvil/140/dom_140_bej_ver_n.jpg",
       "/img/clubvil/140/dom_140_red_ter_1.jpg",
+      "/img/clubvil/140/dom_140_white_ver_1.jpg",
       "/img/clubvil/140/dom_140_1.png",
       "/img/clubvil/140/dom_140_2.png",
       "/img/clubvil/140/dom_140_3.png",
@@ -45,22 +50,58 @@ const houses = [
     id: 3,
     name: "ДОМ МЕЧТЫ ДЛЯ БОЛЬШОЙ СЕМЬИ",
     area: "188 кв.м",
-    features: ["1 спальня", "1 санузел", "Гостиная-кухня", "Мангальная зона", "Wi-Fi"],
+    features: [
+  "Гардеробная при входе",
+  "Постирочная",
+  "Кладовка при кухне",
+  "Высокий второй свет",
+  "4 спальни, 3 санузла",
+  "Котельная",
+  "Мастер-спальня с санузлом и гардеробной",
+  "Опция: сауна, гараж или навес с хозблоком",
+  "Кабинет",
+  ],
     images: [
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/img/clubvil/180/dom_180_bej_ver.jpg",
+      "/img/clubvil/180/dom_180_red_ver.jpg",
+      "/img/clubvil/180/dom_180_white_ver.jpg",
+      "/img/clubvil/180/dom_180_bej_ver_1.jpg",
+      "/img/clubvil/180/dom_180_red_ter_1.jpg",
+      "/img/clubvil/180/dom_180_white_ter_1.jpg",
+      "/img/clubvil/180/dom_180_1.png",
+      "/img/clubvil/180/dom_180_2.png",
+      "/img/clubvil/180/dom_180_3.png",
+      "/img/clubvil/180/dom_180_4.png",
+      "/img/clubvil/180/dom_180_5.png",
     ]
   },
   {
     id: 4,
     name: "ДОМ, ОБЪЕДИНЯЮЩИЙ ПОКОЛЕНИЯ",
     area: "224 кв.м",
-    features: ["1 спальня", "1 санузел", "Гостиная-кухня", "Мангальная зона", "Wi-Fi"],
+    features: [
+    "2 мастер-спальни с санузлом и гардеробной",
+    "Гараж на 2 машины (опция: жилой модуль)",  
+  "Гардеробная при входе",
+  "Постирочная",
+  "Кладовка при кухне",
+  "Высокий второй свет",
+  "5 спален, 4 санузла",
+  "Котельная",
+  "Кабинет",
+    ],
     images: [
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/img/clubvil/220/dom_220_bej_ver.jpg",
+      "/img/clubvil/220/dom_220_red_ver.jpg",
+      "/img/clubvil/220/dom_220_white_ver.jpg",
+      "/img/clubvil/220/dom_220_bej_ver_1.jpg",
+      "/img/clubvil/220/dom_220_red_ter_1.jpg",
+      "/img/clubvil/220/dom_220_white_ter_1.jpg",
+      "/img/clubvil/220/dom_220_1.png",
+      "/img/clubvil/220/dom_220_2.png",
+      "/img/clubvil/220/dom_220_3.png",
+      "/img/clubvil/220/dom_220_4.png",
+      "/img/clubvil/220/dom_220_5.png",
     ]
   },
 ];
@@ -124,10 +165,10 @@ const VillageSection = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4 mb-6">
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-1">
                         {house.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center gap-2">
-                            <Star className="w-4 h-4 fill-current text-amber-400" />
+                            <span className="mr-2">•</span>
                             <span className="text-lg">{feature}</span>
                           </div>
                         ))}
