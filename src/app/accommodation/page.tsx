@@ -8,7 +8,7 @@ import { PromoSection } from "@/app/components/PromoSection";
 
 export default function AboutPage() {
   return (
-    <main className="bg-[rgba(210,182,177,1)]">
+    <main className="bg-[rgba(210,182,177,1)]" style={{paddingBottom:"10%"}}>
       <Hero/>
       <Rooms/>
       <Shalle/>

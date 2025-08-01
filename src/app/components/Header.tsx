@@ -43,14 +43,14 @@ export const Header = () => {
         {/* Десктопная навигация */}
         {!isMobile && (
           <nav
-            className="flex gap-5 sm:gap-6 lg:gap-12 rg:gap-12"
+            className="flex gap-4 sm:gap-6 lg:gap-12 rg:gap-12"
             style={{ fontFamily: "Gothamlight",marginRight:"40px" }}
           >
             {navLinks.map(({ label, href }) => (
               <Link
                 key={label}
                 href={href}
-                className=" footer-link hover:text-white transition-colors cursor-pointer font-body font-bold text-[12px]"
+                className=" footer-link hover:text-white transition-colors cursor-pointer font-body font-bold text-[13px]"
               >
                 {label}
               </Link>

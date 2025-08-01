@@ -35,6 +35,7 @@ export const TerritorySection = () => {
           marginLeft: isMobile? "4%":"5%",
             marginRight: isMobile? "4%":"5%",
           zIndex: 1,
+          
         }}
       />) : (<div></div>)}
         
@@ -42,8 +43,9 @@ export const TerritorySection = () => {
           className="absolute left-1/2 top-[25%] -translate-x-1/2 text-white text-center w-full px-4 tracking-[2px]"
           style={{
             fontFamily: "Roboto",
-            fontSize: isMobile ? "9px" : "25px",
+            fontSize: isMobile ? "13px" : "25px",
             zIndex: 2,
+            
           }}
         >
           Территория комплекса находится в экологически чистом районе

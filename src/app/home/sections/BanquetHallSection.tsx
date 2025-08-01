@@ -79,7 +79,7 @@ export const BanquetHallSection = () => {
           </div>
         </div>
       </div>
-      
+      {/*
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch mb-[100px] ">
         <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0 relative">
           <div className="relative aspect-[0.85] w-[90%] ml-[5%] mr-[5%]">
@@ -104,8 +104,6 @@ export const BanquetHallSection = () => {
               }}
               />) : (<div></div>)}
           </div>
-
-          {/* Текст поверх фото - показываем только на мобильной */}
           <div className="absolute top-[25%] left-0 w-full px-4 max-md:block hidden text-white text-center" style={{zIndex:2}}>
             <h2 className="font-medium uppercase" style={{ fontSize: "20px" }}>
               КЛУБНЫЙ ПОСЁЛОК
@@ -145,7 +143,7 @@ export const BanquetHallSection = () => {
           </div>
         </div>
       </div>
-
+    */}
     </section>
   );
 };
