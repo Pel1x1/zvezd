@@ -23,7 +23,7 @@ export default function HomePage() {
           <RestaurantAndSpaSection />
           <RoomSection />
           <BanquetHallSection />
-          <div className='mb-[100px] mt-[100px] text-transparent' style={{height:"50px"}}></div>
+          <div className=' text-transparent' style={{height:"10px"}}></div>
         </main>
       </div>
     </div>

@@ -9,7 +9,8 @@ export const TerritorySection = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section className="self-center w-full max-w-full mt-[100px] mb-[25px] max-md:mt-[100px] bg-[rgba(210,182,177,1)]">
+    <section className="self-center w-full max-w-full mt-[100px] mb-[50px] max-md:mt-[100px] bg-[rgba(210,182,177,1)]">
+      
       <div className="relative inline-block bg-[rgba(210,182,177,1)] ">
         <Image
           src={territory}

@@ -25,7 +25,7 @@ export const Shalle = () => {
           className="absolute left-1/2 top-[25%] -translate-x-1/2 text-white text-center w-full px-4"
           style={{
             fontFamily: "ZenAntique",
-            fontSize: isMobile ? "11px" : "35px",
+            fontSize: isMobile ? "16px" : "35px",
           }}
         >
           БЕРЁЗКИ
@@ -34,12 +34,12 @@ export const Shalle = () => {
           className="absolute left-1/2 top-[35%] -translate-x-1/2 text-white text-center w-full px-4"
           style={{
             fontFamily: "RobotoL",
-            fontSize: isMobile ? "10px" : "25px",
+            fontSize: isMobile ? "15px" : "25px",
           }}
         >
           Апартаменты "Берёзки" – ваш уютный уголок в гармонии с природой!
         </p>
-        <button className="absolute left-1/2 top-[40%] underline -translate-x-1/2 text-white text-center w-full px-4"
+        <button className="absolute left-1/2 top-[55%] underline -translate-x-1/2 text-white text-center w-full px-4"
         style={{
             fontFamily: "RobotoL",
             fontSize: isMobile ? "11px" : "25px",

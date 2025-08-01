@@ -40,6 +40,17 @@ const About = () => {
 
     return (
         <section className="py-20 px-[15] md:px-[15%]">
+
+        {/* Описание секции */}
+        <div className="text-center mb-20 max-w-4xl mx-auto">
+          <p className="text-xl md:text-4xl text-white/90 leading-normal tracking-[1px]">
+            Клубный посёлок «Звёздный» погрузит Вас в неповторимую атмосферу русских традиций и современной архитектуры!
+          </p>
+          <p className="text-lg md:text-3xl text-white/90 leading-normal tracking-[2px]">
+            Мы уже построили всю необходимую инфраструктуру, чтобы Вы могли наслаждаться природой и уединением не в ущерб привычному образу жизни. Для жителей посёлка особые условия на все услуги.
+          </p>
+        </div>
+
         {/* Комфорт блок */}
         <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white mb-16 py-2">
             <CardHeader>
@@ -52,8 +63,8 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {comfortFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-xl">{feature}</span>
+                    <span className="mr-1 text-2xl">•</span>
+                    <span className="text-2xl">{feature}</span>
                 </div>
                 ))}
             </div>
@@ -75,8 +86,8 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {communicationFeatures.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-xl">{feature}</span>
+                        <span className="mr-1 text-2xl">•</span>
+                        <span className="text-2xl">{feature}</span>
                     </div>
                     ))}
                     </div>
