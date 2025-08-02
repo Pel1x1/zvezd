@@ -39,7 +39,7 @@ const About = () => {
     };
 
     return (
-        <section className="py-20 px-[15] md:px-[15%]">
+        <section className="px-[15] md:px-[15%]" style={{paddingTop:"50px"}}>
 
         {/* Описание секции */}
         <div className="text-center mb-20 max-w-4xl mx-auto">
@@ -54,17 +54,17 @@ const About = () => {
         {/* Комфорт блок */}
         <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white mb-16 py-2">
             <CardHeader>
-                <CardTitle className="text-4xl flex items-center gap-3">
+                <CardTitle className="flex items-center gap-3">
                     <Star className="w-8 h-8" />
-                    Комфорт
+                    <p className="text-[25px] md:text-[40px] mt-3"  style={{fontFamily: "ZenAntoquie"}}>Комфорт</p>
                 </CardTitle>
             </CardHeader>
             <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
                 {comfortFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                    <span className="mr-1 text-2xl">•</span>
-                    <span className="text-2xl">{feature}</span>
+                <div key={index} className="flex items-center gap-2">
+                    <span className="mr-1 text-1">•</span>
+                    <span className="text-[15px] md:text-[25px]">{feature}</span>
                 </div>
                 ))}
             </div>
@@ -74,20 +74,20 @@ const About = () => {
         {/* Коммуникации блок */}
         <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white mb-16">
             <CardHeader>
-                <CardTitle className="text-4xl flex items-center gap-3">
+                <CardTitle className="flex items-center gap-3">
                     <Home className="w-8 h-8" />
-                    Коммуникации
+                    <p className="text-[25px] md:text-[40px] mt-3"  style={{fontFamily: "ZenAntoquie"}}>Коммуникации</p>
                 </CardTitle>
             </CardHeader>
             <CardContent>
             <div className="flex flex-col lg:flex-row gap-8">
                 {/* Левая часть - список */}
                 <div className="flex-1">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
                     {communicationFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                        <span className="mr-1 text-2xl">•</span>
-                        <span className="text-2xl">{feature}</span>
+                    <div key={index} className="flex items-center gap-2">
+                        <span className="mr-1 text-1">•</span>
+                        <span className="text-[15px] md:text-[25px]">{feature}</span>
                     </div>
                     ))}
                     </div>

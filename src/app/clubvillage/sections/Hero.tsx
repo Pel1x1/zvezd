@@ -24,7 +24,7 @@ export const Hero = () => {
       style={{ opacity: 0.5, zIndex: 1 }}
     />
     {/* Текст поверх затемнения */}
-    <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 mb-[120px] md:mb-[0px]">
       <div className="items-center flex flex-col justify-center">
         <p className="text-white text-[30px] md:text-[70px] mb-4 drop-shadow-lg" style={{ fontFamily: "ZenAntoquie" }}>
           КЛУБНЫЙ ПОСЁЛОК

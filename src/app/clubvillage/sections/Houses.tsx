@@ -114,7 +114,7 @@ const VillageSection = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className=" px-4" style={{paddingBottom:"50px"}}>
       <div className="max-w-7xl mx-auto">
         {/* Дома */}
         <div className="space-y-16">
