@@ -12,14 +12,15 @@ const houses = [
     area: "112 кв.м",
     features: ["2 спальни, 2 санузла", "Кабинет (или сауна)", "Терраса", "Котельная-постирочная", "Опция: навес на 2 машины"],
     images: [
-      "/img/clubvil/120/dom_120_bej_ver.jpg",
       "/img/clubvil/120/dom_120_red_ter.jpg",
-      "/img/clubvil/120/dom_120_white.jpg",
-      "/img/clubvil/120/dom_120_bej_ver_1.jpg",
       "/img/clubvil/120/dom_120_red_ter-1.jpg",
-      "/img/clubvil/120/dom_120_white_ver_1.jpg",
-      "/img/clubvil/120/dom_120_1.png",
       "/img/clubvil/120/dom_120_2.png",
+      "/img/clubvil/120/dom_120_1.png",
+      "/img/clubvil/120/dom_120_bej_ver.jpg",
+      "/img/clubvil/120/dom_120_bej_ver_1.jpg",
+      "/img/clubvil/120/dom_120_white.jpg",
+      "/img/clubvil/120/dom_120_white_ver_1.jpg",
+      
     ]
   },
   {
@@ -36,14 +37,15 @@ const houses = [
       "Опция: навес на 2 машины",],
     images: [
       "/img/clubvil/140/dom_140_bej_ter.jpg",
-      "/img/clubvil/140/dom_140_red_ter.jpg",
-      "/img/clubvil/140/dom_140_white_ver.jpg",
       "/img/clubvil/140/dom_140_bej_ver_n.jpg",
-      "/img/clubvil/140/dom_140_red_ter_1.jpg",
-      "/img/clubvil/140/dom_140_white_ver_1.jpg",
       "/img/clubvil/140/dom_140_1.png",
       "/img/clubvil/140/dom_140_2.png",
       "/img/clubvil/140/dom_140_3.png",
+      "/img/clubvil/140/dom_140_red_ter.jpg",
+      "/img/clubvil/140/dom_140_red_ter_1.jpg",
+      "/img/clubvil/140/dom_140_white_ver.jpg",
+      "/img/clubvil/140/dom_140_white_ver_1.jpg",
+      
     ]
   },
   {
@@ -63,16 +65,16 @@ const houses = [
   ],
     images: [
       "/img/clubvil/180/dom_180_bej_ver.jpg",
-      "/img/clubvil/180/dom_180_red_ver.jpg",
-      "/img/clubvil/180/dom_180_white_ver.jpg",
       "/img/clubvil/180/dom_180_bej_ver_1.jpg",
-      "/img/clubvil/180/dom_180_red_ter_1.jpg",
-      "/img/clubvil/180/dom_180_white_ter_1.jpg",
-      "/img/clubvil/180/dom_180_1.png",
       "/img/clubvil/180/dom_180_2.png",
       "/img/clubvil/180/dom_180_3.png",
       "/img/clubvil/180/dom_180_4.png",
       "/img/clubvil/180/dom_180_5.png",
+      "/img/clubvil/180/dom_180_1.png",
+      "/img/clubvil/180/dom_180_white_ver.jpg",
+      "/img/clubvil/180/dom_180_white_ter_1.jpg",
+      "/img/clubvil/180/dom_180_red_ver.jpg",
+      "/img/clubvil/180/dom_180_red_ter_1.jpg",
     ]
   },
   {
@@ -92,16 +94,16 @@ const houses = [
     ],
     images: [
       "/img/clubvil/220/dom_220_bej_ver.jpg",
-      "/img/clubvil/220/dom_220_red_ver.jpg",
-      "/img/clubvil/220/dom_220_white_ver.jpg",
       "/img/clubvil/220/dom_220_bej_ver_1.jpg",
-      "/img/clubvil/220/dom_220_red_ter_1.jpg",
-      "/img/clubvil/220/dom_220_white_ter_1.jpg",
-      "/img/clubvil/220/dom_220_1.png",
       "/img/clubvil/220/dom_220_2.png",
       "/img/clubvil/220/dom_220_3.png",
       "/img/clubvil/220/dom_220_4.png",
       "/img/clubvil/220/dom_220_5.png",
+      "/img/clubvil/220/dom_220_1.png",
+      "/img/clubvil/220/dom_220_white_ver.jpg",
+      "/img/clubvil/220/dom_220_white_ter_1.jpg",
+      "/img/clubvil/220/dom_220_red_ver.jpg",
+      "/img/clubvil/220/dom_220_red_ter_1.jpg",    
     ]
   },
 ];
