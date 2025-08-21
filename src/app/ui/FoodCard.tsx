@@ -9,7 +9,6 @@ interface FoodCardProps {
   imageUrl: StaticImageData;
   link: string;
   index?: number;
-
 }
 export const FoodCard: React.FC<FoodCardProps> = ({
   title,
@@ -36,7 +35,20 @@ export const FoodCard: React.FC<FoodCardProps> = ({
       <div className={`absolute text-white  top-5 ${customLeft}`}>
         <h3 className="text-[27px] uppercase" style={{fontFamily:"ZenAntique"}}>{title}</h3>
         <p className="text-base tracking-[2px] mx-0 my-2.5">{description}</p>
-        <button className="text-lg underline cursor-pointer" onClick={() => alert(link)}>Подробнее</button>
+        <button 
+          className="text-lg underline cursor-pointer" 
+          onClick={() => {
+            const fileUrl = `./${link}.pdf`;
+            const linkElement = document.createElement("a");
+            linkElement.href = fileUrl;
+            linkElement.download = `${link}.pdf`;
+            document.body.appendChild(linkElement);
+            linkElement.click();
+            document.body.removeChild(linkElement);
+          }}
+        >
+          Подробнее
+        </button>
       </div>
     </div>
   );

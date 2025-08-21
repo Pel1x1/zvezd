@@ -11,34 +11,32 @@ import { useIsMobile } from "@/app/hooks/use-mobile";
 
 export const Menu = () =>{
   const isMobile = useIsMobile();
-
-    
     const Foods = [
     {
         title: "Меню",
         description:
         "",
         imageUrl: RestMenu,
-        link:"",
+        link:"MainMenu",
     },
     {
         title: "Завтраки",
         description:
         "",
         imageUrl: RestBreakfast,
-        link:"Белый люкс",
+        link:"BreakfastMenu",
     },
     {
         title: "Банкетное меню",
         description: "",
         imageUrl: RestBanket,
-        link:"Комфорт +",
+        link:"",
     },
     {
         title: "Детское меню",
         description: "",
         imageUrl: RestKids,
-        link:"Комфорт",
+        link:"MainMenu",
     },
     ];
     
