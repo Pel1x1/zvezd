@@ -4,8 +4,8 @@ import React from "react";
 import Script from "next/script";
 import { Button } from "@/app/ui/Button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
+import { useRouter } from "next/navigation";
 
-// Тип данных для карточки
 type CardData = {
   title: string;
   image: string;
@@ -14,13 +14,26 @@ type CardData = {
 };
 
 const cards: CardData[] = [
-  { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на бронирование номеров молодоженам и на годовщину свадьбы.", link: "" },
-  { title: "Скидки для именинников", image: "../img/events.webp", description: "Скидка 10% на проживание на весь заезд.", link: "" },
-  { title: "За Поводом", image: "/img/zapovod.webp", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "" },
+  { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на бронирование номеров молодоженам и на годовщину свадьбы.", link: "/weddings" },
+  { title: "Скидки для именинников", image: "../img/events.webp", description: "Скидка 10% на проживание на весь заезд.", link: "/events" },
+  { title: "За Поводом", image: "/img/zapovod.webp", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "/restaurant" },
+  { title: "Конный спортивный комплекс", image: "/img/ksk.webp", description: "Конно-спортивный комплекс «Звёздный» – это новый центр притяжения спортсменов-профессионалов, любителей лошадей, а также всех, кому не безразличны эти прекрасные и грациозные животные.", link: "https://ksk-zvezdniy.ru/" },
+
 ];
 
 export const PromoSection = () => {
   const isMobile = useIsMobile();
+
+  const router = useRouter();
+
+  const handleClick = (link: string) => {
+  if (link.startsWith("https")) {
+    window.location.href = link;
+  } else {
+    router.push(link);
+  }
+};
+
   return (
     <section className="bg-[rgba(210,182,177,1)]">
       <Script
@@ -31,12 +44,16 @@ export const PromoSection = () => {
         <div className="carousel-inner">
           {cards.map((card, idx) => (
             <div
+              
+              onClick={() => handleClick(card.link)}
+
               className={`carousel-item${idx === 0 ? " active" : ""}`}
               key={card.title}
               style={{fontFamily: "TrajanPro3", height: isMobile?"":"45vh"}}
             >
               <img src={card.image} className="d-block w-100" style={{height: isMobile?"23vh":""}} alt={card.title} />
               <div
+                
                 style={{
                   position: "absolute",
                   top: 0,
