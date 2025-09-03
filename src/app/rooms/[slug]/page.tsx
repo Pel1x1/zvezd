@@ -21,10 +21,11 @@ const getStrapiMediaUrl = (url: string) => {
 
 export default async function RoomPage({ params }: PageProps) {
   const { slug } = await params;
-  const res = await fetch('http://localhost:1337/api/rooms?populate=*', {
+  const room = rooms.find((r) => r.slug === slug);
+  {/*const res = await fetch('http://localhost:1337/api/rooms?populate=*', {
     cache: 'no-store',});
   const json: { data: Room[] } = await res.json();
-  const room = json.data.find(r => r.slug === slug);
+  const room = json.data.find(r => r.slug === slug);*/}
   if (!room) {
     notFound();
   }
