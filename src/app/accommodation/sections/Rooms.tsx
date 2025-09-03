@@ -18,7 +18,7 @@ export const Rooms = () => {
         "«Черный» Люкс в стиле «лофт» с прекрасным видом на хвойный лес.",
       imageUrl: blacklux,
       link:"BlackLux",
-      index: 0
+      index: "0"
     },
     {
       title: "Белый люкс",

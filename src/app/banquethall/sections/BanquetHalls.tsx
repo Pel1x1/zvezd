@@ -2,55 +2,30 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/ui/eventCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/app/ui/carousel";
 import { Users, MapPin, Star } from "lucide-react";
-const halls = [
-  {
-    id: 1,
-    name: "Основной зал",
-    capacity: "до 140 гостей",
-    area: "270 кв.м",
-    description: "Большой просторный зал ресторана-отеля «За поводом» Идеально подходит для торжественных мероприятий и свадеб. Удобное зонирование с тремя вип - зонами.",
-    features: ["Дизайнерский интерьер", "Панорамные окна", "Камин", "Профессиональное освещение"],
-    images: [
-      "/img/bankets/banketClassic-1.webp",
-      "/img/bankets/banketClassic-2.webp",
-      "/img/bankets/banketClassic-3.webp",
-    ]
-  },
-  {
-    id: 2,
-    name: "Белый зал",
-    capacity: "до 100 гостей",
-    area: "150 кв.м",
-    description: "Стильный светлый зал в окружении березовой рощи, панорамные окна и минимализм в интерьере.",
-    features: ["Выездная регистрация", "Панорамные окна", "Романтическое освещение", "Уютная атмосфера"],
-    images: [
-      "/img/bankets/banketWhite-1.webp",
-      "/img/bankets/banketWhite-2.webp",
-      "/img/bankets/banketWhite-3.webp",
-    ] 
-  },
-  {
-    id: 3,
-    name: "Изумрудный зал",
-    capacity: "до 70 гостей",
-    area: "140 кв.м",
-    description: "Уютный изолированный зал на третьем этаже бутик-отеля «За поводом» для камерных мероприятий.",
-    features: ["Бар", "LED-освещение", "Мультимедийное оборудование", "Зонирование"],
-    images: [
-      "/img/bankets/banketEmerald-1.webp",
-      "/img/bankets/banketEmerald-2.webp",
-      "/img/bankets/banketEmerald-3.webp",
-    ]
-  }
-];
 
-const BanquetHalls = () => {
+
+interface Hall {
+  id: number;
+  name: string;
+  capacity: string;
+  area: string;
+  description: string;
+  features: string[];
+  images: string[];
+}
+
+interface BanquetHallsProps {
+  halls: Hall[];
+}
+
+const BanquetHalls: React.FC<BanquetHallsProps> = ({halls}) => {
+  const hallsToUse = halls
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         
         <div className="space-y-16">
-          {halls.map((hall, index) => (
+          {hallsToUse.map((hall, index) => (
             <div key={hall.id} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 items-center`}>
               {/* Images Carousel */}
               <div className="w-full lg:w-1/2">
