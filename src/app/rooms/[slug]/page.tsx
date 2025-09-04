@@ -42,10 +42,10 @@ export default async function RoomPage({ params }: PageProps) {
 
   return (
     <main className='bg-[#D2B6B1]'>
-      <RoomHero room={formattedRoom}/>
+      <RoomHero room={room}/>
       <RoomDetails room={room} />
       <RoomFeature room={room} />
-      <RoomPhotos room={formattedRoom} />
+      <RoomPhotos room={room} />
     </main>
   );
 }
