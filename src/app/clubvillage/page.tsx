@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import {Hero} from './sections/Hero';
 import About from './sections/About';
 import VillageSection from "./sections/Houses";
-
+        
 export default function EventsPage() {
   return (
     <main>

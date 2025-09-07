@@ -6,11 +6,12 @@ import { Route } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from "@/app/spa/sections/button";
 
+import  SearchForm  from '@/app/components/SearchForm';
 export default function RoomDetails({ room }: RoomDetailsProps) {
       const isMobile = useIsMobile();
         const router = useRouter();
   return (
-    <section className="py-12 bg-[#D2B6B1]">
+    <section className="py-10 bg-[#D2B6B1]">
       <div className="container mx-auto px-4">
         {(room.id === '5' || room.id === '6') && (
         <div className="mb-8 flex gap-4 justify-center">
@@ -72,6 +73,25 @@ export default function RoomDetails({ room }: RoomDetailsProps) {
           </div>
         </div>
       </div>
+
+      
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop:"5rem" }}>
+      <Button
+        size="lg"
+        style={{
+          borderRadius: "12px",
+          fontFamily: "Roboto",
+          fontSize: isMobile ? "17px" : "30px",
+          paddingLeft: isMobile ? "15px" : "50px",
+          paddingRight: isMobile ? "15px" : "50px",
+        }}
+        className="py-[2rem] text-white border-white bg-[rgba(145,3,1,0.5)] transition-all hover:bg-[rgba(145,3,1,0.8)]"
+        onClick={() => window.location.href = '' + room.link}
+      >
+        Забронировать
+      </Button>
+    </div>
+
     </section>
   );
 } 

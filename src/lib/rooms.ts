@@ -5,6 +5,7 @@ export const rooms: Room[] = [
     id: '1',
     slug: 'BlackLux',
     name: 'Черный люкс',
+    link: "/booking?room-type=272629",
     description: '«Черный» Люкс в стиле «лофт» с прекрасным видом на хвойный лес.',
     price: 15000,
     features: [
@@ -47,6 +48,7 @@ export const rooms: Room[] = [
      id: '2',
     slug: 'WhiteLux',
     name: 'Белый люкс',
+     link: "/booking?room-type=280121",
     description: 'Роскошный «Белый» люкс предлагает исключительный комфорт для каждого гостя',
     price: 15000,
     features: [
@@ -88,6 +90,7 @@ export const rooms: Room[] = [
     id: '3',
     slug: 'ComfortPlus',
     name: 'Комфорт +',
+     link: "/booking?room-type=272630",
     description: 'Просторный однокомнатный номер',
     price: 8000,
     features: [
@@ -131,6 +134,7 @@ export const rooms: Room[] = [
     id: '4',
     slug: 'Comfort',
     name: 'Комфорт',
+    link: "/booking?room-type=272631",
     description: 'Комфорт - уютный номер, выполненный в современном стиле.',
     price: 8000,
     features: [
@@ -168,6 +172,7 @@ export const rooms: Room[] = [
     id: '5',
     slug: 'shalle1',
     name: 'Апартаменты',
+     link: "/booking?room-type=342083",
     description: 'Апартаменты Берёзки однокомнатные',
     price: 15000,
     features: [
@@ -208,6 +213,7 @@ export const rooms: Room[] = [
     id: '6',
     slug: 'shalle2',
     name: 'Апартаменты 2',
+     link: "/booking?room-type=342074",
     description: 'Апартаменты Берёзки двухкомнатные',
     price: 15000,
     features: [

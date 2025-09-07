@@ -24,6 +24,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+#block-search,
+#block-search * {
+  box-sizing: border-box;
+}
+
+#block-search {
+  background: #ffffff13;
+  width: 100%;
+  max-width: 100%;
+
+}
+
+.tl-container {
+  padding: 0 25px;
+}
 
 @font-face {
   font-family: 'PlayfairDisplay';

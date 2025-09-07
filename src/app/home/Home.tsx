@@ -9,6 +9,9 @@ import { BanquetHallSection } from "./sections/BanquetHallSection";
 import { PromoSection } from "@/app/components/PromoSection";
 import { TerritorySection } from "./sections/TerritorySection";
 import  InteractiveMap  from "./sections/InteractiveMap";
+import  SearchForm  from '@/app/components/SearchForm';
+import  BookingForm  from '@/app/components/BookingForm';
+import TravellineLoader from '@/app/components/TravellineLoader';
 
 export default function HomePage() {
   return (
@@ -17,6 +20,8 @@ export default function HomePage() {
       <div className="bg-[rgba(210,182,177,1)] flex w-full flex-col items-stretch max-md:max-w-full ">
         <main className=''>
           <Hero />
+          
+          <BookingForm/>
           <AboutSection />
           {/*<InteractiveMap/>*/}
           <TerritorySection/>

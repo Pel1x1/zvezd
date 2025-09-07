@@ -1,7 +1,16 @@
+
+declare global {
+  interface Window {
+    travelline?: any;
+    TL?: any;
+  }
+}
+
 export interface Room {
   id: string;
   slug: string;
   name: string;
+  link: string;
   description: string;
   price: number;
   features: string[];
@@ -17,6 +26,9 @@ export interface Room {
     view: string;
   };
 }
+
+
+
 
 export interface RoomDetailsProps {
   room: Room;

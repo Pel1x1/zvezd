@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import {Hero} from './sections/Hero';
 import EventsSections from "./sections/EventsSection";
+import  SearchForm  from '@/app/components/SearchForm';
+        
 export default function EventsPage() {
   return (
     <main>

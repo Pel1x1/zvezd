@@ -4,7 +4,8 @@
 import { useEffect } from 'react';
 import {Hero} from './sections/HeroSection';
 import BanquetHalls from './sections/BanquetHalls';
-
+import  SearchForm  from '@/app/components/SearchForm';
+        
 const halls2 = [
   {
     id: 1,

@@ -4,6 +4,9 @@ import {Hero} from "./sections/Hero"
 import {About} from "./sections/About"
 import {Menu} from "./sections/Menu"
 import { PromoSection } from "@/app/components/PromoSection";
+import  SearchForm  from '@/app/components/SearchForm';
+import TravellineLoader from '@/app/components/TravellineLoader';
+
 export default function RestaurantPage() {
   return (
     <main className="bg-[rgba(210,182,177,1)]">
