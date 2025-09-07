@@ -28,7 +28,7 @@ export const Header = () => {
 
   return (
     <header
-      className="fixed top-0 z-1000 w-full bg-[rgba(145,3,1,1)] backdrop-blur-sm py-3 px-4 sm:py-6 sm:px-8 shadow-md"
+      className="fixed top-14 z-1000 w-full bg-[rgba(145,3,1,1)] backdrop-blur-sm py-3 px-4 sm:py-6 sm:px-8 shadow-md"
     >
       <div className="max-w-[100%] mx-auto flex items-center text-center justify-between text-[#D2B6B1] ">
         {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}

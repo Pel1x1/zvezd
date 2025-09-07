@@ -7,7 +7,7 @@ export default function SearchForm() {
 
   return (
     <>
-    <div id="tl-booking-form" className='mt-20 mb-3' ></div>
+    <div id="tl-booking-form" className='mt-20 mb-20' ></div>
     <TravellineLoader />
     </>
   );
