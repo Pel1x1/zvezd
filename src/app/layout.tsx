@@ -22,7 +22,7 @@ export default function RootLayout({
         
         
         <Header/>
-        <div id="tl-search-form" className='w-[100%] bg-[#ffffff] border-white py-2 px-4 mt-15 fixed z-10000'></div>
+        <div id="tl-search-form" className='w-[100%] bg-[#ffffff] border-white py-2 px-4 mt-13 fixed z-10000'></div>
         <TravellineLoader />
         {children}   
         <PromoSection/>
