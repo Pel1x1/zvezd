@@ -5,7 +5,9 @@ import { useEffect } from 'react';
 import {Hero} from './sections/HeroSection';
 import BanquetHalls from './sections/BanquetHalls';
 import  SearchForm  from '@/app/components/SearchForm';
-        
+     import Head from 'next/head';
+
+  
 const halls2 = [
   {
     id: 1,
@@ -49,6 +51,13 @@ const halls2 = [
 ];
 
 export default function EventsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://zvezdny-complex.ru/banquethall",
+    "name": "Банкетный комплекс - Залы для торжеств и свадеб",
+    "description": "Премиальные банкетные залы для свадеб и торжеств. Организация незабываемых мероприятий с полным сервисом.",
+  };
     useEffect(() => {
     // SEO optimization
     document.title = "Банкетный комплекс - Залы для торжеств и свадеб";
@@ -65,6 +74,12 @@ export default function EventsPage() {
   }, []);
   return (
     <main>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head> 
       <div className="min-h-screen text-white" style={{ backgroundColor: '#D2B6B1' }}>
         <Hero/>
         <BanquetHalls halls={halls2} />

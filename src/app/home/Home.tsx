@@ -12,10 +12,26 @@ import  InteractiveMap  from "./sections/InteractiveMap";
 import  SearchForm  from '@/app/components/SearchForm';
 import  BookingForm  from '@/app/components/BookingForm';
 import TravellineLoader from '@/app/components/TravellineLoader';
+import Head from 'next/head';
+
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://zvezdny-complex.ru/",
+    "name": "«Звёздный»",
+    "description": "Загородный комплекс «Звёздный» — Официальный сайт",
+    // дополнительные специфичные данные
+  };
   return (
     <main className='bg-[rgba(210,182,177,1)]'>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       <div className="bg-[rgba(68,68,68,1)] overflow-hidden rounded-sm border-[rgba(255,255,255,0.1)] border-solid ">
       <div className="bg-[rgba(210,182,177,1)] flex w-full flex-col items-stretch max-md:max-w-full ">
         <main className=''>
