@@ -4,6 +4,7 @@ import { Clock, MapPin, DollarSign } from "lucide-react";
 import { Button } from "@/app/spa/sections/button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import { useState } from 'react';
+import BookingButton from "./BookingButton";
 const services = [
   {
     id: 1,
@@ -11,12 +12,12 @@ const services = [
     location: "Бильярдный зал в ресторане «За Поводом»",
     workingHours: {
       weekdays: "с 12:00 до 22:00",
-      weekends: "с 12:00 до 00:00"
+      weekends: ""
     },
     description: "Здесь вы можете наслаждаться игрой в бильярд, проводить комфортно время и расслабиться. Выбирайте американский или русский бильярд и наслаждайтесь игрой в уютной атмосфере.",
     pricing: {
-      weekdays: "1500₽ в час",
-      weekends: "2500₽ в час"
+      weekdays: "2000₽ в час",
+      weekends: ""
     },
     status: "Доступно",
     images: [
@@ -28,13 +29,13 @@ const services = [
     title: "Караоке",
     location: "Караоке комната в ресторане ресторане «За Поводом»",
     workingHours: {
-      weekdays: "с 18:00 до 02:00",
-      weekends: "с 16:00 до 03:00"
+      weekdays: "с 12:00 до 21:00",
+      weekends: ""
     },
     description: "Загородный комплекс «Звёздный» предлагает полный спектр развлечений и отдыха, включая великолепные услуги караоке. Специальная караоке комната, оборудованная профессиональной системой. Можно заказать напитки и закуски.",
     pricing: {
       weekdays: "1500₽ в час",
-      weekends: "2500₽ в час"
+      weekends: ""
     },
     status: "Популярно",
     images: [
@@ -46,13 +47,13 @@ const services = [
     title: "Аренда беседок для шашлыка",
     location: "Площадки под открытом небом",
     workingHours: {
-      weekdays: "с 11:00 до 22:00",
-      weekends: "с 11:00 до 22:00"
+      weekdays: "с 12:00 до 21:00",
+      weekends: ""
     },
     description: "Приватная зона отдыха со своим прудом и развлечениями в загородном комплексе «Звёздный». Аренда беседок с мангалом до 25 человек. Площадки под открытом небом, включающие все необходимое для барбекю.",
     pricing: {
       weekdays: "2000₽ в час",
-      weekends: "3000₽ в час"
+      weekends: ""
     },
     status: "Под заказ",
     images: [
@@ -64,11 +65,14 @@ const services = [
     title: "Конные прогулки",
     location: "КСК «Звёздный»",
     workingHours: {
-      weekdays: "с 10:00 до 22:00",
-      weekends: "с 10:00 до 22:00"
+      weekdays: "с 10:00 до 19:00",
+      weekends: ""
     },
     description: "Конные прогулки — это не просто отдых, это настоящее волшебство, которое наполняет жизнь яркими красками и незабываемыми впечатлениями. В седле лошади каждый человек может почувствовать себя свободным и сильным, забыв о повседневных заботах и стрессах. Контакт с природой, свежий воздух и теплое общение с этими прекрасными животными делают конные прогулки идеальным способом провести время как в одиночестве, так и в компании друзей или семьи.",
-
+    pricing: {
+        weekdays: "3000₽ в час",
+        weekends: ""
+    },
     status: "Под заказ",
     images: [
       "/img/services/Horses-1.webp",
@@ -80,12 +84,12 @@ const services = [
     location: "Зона отдыха",
     workingHours: {
       weekdays: "с 11:00 до 22:00",
-      weekends: "с 11:00 до 22:00"
+      weekends: ""
     },
-    description: "Приглашаем вас отдохнуть в нашей костровой зоне, где вы найдете уютные качели и кресла для комфортного времяпровождения. Здесь вы можете насладиться ароматным чаем у костра, устроить гриль-вечеринку или организовать небольшой пикник в кругу друзей. Приходите встречать рассветы и провожать закаты в нашей уютной зоне отдыха.",
+    description: "Приглашаем вас отдохнуть в нашей костровой зоне, где вы найдете уютные качели и кресла для комфортного времяпровождения.",
     pricing: {
       weekdays: "8500₽",
-      weekends: "8500₽"
+      weekends: ""
     },
     status: "Под заказ",
     images: [
@@ -135,25 +139,38 @@ const ServicesSection = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <Clock className="w-5 h-5" />
-                        <div className="flex flex-col">
-                          <span>Будни: {service.workingHours.weekdays}</span>
-                          <span>Выходные: {service.workingHours.weekends}</span>
+                        {service.workingHours.weekdays && service.workingHours.weekends ? (
+                          <div className="flex flex-col">
+                            <span>Будни: {service.workingHours.weekdays}</span>
+                            <span>Выходные: {service.workingHours.weekends}</span>
+                          </div>
+                        ) : (
+                          <span>Время работы: {service.workingHours.weekdays || service.workingHours.weekends}</span>
+                        )}
+                      </div>
+
+                      {service.pricing ? (
+                        service.pricing.weekdays && service.pricing.weekends !== "" ? (
+                          <div className="flex items-center gap-3">
+                            <DollarSign className="w-5 h-5" />
+                            <div className="flex flex-col">
+                              <span>Будни: {service.pricing.weekdays}</span>
+                              <span>Выходные: {service.pricing.weekends}</span>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-3">
+                            <DollarSign className="w-5 h-5" />
+                            <span>{service.pricing.weekends === "" ? service.pricing.weekdays : service.pricing.weekends || service.pricing.weekdays}</span>
+                          </div>
+                        )
+                      ) : (
+                        <div className="flex items-center gap-3">
+                          <DollarSign className="w-5 h-5" />
+                          <span>Договорная</span>
                         </div>
-                      </div>
-                      {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (
-                      <div className="flex items-center gap-3">
-                        <DollarSign className="w-5 h-5" />
-                        <div className="flex flex-col">
-                          <span>Будни: {service.pricing.weekdays}</span>
-                          <span>Выходные: {service.pricing.weekends}</span>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-3">
-                        <DollarSign className="w-5 h-5" />
-                        <span>Договорная</span>
-                      </div>
-                    )}
+                      )}
+
                     </div>
                     
                     <p className="text-lg opacity-90 mb-6 leading-relaxed">
@@ -165,18 +182,8 @@ const ServicesSection = () => {
                     <div>
                       {service.pricing && (service.pricing.weekdays || service.pricing.weekends) ? (<p className="text-xl font-bold" style={{fontSize: isMobile? "15px" : "24px"}}>от {service.pricing.weekdays}</p>) : (<span className="text-xl font-bold" style={{fontSize: isMobile? "15px" : "24px"}}>Договорная</span>)}
                     </div>
-                    <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block' }}>
-                    <Button
-                      size="lg"
-                      className="text-lg px-12 py-4 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex items-center gap-3 mx-auto mb-[20px]"
-                      style={{
-                        borderRadius:"10px",
-                        fontFamily:"RobotoL",
-                        fontSize: isMobile? "18px" : "20px",
-                      }}>
-                      Забронировать
-                    </Button>
-                    </a>
+                    <BookingButton service={service} isMobile={isMobile} />
+
                   </div>
                 </CardContent>
               </div>

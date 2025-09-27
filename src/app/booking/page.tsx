@@ -5,7 +5,7 @@ import  BookingForm  from '@/app/components/BookingForm';
 
 export default function EventsPage() {
   return (
-    <main>
+    <main className='pt-[6rem]'>
       <BookingForm/>
     </main>
   );

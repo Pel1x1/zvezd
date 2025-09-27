@@ -14,8 +14,8 @@ type CardData = {
 };
 
 const cards: CardData[] = [
-  { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на бронирование номеров молодоженам и на годовщину свадьбы.", link: "/weddings" },
-  { title: "Скидки для именинников", image: "../img/events.webp", description: "Скидка 10% на проживание на весь заезд.", link: "/events" },
+  { title: "Свадебный тариф", image: "../img/weddings.webp", description: "Спецпредложение скидка 10% на годовщину свадьбы.", link: "/weddings" },
+  { title: "Скидки для именинников", image: "../img/events.webp", description: "Скидка в Ресторане на ужин.", link: "/events" },
   { title: "За Поводом", image: "/img/zapovod.webp", description: "Уютный интерьер с панорамными окнами и камином, профессиональный сервис и авторские блюда.", link: "/restaurant" },
   { title: "Конный спортивный комплекс", image: "/img/ksk.webp", description: "Конно-спортивный комплекс «Звёздный» – это новый центр притяжения спортсменов-профессионалов, любителей лошадей, а также всех, кому не безразличны эти прекрасные и грациозные животные.", link: "https://ksk-zvezdniy.ru/" },
 

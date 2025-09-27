@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'icon',
-      url: 'logo.webp'
+      url: '/logo.webp'
     }
   ],
 

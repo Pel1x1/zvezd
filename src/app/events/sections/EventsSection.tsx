@@ -7,6 +7,7 @@ import { useIsMobile } from "@/app/hooks/use-mobile";
 import { HoverCard } from "radix-ui";
 import { useState } from 'react';
 import { Button } from "@/app/spa/sections/button";
+import BookingButton from "@/app/services/sections/BookingButton";
 
 const events = [
   {
@@ -140,19 +141,8 @@ const EventsSection = () => {
                     <div>
                       <p className="text-xl font-bold" style={{fontSize: isMobile? "18px" : "24px"}}>{event.price}</p>
                     </div>
-                    <a href="tel:+79850168008" className="footer-link items-center gap-3 mx-auto mb-[20px]" style={{ display: 'inline-block' }}>
-                    <Button 
-                     size="lg" 
-                     className="text-lg px-12 py-4 bg-white/5 backdrop-blur-md border-white/50 text-white hover:bg-white/30 transition-all duration-300 flex "
-                    style={{
-                      borderRadius:"10px",
-                      fontFamily:"RobotoL",
-                      fontSize: isMobile? "22px" : "20px",
-                    }} 
-                    >
-                      Забронировать
-                    </Button>
-                    </a>
+                    <BookingButton service={event} isMobile={isMobile} />
+
                   </div>
                 </CardContent>
               </div>
