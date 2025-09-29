@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import newyear from "@/app/img/newyear.png";
+import newyear from "@/app/img/newyear.webp";
 export const Hero = () => {
   const isMobile = useIsMobile();
 

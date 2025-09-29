@@ -9,8 +9,8 @@ export const Footer = () => {
   return (
     <footer className="bg-black flex w-full flex-col text-sm font-light tracking-[2px] mt-10 px-[51px] pt-[77px] pb-3 max-md:max-w-full max-md:px-5">
       <div className="text-[rgba(210,182,177,1)] ">
-      <a href="https://t.me" className="footer-link">TELEGRAM</a> | 
-        <a href="https://vk.ru" className="footer-link hover:text-white ml-[5px]">VK</a>
+      <a href="https://t.me/zvezdniycomplex" className="footer-link">TELEGRAM</a> | 
+        <a href="https://vk.com/zvevdniy_complex" className="footer-link hover:text-white ml-[5px]">VK</a>
       </div>
       <div className="flex items-stretch gap-2.5 mt-[18px]">
         <div className="text-[rgba(242,215,210,1)]">

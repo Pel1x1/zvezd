@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import rest from "@/app/img/main/rest.webp"
-import rainb from "@/app/img/rooms/shalle.jpg"
+import rainb from "@/app/img/rooms/shalle.webp"
 import { useIsMobile } from "@/app/hooks/use-mobile";
 import React, { useRef, useEffect, useState } from "react";
 import { Card, CardContent } from "@/app/ui/card";

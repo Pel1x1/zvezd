@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { Button } from "@/app/ui/Button";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import clubvil from "@/app/img/image.png";
-import bg2 from "@/app/img/main/banket.jpg";
+import clubvil from "@/app/img/image.webp";
+import bg2 from "@/app/img/main/banket.webp";
 import { useRouter } from 'next/navigation';
 
 

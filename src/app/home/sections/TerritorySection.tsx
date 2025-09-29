@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import territory from "@/app/img/main/Territory.jpg";
+import territory from "@/app/img/main/Territory.webp";
 import { Fullscreen } from "lucide-react";
 
 export const TerritorySection = () => {

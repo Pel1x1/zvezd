@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import {Hero} from './sections/Hero';
 import NewYear from "./sections/NewYear";
 import  SearchForm  from '@/app/components/SearchForm';
-        import Head from 'next/head';
+import Head from 'next/head';
 
 
 export default function EventsPage() {

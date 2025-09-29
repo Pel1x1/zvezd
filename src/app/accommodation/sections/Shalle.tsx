@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import shalle from "@/app/img/rooms/shalle.jpg";
+import shalle from "@/app/img/rooms/shalle.webp";
 import Link from "next/link";
 
 
