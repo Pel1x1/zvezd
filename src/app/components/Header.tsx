@@ -7,6 +7,7 @@ import { FiMenu } from "react-icons/fi";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from "next/image";
+import { useMediaQuery } from 'react-responsive';
 
 
 export const Header = () => {
@@ -16,6 +17,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = [
     { label: "ПРОЖИВАНИЕ", href: "/accommodation" },
+    { label: "НОВЫЙ ГОД", href: "/newyear" },
     { label: "БАНКЕТНЫЕ ЗАЛЫ", href: "/banquethall" },
     { label: "SPA-КОМПЛЕКС", href: "/spa" },
     { label: "МЕРОПРИЯТИЯ", href: "/events" },
@@ -24,18 +26,22 @@ export const Header = () => {
     { label: "УСЛУГИ", href: "/services" },
     { label: "РЕСТОРАН", href: "/restaurant" },
   ];
-  
+  const isTablet = useMediaQuery({ query: '(max-width: 1419px)' });
+  const isLowTablet = useMediaQuery({ query: '(max-width: 1197px)' });
 
   return (
     <header
       className="fixed top-14 z-1000 w-full bg-[rgba(145,3,1,1)] backdrop-blur-sm py-3 px-4 sm:py-6 sm:px-8 shadow-md"
+      style={{paddingTop: isMobile?"3px":"6px", paddingBottom: isMobile?"3px":"6px"}}
     >
-      <div className="max-w-[100%] mx-auto flex items-center text-center justify-between text-[#D2B6B1] ">
+      <div 
+      className="max-w-[100%] mx-auto flex items-center text-center justify-between text-[#D2B6B1] "
+      >
         {/*<Image src={"/img/logo.png"} width={40} height={40} className="rounded-4xl l-0" alt="Звёздный"></Image>*/}
         <p
           onClick={() => router.push('/')}
           className="text-[15px] md:text-[20px] text-bold shrink-1 tracking-[2px] cursor-pointer text-white hover:text-[#D2B6B1] transition-colors l-0 mt-0 mb-0" 
-          style={{ marginLeft: isMobile? "3%":"10%"}}
+          style={{ marginLeft: isMobile? "3%": isLowTablet? "2%" : "10%", fontSize: isLowTablet? "15px" : "20px" }}
         >
           ЗВЁЗДНЫЙ
         </p>
@@ -50,7 +56,8 @@ export const Header = () => {
               <Link
                 key={label}
                 href={href}
-                className=" footer-link hover:text-white transition-colors cursor-pointer font-body font-bold text-[13px]"
+                style={{fontSize: isTablet? isLowTablet? "9px" : "10px" :"13px"}}
+                className=" footer-link hover:text-white transition-colors cursor-pointer font-body font-bold "
               >
                 {label}
               </Link>

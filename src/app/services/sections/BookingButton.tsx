@@ -71,7 +71,7 @@ function BookingButton({ service, isMobile }: BookingButtonProps) {
             </a>
             <div className="flex justify-center gap-6 text-gray-700">
               <a
-                href="https://vk.com/your_vk_page"
+                href="https://vk.com/zvevdniy_complex"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="VK"
@@ -80,7 +80,7 @@ function BookingButton({ service, isMobile }: BookingButtonProps) {
                 <FaVk className="w-15 h-15" />
               </a>
               <a
-                href="https://t.me/your_telegram"
+                href="https://t.me/zvezdniycomplex"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"

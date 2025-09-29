@@ -26,7 +26,9 @@ export default function RootLayout({
       
       <body className={inter.className} style={{background: "black"}} >
         
-        <div className='w-full h-14 bg-[rgba(145,3,1,0.7)] border-white py-2 px-4 fixed top-0 z-10000 flex items-center justify-between'>
+        <div 
+        style={{paddingTop: isMobile?"2px":"4px", paddingBottom: isMobile?"2px":"4px"}}
+        className='w-full h-14 bg-[rgba(145,3,1,0.7)] border-white px-4 fixed top-0 z-10000 flex items-center justify-between'>
           {/* Левая колонка: телефон с кликом-звонком */}
           {!isMobile &&(
           <div className="text-white cursor-pointer lg:text-lg " onClick={() => window.location.href = 'tel:+79850168008'}>

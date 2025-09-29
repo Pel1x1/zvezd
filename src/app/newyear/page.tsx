@@ -11,9 +11,9 @@ export default function EventsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "url": "https://zvezdny-complex.ru/events",
-    "name": "Мероприятия",
-    "description": "Присоединяйтесь к нашим эксклюзивным мероприятиям. Каждое событие - это уникальная возможность насладиться особенной атмосферой и создать незабываемые воспоминания.",
+    "url": "https://zvezdny-complex.ru/newyear",
+    "name": "Встречаем Новый 2026 год",
+    "description": ".",
     // дополнительные специфичные данные
   };
   return (

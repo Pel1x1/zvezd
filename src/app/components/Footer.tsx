@@ -28,7 +28,7 @@ export const Footer = () => {
       </div>
       <div className="text-[rgba(210,182,177,1)] leading-none mt-[21px] flex justify-between">
         <p className="" style={{fontSize: isMobile?"10px":"15px"}}>© 2025. ЗАГОРОДНЫЙ КОМПЛЕКС «ЗВЁЗДНЫЙ»</p>
-        <a href="https://pel1x1.ru" className="footer-link">
+        <a href="https://pel1x1.vercel.app/" className="footer-link">
           <p className="text-right whitespace-nowrap flex-shrink-0" style={{fontSize: isMobile?"10px":"15px"}}>
             Made by "K<span className="text-[10px]">&</span>K"</p>
         </a>

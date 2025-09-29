@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useIsMobile } from "@/app/hooks/use-mobile";
-import zvezd3 from "@/app/img/main/zvezd3.webp";
+import newyear from "@/app/img/newyear.png";
 export const Hero = () => {
   const isMobile = useIsMobile();
 
@@ -12,7 +12,7 @@ export const Hero = () => {
       <div>
         <div className="relative mx-auto my-auto" style={{width:isMobile?"100%":"97%", height:isMobile?"50vh":"95vh"}}>
           <Image
-            src={zvezd3}
+            src={newyear}
             alt="Hero background"
             fill
             className="object-cover "
@@ -30,14 +30,6 @@ export const Hero = () => {
                 style={{fontFamily: "RobotoL", borderRadius: "0.5rem" }}
             >
                 Забронировать
-            </button>
-            </a>
-            <a href="tel:+79850168008" className="footer-link" style={{ display: 'inline-block', borderRadius: "15px" }}>
-            <button
-                className="bg-gray-200 text-gray-900 px-8 py-3 font-semibold text-[16px] md:text-[22px] shadow-md transition hover:bg-[#ffffff83] border-white border-1"
-                style={{fontFamily: "RobotoL", borderRadius: "0.5rem"}}
-            >
-                Заказать звонок
             </button>
             </a>
             </div>
